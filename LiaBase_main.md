@@ -21,7 +21,7 @@ translation: Deutsch  translations/German.md
 translation: Français translations/French.md
 -->
 
-# Course Main Title
+# LiaScript
 
 This is your **course** initialization stub.
 
@@ -30,15 +30,17 @@ to find out what is possible in [LiaScript](https://liascript.github.io).
 
 If you want to use instant help in your Atom IDE, please type **lia** to see all available shortcuts.
 
-## Markdown
+## Mise en route
 
-You can use common [Markdown](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) syntax to create your course, such as:
+### Se créer un compte GitHub
 
-1. Lists
-2. ordered or
+Pour utiliser tranquillement Liascript, la création d'un compte sur GitHub est nécessaire.
 
-   * unordered
-   * ones ...
+![Page de connexion de GitHub](assets/github/githubconnect.png)
+
+### Créer un répertoire
+
+{{1}} Commencez par
 
 
 | Header 1   | Header 2   |
