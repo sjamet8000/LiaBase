@@ -1,13 +1,11 @@
 <!--
-author:   Your Name
+author:   Samuel Jamet
 
-email:    your@mail.org
+email:    samuel.jamet.bib@proton.me
 
 version:  0.0.1
 
-language: en
-
-narrator: US English Female
+language: fr
 
 comment:  Try to write a short comment about
           your course, multiline is also okay.
@@ -15,10 +13,6 @@ comment:  Try to write a short comment about
 link:     https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css
 
 script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
-
-translation: Deutsch  translations/German.md
-
-translation: Français translations/French.md
 -->
 
 # LiaScript
@@ -54,6 +48,22 @@ Super important : votre répertoire doit impérativement être **public** pour q
 ![Répertoire GitHub vide](assets/github/github_repo_4.png)
 
 ### Visual Studio Code
+
+Présentation rapide de VS Code
+![Accueil VS Code](assets/VS_Code/VS_Code_acc.png)
+
+#### Installer et activer les plugins Liascript
+
+Installation du plugin **Liascript Preview**
+![Liascript Preview](assets/VS_Code/VS_Code_plug_in_LSPreview.png)
+
+##### Installer et activer le plugin Liascript Snippets
+
+![Liascript Snippets](assets/VS_Code/VS_Code_plug_in_LSSnippets.png)
+
+![Liascript Snippets suite](assets/VS_Code/VS_Code_plug_in_LSSnippets_2.png)
+
+![Liascript Snippets suite](assets/VS_Code/VS_Code_plug_in_LSSnippets_3.png)
 
 ### Extensions
 
