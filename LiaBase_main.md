@@ -40,18 +40,20 @@ Pour utiliser tranquillement Liascript, la création d'un compte sur GitHub est 
 
 ### Créer un répertoire
 
-{{1}} Commencez par
+{{1}} Cliquez sur l'icône de votre compte en haut à droit de l'écran, puis sur *Repositories*
+![Création d'un répertoire Github](assets/github/github_repo.png)
 
+{{2}} Cliquez sur *New* pour créer un nouveau répertoire.
+![Création d'un répertoire GitHub](assets/github/github_repo_2.png)
 
-| Header 1   | Header 2   |
-| :--------- | :--------- |
-| Item 1     | Item 2     |
+{{3}} Entrez les informations nécessaires. Evitez les espaces dans le nom du répertoire. la description n'est pas obligatoire, mais elle peut aider à ce que l'on retrouve votre répertoire.
+Super important : votre répertoire doit impérativement être **public** pour que Liascript puisse l'interpréter.
+![Finalisation d'un répertoire](assets/github/github_repo_3.png)
 
+{{4}} Une fois votre répertoire créé, vous pouvez y accéder depuis *Repositories* en cliquant sur l'icone de votre profil. Notez qu'au moment de la création du répertoire, il ne contient rien que la **LICENCE** et le README.md.
+![Répertoire GitHub vide](assets/github/github_repo_4.png)
 
-Images:
-
-![images](https://farm2.static.flickr.com/1618/26701766821_7bea494826.jpg)
-
+### Visual Studio Code
 
 ### Extensions
 
