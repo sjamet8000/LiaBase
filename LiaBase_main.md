@@ -63,7 +63,46 @@ Installation du plugin **Liascript Preview**
 
 ![Liascript Snippets suite](assets/VS_Code/VS_Code_plug_in_LSSnippets_2.png)
 
+Faites `Ctrl + Shift + P` puis entrez `settings` et cliquez sur Open User Settings (JSON)
+
+```
+Bla bla Bla
+```
+
 ![Liascript Snippets suite](assets/VS_Code/VS_Code_plug_in_LSSnippets_3.png)
+
+### Git
+
+#### Installer Git
+
+Aller sur le site officiel (git-scm.com) et de télécharger Git for Windows.
+L'installateur de Git sous Windows a énormément d'étapes avec plein de cases à cocher, **laisser toutes les options par défaut et de cliquer sur "Next" jusqu'au bout**. Ça ira très bien pour 99 % des usages.
+
+#### Configurer Git
+
+Une fois installé, ouvrez le terminal de commande PowerShell. 
+
+C'est là qu'il faut définir l'identité, pour que Git sache qui fait les modifications. 
+Voici les commandes à entrer (le --global est important pour que ça s'applique à tous vos futurs projets) :
+
+Pour le nom (avec les guillemets) :
+
+git config --global user.name "Prénom Nom"
+
+
+Pour l'email (idéalement celui que vous utilisez pour GitHub) :
+
+git config --global user.email "leur.email@exemple.com"
+
+Aujourd'hui, le standard est d'appeler la branche principale main (au lieu de l'ancien master). Autant configurer ça tout de suite pour éviter des confusions plus tard :
+
+git config --global init.defaultBranch main
+
+Pour vérifier que tout a bien fonctionné, taper :
+
+git config --list
+
+Cela affichera votre nom, votre mail et vos réglages. Si vous voyez vos infos, c'est tout bon !
 
 ### Extensions
 
