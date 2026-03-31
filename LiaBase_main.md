@@ -81,6 +81,8 @@ Faites `Ctrl + Shift + P` puis entrez `settings` et cliquez sur Open User Settin
 
 ![Liascript Snippets suite](assets/VS_Code/VS_Code_plug_in_LSSnippets_3.png)
 
+**LiaScript-Snippets** va vous permettre d'"appeler" des fonctionalités de LiaScript comme des modèles mise en formes spécifiques (tableaux, graph, etc.), ou des modèles de quizs, et une miriade de choses super chouettes avec le préfixe `lia`.
+
 ### Git
 
 #### Installer Git
