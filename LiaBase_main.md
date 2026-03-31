@@ -17,12 +17,7 @@ script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
 
 # LiaScript
 
-This is your **course** initialization stub.
-
-Please see the [Docs](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md)
-to find out what is possible in [LiaScript](https://liascript.github.io).
-
-If you want to use instant help in your Atom IDE, please type **lia** to see all available shortcuts.
+![Logo Liascript](assets/liascript/LiaScript_logo.png)
 
 ## Mise en route
 
@@ -49,8 +44,10 @@ Super important : votre répertoire doit impérativement être **public** pour q
 
 ### Visual Studio Code
 
-Présentation rapide de VS Code
+**Visual Studio Code** est un éditeur de texte gratuit et open source maintenu par **Microsoft** (eh oui, snif). Très utilisé par les développeur.ses, on va plutôt l'utiliser comme simple éditeur de MarkDown, un peu amélioré par le créateur de Liascript, grâce à quelques plung in.
 ![Accueil VS Code](assets/VS_Code/VS_Code_acc.png)
+
+Rendez-vous sur la [page de téléchargement](https://code.visualstudio.com/Download) et procédez à l'installation du logiciel, on se retrouve de l'autre côté.
 
 #### Installer et activer les plugins Liascript
 
@@ -87,20 +84,27 @@ Voici les commandes à entrer (le --global est important pour que ça s'applique
 
 Pour le nom (avec les guillemets) :
 
+```
 git config --global user.name "Prénom Nom"
-
+```
 
 Pour l'email (idéalement celui que vous utilisez pour GitHub) :
 
+```
 git config --global user.email "leur.email@exemple.com"
+```
 
 Aujourd'hui, le standard est d'appeler la branche principale main (au lieu de l'ancien master). Autant configurer ça tout de suite pour éviter des confusions plus tard :
 
+```
 git config --global init.defaultBranch main
+```
 
 Pour vérifier que tout a bien fonctionné, taper :
 
+```
 git config --list
+```
 
 Cela affichera votre nom, votre mail et vos réglages. Si vous voyez vos infos, c'est tout bon !
 
