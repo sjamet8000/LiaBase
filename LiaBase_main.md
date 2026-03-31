@@ -51,19 +51,32 @@ Rendez-vous sur la [page de téléchargement](https://code.visualstudio.com/Down
 
 #### Installer et activer les plugins Liascript
 
-Installation du plugin **Liascript Preview**
+Pour utiliser confortablement Liascript, on va devoir installer deux extensions développées par André Dietrich.
+Rendez-vous dans le magasin d'extensions (cf. capture ci-dessous ou `Ctrl + Shift + X`).
+
+Entrez `liascript` dans la barre de recherche, normalement trois extensions doivent remonter. Cliquez sur `LiaScript-Preview` puis sur `Install`.
 ![Liascript Preview](assets/VS_Code/VS_Code_plug_in_LSPreview.png)
+
+Ce plug in va vous permettre de lancer une prévisualisation de ce que vous êtes en train de produire depuis Visual Code, sur votre navigateur favori, en local, sans connexion internet. Plutôt utile pour vérifier et tester votre cours au fil de l'eau !
 
 ##### Installer et activer le plugin Liascript Snippets
 
+Le second plug in se nomme **LiaScript-Snippets**, il n'est absolument nécessaire à l'utilisation de LiaScript avec VS Code, mais c'est une aide non négligable quand on débute.
+
 ![Liascript Snippets](assets/VS_Code/VS_Code_plug_in_LSSnippets.png)
+
+Une fois l'installation faite, ce n'est pas terminé. Sur la page de **LiaScript-Snippets**, on vous demande de copier-coller un morceau de code. Sélectionnez le morceau de code mis en exergue, puis `Ctrl + C`.
 
 ![Liascript Snippets suite](assets/VS_Code/VS_Code_plug_in_LSSnippets_2.png)
 
-Faites `Ctrl + Shift + P` puis entrez `settings` et cliquez sur Open User Settings (JSON)
+Faites `Ctrl + Shift + P` puis entrez `settings` et cliquez sur Open User Settings (JSON), et collez le morceau de code entre les deux accolades (je le remets ci-dessous), puis quittez.
 
 ```
-Bla bla Bla
+   "[markdown]": {
+      "editor.tabCompletion": "on",
+      "editor.quickSuggestions": true,
+      "editor.snippetSuggestions": "top"
+   },
 ```
 
 ![Liascript Snippets suite](assets/VS_Code/VS_Code_plug_in_LSSnippets_3.png)
