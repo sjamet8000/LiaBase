@@ -44,7 +44,7 @@ Super important : votre répertoire doit impérativement être **public** pour q
 
 ### Visual Studio Code
 
-**Visual Studio Code** est un éditeur de texte gratuit et open source maintenu par **Microsoft** (eh oui, snif). Très utilisé par les développeur.ses, on va plutôt l'utiliser comme simple éditeur de MarkDown, un peu amélioré par le créateur de Liascript, grâce à quelques plung in.
+**Visual Studio Code** est un éditeur de texte gratuit et open source maintenu par **Microsoft** (eh oui, snif). Très utilisé par les développeur.ses, on va plutôt l'utiliser comme simple éditeur de MarkDown, un peu amélioré par le créateur de Liascript, grâce à quelques plug in.
 ![Accueil VS Code](assets/VS_Code/VS_Code_acc.png)
 
 Rendez-vous sur la [page de téléchargement](https://code.visualstudio.com/Download) et procédez à l'installation du logiciel, on se retrouve de l'autre côté.
@@ -61,7 +61,7 @@ Ce plug in va vous permettre de lancer une prévisualisation de ce que vous ête
 
 ##### Installer et activer le plugin Liascript Snippets
 
-Le second plug in se nomme **LiaScript-Snippets**, il n'est absolument nécessaire à l'utilisation de LiaScript avec VS Code, mais c'est une aide non négligable quand on débute.
+Le second plug in se nomme **LiaScript-Snippets**, il n'est pas absolument nécessaire à l'utilisation de LiaScript avec VS Code, mais c'est une aide non négligable quand on débute.
 
 ![Liascript Snippets](assets/VS_Code/VS_Code_plug_in_LSSnippets.png)
 
@@ -85,14 +85,28 @@ Faites `Ctrl + Shift + P` puis entrez `settings` et cliquez sur Open User Settin
 
 ### Git
 
+![Logo de Git](assets/git/git_logo.png)Git est un logiciel de gestion de versions décentralisé développé par Linus Torvalds, le créateur du noyeau Linux. Pour en savoir plus sur Git et son fonctionnement, vous pouvez consulter [la page Wikipédia](https://fr.wikipedia.org/wiki/Git) qui est bien détaillée.
+
 #### Installer Git
 
-Aller sur le site officiel (git-scm.com) et de télécharger Git for Windows.
-L'installateur de Git sous Windows a énormément d'étapes avec plein de cases à cocher, **laisser toutes les options par défaut et de cliquer sur "Next" jusqu'au bout**. Ça ira très bien pour 99 % des usages.
+Aller sur le [site officiel](https://git-scm.com/install/windows) et de télécharger Git for Windows.
+
+Sélectionnez l'installateur `Git for Windows/x64 Setup` qui devrait fonctionner dans la plupart des cas.
+![Page de téléchargement de Git for Windows](assets/git/git_dl.png)
+
+L'installateur de Git sous Windows a beaucoup d'étapes avec plein de cases à cocher, **laisser toutes les options par défaut et de cliquer sur "Next" jusqu'au bout**. Ça ira très bien pour 99 % des usages.
 
 #### Configurer Git
 
-Une fois installé, ouvrez le terminal de commande PowerShell. 
+Une fois installé, ouvrez le terminal de commande **Git Bash**.
+
+Vérifiez que Git est bien installé en entrant :
+
+```
+git --version
+```
+
+Si le terminal vous renvoie `git version 2.5x.x` c'est bon.
 
 C'est là qu'il faut définir l'identité, pour que Git sache qui fait les modifications. 
 Voici les commandes à entrer (le --global est important pour que ça s'applique à tous vos futurs projets) :
@@ -106,7 +120,7 @@ git config --global user.name "Prénom Nom"
 Pour l'email (idéalement celui que vous utilisez pour GitHub) :
 
 ```
-git config --global user.email "leur.email@exemple.com"
+git config --global user.email "votre.email@exemple.com"
 ```
 
 Aujourd'hui, le standard est d'appeler la branche principale main (au lieu de l'ancien master). Autant configurer ça tout de suite pour éviter des confusions plus tard :
@@ -122,6 +136,30 @@ git config --list
 ```
 
 Cela affichera votre nom, votre mail et vos réglages. Si vous voyez vos infos, c'est tout bon !
+
+![Nom, mail et réglages avec git config](assets/Powershell/Powershell_gitconfig.png)
+
+### Synchroniser votre répertoire GitHub en local
+
+Rendez-vous dans le dossier dans lequel vous souhaitez synchroniser votre répertoire.
+
+A titre personnel, je synchronise mes répertoires directement dans le dossier Documents, mais vous pouvez choisir un autre dossier.
+
+Une fois dans le dossier, faites un `clic droit` à l'intérieur puis cliquez sur `Git Bash here` pour ouvrir le terminal.
+
+Tapez :
+
+```
+git clone https://github.com/nomdevotrecompte/nomdurepertoire.git
+```
+
+Vous trouverez l'URL du répertoire en vous rendant... dans votre répertoire bien joué, et en cliquant sur `<> code`.
+
+![URL GitHub](assets/github/github_url_clone.png)
+
+### Finalisation de la configuration
+
+![Open Folder](assets/VS_Code/VS_Code_open_folder.png)Rouvrez VS Code et ouvrez votre répertoire synchronisé : `File > Open Folder... > "Nom du répertoire"`
 
 ### Extensions
 
