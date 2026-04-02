@@ -185,7 +185,39 @@ Evidemment, vous n'allez pas vous mettre à composer dans le `README.md` (conser
 
 Dans l'arborescence de votre répertoire, toujours dans VS Code, cliquez sur l'icône `New File`juste à côté du nom de votre répertoire.
 
-![Newfile](assets\VS_Code\VS_Code_premier_fichier.png) Attention, comme vous le voyez sur la capture, il est indispensable de spécifier le format du fichier nouvellement créé, et ce format, c'est du `.md` donc le format MarkDown. Vous pouvez nommer votre document comme vous le souhaitez, mais ajoutez `.md`à la fin si vous voulez que ça fonctionne.
+![Newfile](assets\VS_Code\VS_Code_premier_fichier.png) Attention, comme vous le voyez sur la capture, il est indispensable de spécifier le format du fichier nouvellement créé, et ce format, c'est du `.md` donc le format MarkDown. Vous pouvez nommer votre document comme vous le souhaitez, mais ajoutez `.md` à la fin si vous voulez que ça fonctionne.
+
+Cliquez sur le document pour afficher l'éditeur de texte. Par défaut, il vous propose de générer du code, mais vous ne mangez pas de ce pain-là. Positionnez-vous dans l'éditeur comme vous le feriez pour un éditeur de texte classique et tapez :
+
+```
+lia-init
+```
+
+Vous vous souvenez du plug in [LiaScript Snippets](#7) ? C'est là qu'il entre en action. Appuyez sur `entrée` pour faire apparaître une première base du cours à partir de laquelle vous allez pouvoir avancer, ainsi qu'un certain nombre de métadonnées super utiles.
+
+![Lia-init](assets\VS_Code\VS_Code_lia_init.png)
+
+#### Lier VS Code à GitHub
+
+Il est temps de vous mettre au travail, vous avez cloné votre répertoire GitHub, vous allez maintenant l'alimenter et le mettre à jour. Pour cela, vous aller lier VS Code à votre compte GitHub (il existe d'autres voies pour synchroniser vos répertoires, ils seront détaillés dans des versions ultérieures de ce guide).
+
+En bas à gauche de la fenêtre de VS Code, cliquez sur `Accounts`puis sur `Backups and Sync Settings`.
+
+![VS Code Accounts](assets\VS_Code\VS_Code_sync.png)
+
+Les `Settings Sync`s'ouvrent en haut de la fenêtre (oui on voyage), cliquez sur `Sign in` puis sur `Sign in with GitHub`
+
+![Sign in with GitHub](assets\VS_Code\VS_Code_sync2.png)
+
+![Sign in GitHub](assets\VS_Code\VS_Code_sync3.png) VS Code va automatiquement ouvrir une page de votre navigateur enregistré par défaut pour vous demander si vous souhaitez vous connecter à GitHub, cliquez sur `Sign in` puis continuez. Si, de retour sur VS Code, le nom de votre compte s'affiche quand vous cliquez sur `Accounts` c'est bon !
+
+#### Premier commit
+
+Vous avez créé votre premier document et vous souhaitez qu'ils soit synchronisé sur votre répertoire GitHub, vous allez donc faire ce qu'on appelle un *commit*, c'est-à-dire une modification du répertoire qui sera décrite et signée de votre nom.
+
+Cliquez sur `Source Control`(par défaut, parmi les quelques icônes sur le côté gauche de la fenêtre de VS Code)
+
+![Premier commit](assets\VS_Code\VS_Code_commit.png) Vous arriver dans le panneau de contrôle des sources. Juste en dessous du bouton `Commit` un certain nombre de `Changes` sont listés (notamment la création de votre nouveau document.) Cliquez sur le petit `+` en face de `Changes`
 
 ### Extensions
 
