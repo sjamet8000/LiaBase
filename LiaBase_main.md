@@ -217,7 +217,7 @@ Vous avez créé votre premier document et vous souhaitez qu'ils soit synchronis
 
 Cliquez sur `Source Control`(par défaut, parmi les quelques icônes sur le côté gauche de la fenêtre de VS Code)
 
-![Premier commit](assets\VS_Code\VS_Code_commit.png) Vous arriver dans le panneau de contrôle des sources. Juste en dessous du bouton `Commit` un certain nombre de `Changes` sont listés (notamment la création de votre nouveau document.) Cliquez sur le petit `+` en face de `Changes` les éléments listés deviennent des `Staged Changes`prêts à être envoyé dans votre répertoire GitHub. N'oubliez pas de décrire votre modification/ajout avant de cliquer sur `Commit
+![Premier commit](assets\VS_Code\VS_Code_commit.png) Vous arriver dans le panneau de contrôle des sources. Juste en dessous du bouton `Commit` un certain nombre de `Changes` sont listés (notamment la création de votre nouveau document.) Cliquez sur le petit `+` en face de `Changes` les éléments listés deviennent des `Staged Changes`prêts à être envoyé dans votre répertoire GitHub. N'oubliez pas de décrire votre modification/ajout avant de cliquer sur `Commit` puis de cliquer sur `Sync`
 
 ### Extensions
 
