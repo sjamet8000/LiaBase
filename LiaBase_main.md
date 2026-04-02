@@ -143,11 +143,11 @@ Cela affichera votre nom, votre mail et vos réglages. Si vous voyez vos infos, 
 
 ![Nom, mail et réglages avec git config](assets/Powershell/Powershell_gitconfig.png)
 
-### Synchroniser votre répertoire GitHub en local
+### Cloner votre répertoire GitHub en local
 
 Rendez-vous dans le dossier dans lequel vous souhaitez synchroniser votre répertoire.
 
-A titre personnel, je synchronise mes répertoires directement dans le dossier Documents, mais vous pouvez choisir un autre dossier.
+A titre personnel, je clone mes répertoires directement dans le dossier Documents, mais vous pouvez choisir un autre dossier.
 
 Une fois dans le dossier, faites un `clic droit` à l'intérieur puis cliquez sur `Open Git Bash here` pour ouvrir le terminal.
 
@@ -169,9 +169,23 @@ Et voilà ! Votre répertoire avec tout son contenu est cloné sur votre PC ! Si
 
 ![Répertoire en local](assets\git\repo_git_local.png)
 
-### Finalisation de la configuration
+### Finalisation de la configuration... et premier commit
 
-![Open Folder](assets/VS_Code/VS_Code_open_folder.png)Rouvrez VS Code et ouvrez votre répertoire synchronisé : `File > Open Folder... > "Nom du répertoire"`
+![Open Folder](assets/VS_Code/VS_Code_open_folder.png)Rouvrez VS Code et ouvrez votre répertoire synchronisé : `File > Open Folder... > "Nom du répertoire > Select folder"` (Sélectionnez simplement le répertoire cloné, ne double-cliquez pas dessus)
+
+Votre arborescence s'affichera sur la partie gauche de la fenêtre de VS Code. Sauf événement cataclismique, elle sera parfaitement identique à celle que vous avez dans l'explorateur de fichiers Windows et votre répertoire dans GitHub.
+
+Sélectionnez le `README.md` pour afficher l'éditeur de texte et voyez ce que ça donne. C'est visuellement beaucoup plus sobre et plus du tout WYSIWYG, mais on s'y fait.
+
+![Arborescence répertoire VS Code](assets\VS_Code\VS_Code_arbo.png)
+
+#### Créer votre premier document
+
+Evidemment, vous n'allez pas vous mettre à composer dans le `README.md` (conservez ce fichier pour expliquer comment utiliser votre ressource !)
+
+Dans l'arborescence de votre répertoire, toujours dans VS Code, cliquez sur l'icône `New File`juste à côté du nom de votre répertoire.
+
+![Newfile](assets\VS_Code\VS_Code_premier_fichier.png) Attention, comme vous le voyez sur la capture, il est indispensable de spécifier le format du fichier nouvellement créé, et ce format, c'est du `.md` donc le format MarkDown. Vous pouvez nommer votre document comme vous le souhaitez, mais ajoutez `.md`à la fin si vous voulez que ça fonctionne.
 
 ### Extensions
 
