@@ -100,13 +100,17 @@ L'installateur de Git sous Windows a beaucoup d'étapes avec plein de cases à c
 
 Une fois installé, ouvrez le terminal de commande **Git Bash**.
 
+![Ouvrir Git Bash](assets\git\git_bash.png)
+
 Vérifiez que Git est bien installé en entrant :
 
 ```
 git --version
 ```
 
-Si le terminal vous renvoie `git version 2.5x.x` c'est bon.
+Si le terminal vous renvoie `git version 2.5x.x.windows` c'est bon.
+
+![Git version sur Git Bash](assets\git\git_version.png)
 
 C'est là qu'il faut définir l'identité, pour que Git sache qui fait les modifications. 
 Voici les commandes à entrer (le --global est important pour que ça s'applique à tous vos futurs projets) :
