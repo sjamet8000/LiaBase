@@ -149,7 +149,9 @@ Rendez-vous dans le dossier dans lequel vous souhaitez synchroniser votre réper
 
 A titre personnel, je synchronise mes répertoires directement dans le dossier Documents, mais vous pouvez choisir un autre dossier.
 
-Une fois dans le dossier, faites un `clic droit` à l'intérieur puis cliquez sur `Git Bash here` pour ouvrir le terminal.
+Une fois dans le dossier, faites un `clic droit` à l'intérieur puis cliquez sur `Open Git Bash here` pour ouvrir le terminal.
+
+![Git bash here](assets\git\open_git_bash_here.png)
 
 Tapez :
 
@@ -157,9 +159,15 @@ Tapez :
 git clone https://github.com/nomdevotrecompte/nomdurepertoire.git
 ```
 
+![Clonage de répertoire](assets\git\git_clone.png)
+
 Vous trouverez l'URL du répertoire en vous rendant... dans votre répertoire bien joué, et en cliquant sur `<> code`.
 
 ![URL GitHub](assets/github/github_url_clone.png)
+
+Et voilà ! Votre répertoire avec tout son contenu est cloné sur votre PC ! Si c'est votre premier répertoire, seul le `README.md`et la `LICENCE` ont été clonées, mais ce n'est qu'un début.
+
+![Répertoire en local](assets\git\repo_git_local.png)
 
 ### Finalisation de la configuration
 
