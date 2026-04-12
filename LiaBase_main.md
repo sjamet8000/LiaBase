@@ -19,6 +19,33 @@ script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
 
 ![Logo Liascript](assets/liascript/LiaScript_logo.png)
 
+## 🎶 Je lui dirai démo bleue...
+
+<script
+  style="display: block"
+  modify="false"
+>
+"HTML: <marquee>Attention, tout ce qui suit a été réalisé sur LiaScript</marquee>"
+</script>
+
+      {{1-2}}
+<iframe style="height: 80vh; min-width: 100%; border: 1px black solid" src="https://liascript.github.io/LiveEditor/?/embed/code/H4sIAAAAAAAAA31U23LbRgx9369A5Jk61oi6kLpZDaNpbTW169pJHTtuPa5mRYLSepa7MpcrOYnyL31r3d/QjxVLyZaVacsHEiBwAOwBsDtwzqXNIdf0kgipVjGynR04wEgAmhysQjDaGs9glAut2DMLTHnGxxmfTrDKthDTScYNQsyVKcIu/07xmTfbisJtnm1by+V/i4YKyMGUy1X4L7vIuRR3Fstsux4pTI7MIzumX33YyfKPysYJdBZrpZYPyBpVuDhlfhUOBxdXLKjC+1/Ojs4Z8zyPsQsFOR9J5JaxBRxoaVMFDXgS/Y0YwIJcvPUDi96j2Nv87S2KKDbSFoCgTzKJjzK5XFCZK7qkGCtcvLMCzC5PEhFNcMFnGBGPijuFuTaeKZhxSLgghDtijPZeLP9Kv+rpDrl+58Cbbj8zE8o1kijVaYoqdxmnU5TU2BOEaCJQEZnXL2HvBr7XVmKhXTlNSLmBcUJ88mYUGfrO5RpunMsKvVJ0UshXJB/suuZNdJYJohmoqfLO7rpxgZSr8fLBDStl5zkwBsXz+XPjyxdGZ54ijTO3xoiNySfTDwURMRrgSqTcHc5sPALyOBfpVKK5/r1xw5h792D9q0JphaE6dvU6QaTTkVCYQcF7TD3ZpaBjrBQZ7qz4VAHMoyor+B24BTO0Cg+x4Ga1GsXaLf/kxMepVhW4RVDFJkj3Ni5mtMGwF9c3L5vtJm/zpBHU6xHvtLrYaqPfjjvNoB4k+36CcaO7HzSwOlXjPcYGKhEKjFhX74ISk1V2/JimYMklojLYiz5lmOT51PRqtY9UnK2OsHZ/fBeMW7dvupe6b0Q4Swy+v5cD63f9WJy6LGf2/yN4J4di2Lz8bVgfuwi/Jm/rH3786e3xuzN5lDYP91YMbTVuPbQuJjx113NNfCWSjNMEz0WcT8JSq14vwQTFeJKHpXaTFJNFYemxhlRkukqdqtHI1qSYoYfpCOOavbq9fJMORD7ohrV+oiNrPoh4jHkYNFvdTrvZbrc7fsvvdDr73W8KzM86xnAmcD7USn4czkU+oQMOrViZj+IwaPtBx+/4zWYrKEFR5ojuE8zCkqsryrSUQo3DktIltw56HpYSKyVZENW3EEkxHWmexV6GPH6uzzO6rNaYDeL1q9qKjNdsw5LjaLU8CV0aiqa1/w/kqLwH5wUAAA=="></iframe>
+
+    {{2}}
+Ça s'appelle un LiaScript par récursivité
+
+## Alors, pourquoi LiaScript et pas Moodle ?
+
+### Le suivi des versions
+
+![Le suivi des versions](assets/Pk_Liascript/Versioning.png)
+
+![Le suivi des versions sur GitHub et VS Code](assets/Pk_Liascript/Versioning_VS_Github.png)
+
+### Un flow de travail plus fluide
+
+### Un partage facilité
+
 ## Mise en route
 
 ### Se créer un compte GitHub
@@ -222,15 +249,6 @@ Cliquez sur `Source Control`(par défaut, parmi les quelques icônes sur le côt
         --{{1}}--
 Vous arrivez dans le panneau de contrôle des sources. Juste en dessous du bouton `Commit` un certain nombre de `Changes` sont listés (notamment la création de votre nouveau document.) Cliquez sur le petit `+` en face de `Changes` les éléments listés deviennent des `Staged Changes`prêts à être envoyé dans votre répertoire GitHub. N'oubliez pas de décrire votre modification/ajout avant de cliquer sur `Commit` puis de cliquer sur `Sync Changes` pour que votre répertoire GitHub soit synchronisé.
 
-## 🎶 Je lui dirai démo bleue...
-
-<script
-  style="display: block"
-  modify="false"
->
-"HTML: <marquee>Attention, tout ce qui suit a été réalisé sur LiaScript</marquee>"
-</script>
-
 ## Les bases des bases : écrire du texte
 
         --{{1}}--
@@ -243,9 +261,7 @@ What you see may not be very pleasant...
 ```
 ... mais au moins, ça ne se casse pas.
 
-<section>
 ### 1. Structurer votre contenu
-</section>
 
         --{{0}}--
 Sur LiaScript, une habitude à prendre, c'est de structurer votre contenu (quel qu'il soit). Entrez `#`[^1] suivi d'un texte pour créer la page de titre de votre cours, puis structurez de la manière suivante :
@@ -279,11 +295,27 @@ Sous-sous-section dans la même page
 --------------------
 ```
 
-<section>
-### 2. Mettre en forme votre contenu
-</section>
+[^1]: `Alt GR + 3` mais vous saviez.
 
-[^1]: `Alt GR + 3` mais vous saviez
+### 2. Mettre en forme votre contenu
+
+        --{{0}}--
+En MarkDown, la mise en forme du texte se fait en entourant ce dernier avec certains caractères que voici :
+
+* `*italique*` -> *italique*<!-- class="notranslate"-->
+* `**gras**` -> **gras**<!-- class="notranslate"-->
+* `***gras et italique ***` -> ***gras et italique ***<!-- class="notranslate"-->
+* `_italique aussi_` -> _italique aussi_<!-- class="notranslate"-->
+* `__gras aussi__` -> __gras aussi__<!-- class="notranslate"-->
+* `___gras et italique aussi___` -> ___gras et italique aussi___<!-- class="notranslate"-->
+* `~barré~` -> ~barré~<!-- class="notranslate"-->
+
+        --{{1}}--
+Les mises en forme qui suivent n'existent pas en MarkDown de base :
+
+* `~~souligné~~` -> ~~souligné~~<!-- class="notranslate"--> (attention avec l'éditeur VS Code votre texte apparaîtra ~barré~, mais il sera bien ~~souligné~~ dans LiaScript
+* `~~~barré et souligné~~~` -> ~~~barré et souligné~~~<!-- class="notranslate"--> (remarque similaire ici, l'affichage du texte dans VS Code peut être confusionnalisant)
+* `^en exposant^` -> ^en exposant^<!-- class="notranslate"--> (comme ça vous allez pouvoir écrire XIX^**e**^ et pas XIX**e**.
 
 ### Extensions
 
@@ -321,23 +353,6 @@ The whole text-block should appear in purple color and with a wobbling effect.
 Which is a **bad** example, please use it with caution ...
 ~~ only this is red ;-) ~~ <!-- class = "animated infinite bounce" style = "color: red;" -->
 
-## Charts
-
-Use ASCII-Art to draw diagrams:
-
-                                    Multiline
-    1.9 |    DOTS
-        |                 ***
-      y |               *     *
-      - | r r r r r r r*r r r r*r r r r r r r
-      a |             *         *
-      x |            *           *
-      i | B B B B B * B B B B B B * B B B B B
-      s |         *                 *
-        | *  * *                       * *  *
-     -1 +------------------------------------
-        0              x-axis               1
-
 ## Quizzes
 
 ### A Textquiz
@@ -361,56 +376,6 @@ Just add as many points as you wish:
     [( )] ...
     [(X)] <-- Only the **X** is allowed.
     [( )] ...
-
-## Executable Code
-
-A drawing example, for demonstrating that any JavaScript library can be used, also for drawing.
-
-```javascript
-// Initialize a Line chart in the container with the ID chart1
-new Chartist.Line('#chart1', {
-  labels: [1, 2, 3, 4],
-  series: [[100, 120, 180, 200]]
-});
-
-// Initialize a Line chart in the container with the ID chart2
-new Chartist.Bar('#chart2', {
-  labels: [1, 2, 3, 4],
-  series: [[5, 2, 8, 3]]
-});
-```
-<script>@input</script>
-
-<div class="ct-chart ct-golden-section" id="chart1"></div>
-<div class="ct-chart ct-golden-section" id="chart2"></div>
-
-
-### Projects
-
-You can make your code executable and define projects:
-
-``` js     -EvalScript.js
-let who = data.first_name + " " + data.last_name;
-
-if(data.online) {
-  who + " is online"; }
-else {
-  who + " is NOT online"; }
-```
-``` json    +Data.json
-{
-  "first_name" :  "Sammy",
-  "last_name"  :  "Shark",
-  "online"     :  true
-}
-```
-<script>
-  // insert the JSON dataset into the local variable data
-  let data = @input(1);
-
-  // eval the script that uses this dataset
-  eval(`@input(0)`);
-</script>
 
 ## More
 
