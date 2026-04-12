@@ -29,10 +29,10 @@ Pour utiliser tranquillement Liascript, la création d'un compte sur GitHub est 
 
 ### Créer un répertoire
 
-{{1}} Cliquez sur l'icône de votre compte en haut à droit de l'écran, puis sur *Repositories*
+{{1-3}} Cliquez sur l'icône de votre compte en haut à droit de l'écran, puis sur *Repositories*
 ![Création d'un répertoire Github](assets/github/github_repo.png)
 
-{{2}} Cliquez sur *New* pour créer un nouveau répertoire.
+{{2-3}} Cliquez sur *New* pour créer un nouveau répertoire.
 ![Création d'un répertoire GitHub](assets/github/github_repo_2.png)
 
 {{3}} Entrez les informations nécessaires. Evitez les espaces dans le nom du répertoire. la description n'est pas obligatoire, mais elle peut aider à ce que l'on retrouve votre répertoire.
@@ -217,7 +217,73 @@ Vous avez créé votre premier document et vous souhaitez qu'ils soit synchronis
 
 Cliquez sur `Source Control`(par défaut, parmi les quelques icônes sur le côté gauche de la fenêtre de VS Code)
 
-![Premier commit](assets\VS_Code\VS_Code_commit.png) Vous arriver dans le panneau de contrôle des sources. Juste en dessous du bouton `Commit` un certain nombre de `Changes` sont listés (notamment la création de votre nouveau document.) Cliquez sur le petit `+` en face de `Changes` les éléments listés deviennent des `Staged Changes`prêts à être envoyé dans votre répertoire GitHub. N'oubliez pas de décrire votre modification/ajout avant de cliquer sur `Commit` puis de cliquer sur `Sync Changes` pour que votre répertoire GitHub soit synchronisé.
+![Premier commit](assets\VS_Code\VS_Code_commit.png)
+
+        --{{1}}--
+Vous arrivez dans le panneau de contrôle des sources. Juste en dessous du bouton `Commit` un certain nombre de `Changes` sont listés (notamment la création de votre nouveau document.) Cliquez sur le petit `+` en face de `Changes` les éléments listés deviennent des `Staged Changes`prêts à être envoyé dans votre répertoire GitHub. N'oubliez pas de décrire votre modification/ajout avant de cliquer sur `Commit` puis de cliquer sur `Sync Changes` pour que votre répertoire GitHub soit synchronisé.
+
+## 🎶 Je lui dirai démo bleue...
+
+<script
+  style="display: block"
+  modify="false"
+>
+"HTML: <marquee>Attention, tout ce qui suit a été réalisé sur LiaScript</marquee>"
+</script>
+
+## Les bases des bases : écrire du texte
+
+        --{{1}}--
+Si vous n'êtes pas familier avec le MarkDown, cette section est là pour y remedier. Pas d'inquiétude, les bases du langage sont très simples et vous aurez vite fait le tour du principal de sa syntaxe.
+Le plus difficile reste de se défaire de l'accoutumance des éditeurs de texte WYSIWYG (What You See Is What You Get) comme Word.
+
+Ici, 
+```markdown
+What you see may not be very pleasant...
+```
+... mais au moins, ça ne se casse pas.
+
+<section>
+### 1. Structurer votre contenu
+</section>
+
+        --{{0}}--
+Sur LiaScript, une habitude à prendre, c'est de structurer votre contenu (quel qu'il soit). Entrez `#`[^1] suivi d'un texte pour créer la page de titre de votre cours, puis structurez de la manière suivante :
+
+```markdown
+# Titre principal de votre cours
+
+ ...
+
+## Titre de la première section
+
+ ...
+
+### Titre d'une sous-section
+
+ ...
+## Titre de la deuxième section
+```
+        --{{1}}--
+Vous verrez votre table des matières cliquable se structurer sans que vous ayez besoin de faire quoi que ce soit d'autre chaque section, sous-section devient une page du cours.
+
+Il est aussi possible de créer des sous-sections à l'intérieur d'une page de cours
+
+```markdown
+## Titre d'une section
+
+Sous-section dans la page
+================
+
+Sous-sous-section dans la même page
+--------------------
+```
+
+<section>
+### 2. Mettre en forme votre contenu
+</section>
+
+[^1]: `Alt GR + 3` mais vous saviez
 
 ### Extensions
 
