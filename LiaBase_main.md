@@ -38,11 +38,30 @@ script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
 
 ### Le suivi des versions
 
-![Le suivi des versions](assets/Pk_Liascript/Versioning.png)
+           --{{0}}--
+Sans doute un des aspects les plus importants quand on travaille sur du long terme ou à plusieurs, c'est de pouvoir s'y retrouver entre plus états d'un même projet, d'éventuellement revenir à un état antérieur, voire de dupliquer un projet entier (à soi ou non) pour le modifier en tant que projet indépendant (faire un **fork**). 
 
+          {{1-2}}
+Ci-dessous l'interface de suivi des versions d'un même projet dans VS Code et dans GitHub
 ![Le suivi des versions sur GitHub et VS Code](assets/Pk_Liascript/Versioning_VS_Github.png)
 
+          --{{1}}--
+Le suivi des versions implique aussi que votre travail, ou le travail de quelqu'un d'autre qui vous ferait de l'œil est implicitement disponible à la modification et au remixage. sans risque de corruption (on peut toujours revenir à une version antérieure). 
+
+          {{2}}
+Le versioning, une invitation au partage et à la collectivisation rigoureuse des moyens de productions pédagogiques.
+![Le suivi des versions](assets/Pk_Liascript/Versioning.png)
+
 ### Un flow de travail plus fluide
+
+           --{{0}}--
+C'est sans doute plus subjectif, mais je suis plus à l'aise avec un système de type éditeur de texte comme interface de production que dans un LMS[^1] avec une GUI[^2] super chargée et, quand on a un PC tout naze comme le mien, super LENTE !
+
+           {{1}}
+![les joies d'une GUI un peu lourde](assets/moodle/GUI.png)Parfois, Moodle est un peu overkill quand vous avez besoin de corriger une coquille.
+
+[^1]: Learning System Management, donc en gros tout ce qui ressemble à Moodle.
+[^2]: Graphical User Interface : donc une interface utilisateur visuelle avec fenêtres, bouton, menus...
 
 ### Un partage facilité
 
