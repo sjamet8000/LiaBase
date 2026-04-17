@@ -36,10 +36,38 @@ script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
 
 ## Alors, pourquoi LiaScript et pas Moodle ?
 
+           --{{0}}--
+Je vous arrête tout de suite, on ne part pas en guerre, c'est une " licence pédagogique " qui me permet de placer abusivement LiaScript sur le même plan qu'un LMS[^1], ce qui n'est pas tout à fait le cas, malgré ce qu'en pense son créateur André Dietrich (cf. un [article de son blog datant de 2020](https://liascript.github.io/blog/from-hero-to-zero-with-lms/)).
+
+![Who will prevail ?](assets\Pk_Liascript\Who_will_prevail.png)
+
+Moodle, LiaScript... Serait-ce LA bataille finale ?
+
+           {{1}}
+<!-- Bloc Résumé --> 
+<div style="background-color:#72003e; padding: 0.8em; border-radius: 6px; margin-top:2em;"> 
+    <div style="color:white; display:flex; align-items:center;"> 
+        <div style="font-size: 1.2em;"><strong>Moodle et consort (LMS)</strong></div> 
+    </div> 
+</div> 
+<div style="background-color:#F5F6F9; font-size: 0.95em; padding: 1.1em 1.2em; margin-top:-8px; border-radius: 0 0 6px 6px; line-height: 1.6;"> 
+    <p> 
+        Paragraphe 1 
+    </p> 
+    <p> 
+        Paragraphe 2 
+    </p> 
+</div> 
+
+           --{{1}}--
+On peut plutôt considérer que ce sont deux outils pour deux usages bien différents :
+
+[^1]: Learning System Management, donc en gros tout ce qui ressemble à Moodle.
+
 ### Le suivi des versions
 
            --{{0}}--
-Sans doute un des aspects les plus importants quand on travaille sur du long terme ou à plusieurs, c'est de pouvoir s'y retrouver entre plus états d'un même projet, d'éventuellement revenir à un état antérieur, voire de dupliquer un projet entier (à soi ou non) pour le modifier en tant que projet indépendant (faire un **fork**). 
+Sans doute un des aspects les plus importants quand on travaille sur du long terme ou à plusieurs, c'est de pouvoir s'y retrouver entre plusieurs états d'un même projet, d'éventuellement revenir à un état antérieur, voire de dupliquer un projet entier (à soi ou non) pour le modifier en tant que projet indépendant (faire un **fork**). 
 
           {{1-2}}
 Ci-dessous l'interface de suivi des versions d'un même projet dans VS Code et dans GitHub
@@ -55,13 +83,12 @@ Le versioning, une invitation au partage et à la collectivisation rigoureuse de
 ### Un flow de travail plus fluide
 
            --{{0}}--
-C'est sans doute plus subjectif, mais je suis plus à l'aise avec un système de type éditeur de texte comme interface de production que dans un LMS[^1] avec une GUI[^2] super chargée et, quand on a un PC tout naze comme le mien, super LENTE !
+C'est sans doute plus subjectif, mais je suis plus à l'aise avec un système de type éditeur de texte comme interface de production que dans un LMS avec une GUI[^1] super chargée et, quand on a un PC tout naze comme le mien, super LENTE !
 
            {{1}}
 ![les joies d'une GUI un peu lourde](assets/moodle/GUI.png)Parfois, Moodle est un peu overkill quand vous avez besoin de corriger une coquille.
 
-[^1]: Learning System Management, donc en gros tout ce qui ressemble à Moodle.
-[^2]: Graphical User Interface : donc une interface utilisateur visuelle avec fenêtres, bouton, menus...
+[^1]: Graphical User Interface : donc une interface utilisateur visuelle avec fenêtres, bouton, menus...
 
 ### Un partage facilité
 
