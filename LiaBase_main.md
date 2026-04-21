@@ -64,7 +64,85 @@ On peut plutôt considérer que ce sont deux outils pour deux usages bien diffé
 
 [^1]: Learning System Management, donc en gros tout ce qui ressemble à Moodle.
 
-### Le suivi des versions
+### Un partage facilité
+
+Intro générale (début d'atelier)
+> *"LiaScript, ce n'est pas juste un outil de plus. C'est un outil qui vous redonne **le contrôle** sur vos contenus pédagogiques. Je vais vous montrer ça à travers 3 arguments : d'abord que vos contenus **circulent librement**, ensuite qu'ils **s'adaptent à vos besoins réels**, et enfin qu'ils **vous survivent**. On commence par le partage."*
+
+Transition Partage → Souplesse
+> *"On vient de voir que vos contenus peuvent circuler, être repris, modifiés, redistribués. Mais encore faut-il que l'outil soit capable de porter ce que vous voulez enseigner. Parce qu'un outil qui vous enferme dans un format pauvre, c'est une autre forme de dépendance. Regardons jusqu'où LiaScript peut aller."*
+
+Transition Souplesse → Résilience
+> *"Vous avez vu qu'on peut aller très loin avec LiaScript. Mais il reste une question : qu'est-ce qui se passe si LiaScript disparaît demain ? Si le projet s'arrête ? C'est là qu'intervient le 3ème argument : vos contenus vous survivent."*
+
+Clôture
+> *"Partage, souplesse, résilience. Trois manières différentes de dire la même chose : avec LiaScript, **vos contenus pédagogiques vous appartiennent vraiment**. Et ça, dans un paysage dominé par des plateformes qui captent et enferment, c'est politique."*
+
+🎯 Objectif de la séquence
+Démontrer que LiaScript + GitHub permet nativement les 5R des REL, en faisant vivre le cycle complet sur un cours réel.
+
+🧱 Prérequis posés
+- Slide "Les 5R" affichée en permanence ou rappelée à chaque étape
+- Un cours LiaScript sur GitHub prêt à forker (cours du collègue sur LiaScript)
+- Un bloc de contenu Git prêt à injecter (rédigé par toi)
+- Une vieille capture d'écran à remplacer dans le cours
+
+#### ⏱️ 0:00 — 2:00 | Cadrage "Les 5R"
+
+**Ce que tu montres** : slide simple avec les 5R (Retain, Reuse, Revise, Remix, Redistribute) + définition courte de chacun.
+
+**Ce que tu dis** (verbatim de référence) :
+> *"Les REL — Ressources Éducatives Libres — reposent sur 5 libertés qu'on appelle les 5R. Retenir, réutiliser, réviser, remixer, redistribuer. Je vais vous montrer tout de suite en quoi LiaScript respecte super bien ces 5R. Et donc qu'en composant une formation sur LiaScript, vous élaborez une formation **nativement REL**. On y va."*
+
+**Backstage** : ne pas détailler chaque R maintenant, tu y reviendras concrètement.
+
+#### ⏱️ 2:00 — 5:00 | RETAIN + REUSE + FORK
+
+**Ce que tu fais** :
+1. Tu montres le cours original sur GitHub
+2. Tu cliques sur "Fork"
+3. Le cours apparaît sur ton compte
+
+**Ce que tu dis** :
+> *"Première étape : je prends ce cours qui m'intéresse. Un clic sur Fork, et j'en ai une copie sur mon compte GitHub. **Ce que je viens de faire, c'est le Retain** : cette copie est à moi, elle est chez moi. Même si le cours original disparaît demain, j'ai mon exemplaire.*
+> 
+> *Et déjà, à ce stade, je peux l'utiliser tel quel avec mes apprenants — je récupère le lien LiaScript et je le partage. **Ça, c'est le Reuse**. Je n'ai rien modifié, mais j'ai fait mien ce contenu."*
+
+**Plan B** : si le fork rame, tu as une capture en backup et tu expliques ce qui se passe.
+
+#### ⏱️ 5:00 — 8:00 | REVISE (remplacement de capture)
+
+**Ce que tu fais** :
+1. Tu ouvres le fichier `.md` dans l'éditeur GitHub (crayon)
+2. Tu repères la vieille capture
+3. Tu la remplaces par la nouvelle (upload ou modif du lien)
+4. Tu commit
+
+**Ce que tu dis** :
+> *"Maintenant, j'aimerais adapter ce cours. Par exemple, cette capture d'écran date un peu — l'interface a changé. Je l'ouvre, je remplace, je valide. **Ça, c'est le Revise** : j'ai modifié le contenu sans en changer la structure. Un geste simple, mais qui fait toute la différence pour la maintenance de vos formations."*
+
+**Backstage** : insister sur le fait que c'est un geste **de bibliothécaire-formateur**, pas de développeur.
+
+**Plan B** : si la modif en ligne plante, tu montres une capture du résultat attendu.
+
+#### ⏱️ 8:00 — 14:00 | REMIX (ajout d'une section Git)
+
+**Ce que tu fais** :
+1. Tu ouvres le fichier `.md`
+2. Tu colles ta section Git (préparée en amont, markdown prêt)
+3. Tu commit
+4. Tu rafraîchis la vue LiaScript pour montrer le résultat
+
+**Ce que tu dis** :
+> *"Aller plus loin : j'ai écrit de mon côté toute une partie sur l'utilisation de Git, qui complète bien ce cours. Je vais l'injecter ici. Je colle, je commit, et… voilà. Le cours a gagné un chapitre entier. **Ça, c'est le Remix** : je fusionne du contenu d'origines différentes pour créer une nouvelle ressource.*
+> 
+> *Et notez bien : c'est du markdown. C'est lisible, c'est éditable dans n'importe quel éditeur de texte. Pas de format propriétaire, pas de dépendance à une plateforme."*
+
+**Backstage** : c'est le bloc le plus long, celui qui peut déborder. Si tu es en retard, tu peux écourter en ne recommitant pas et en montrant juste le markdown source.
+
+**Plan B** : capture avant/après du rendu LiaScript.
+
+##### Le suivi des versions
 
            --{{0}}--
 Sans doute un des aspects les plus importants quand on travaille sur du long terme ou à plusieurs, c'est de pouvoir s'y retrouver entre plusieurs états d'un même projet, d'éventuellement revenir à un état antérieur, voire de dupliquer un projet entier (à soi ou non) pour le modifier en tant que projet indépendant (faire un **fork**). 
@@ -80,17 +158,33 @@ Le suivi des versions implique aussi que votre travail, ou le travail de quelqu'
 Le versioning, une invitation au partage et à la collectivisation rigoureuse des moyens de productions pédagogiques.
 ![Le suivi des versions](assets/Pk_Liascript/Versioning.png)
 
-### Un flow de travail plus fluide
+#### ⏱️ 14:00 — 18:00 | REDISTRIBUTE
 
-           --{{0}}--
-C'est sans doute plus subjectif, mais je suis plus à l'aise avec un système de type éditeur de texte comme interface de production que dans un LMS avec une GUI[^1] super chargée et, quand on a un PC tout naze comme le mien, super LENTE !
+**Ce que tu fais** :
+1. Sur GitHub, tu ouvres le `.md` modifié
+2. Tu cliques sur "Raw"
+3. Tu copies l'URL raw
+4. Tu la colles dans le générateur de lien LiaScript (ou directement dans l'URL LiaScript)
+5. Tu montres le cours live, utilisable
+6. Tu évoques : "ce lien, je peux le poster n'importe où — mon ENT, un mail, Zenodo pour archivage pérenne avec DOI…"
 
-           {{1}}
-![les joies d'une GUI un peu lourde](assets/moodle/GUI.png)Parfois, Moodle est un peu overkill quand vous avez besoin de corriger une coquille.
+**Ce que tu dis** :
+> *"Dernière étape : je veux partager ma version remixée. Je récupère le lien raw, je le bascule en URL LiaScript, et j'obtiens un cours vivant, accessible à n'importe qui avec juste un navigateur. Ce lien, je peux le poster où je veux : mon ENT, un mail à mes collègues, ou même Zenodo pour obtenir un DOI et un archivage pérenne.*
+> 
+> ***Ça, c'est le Redistribute.** Et remarquez quelque chose d'important : GitHub, qu'on présente souvent comme un outil de développeur, fonctionne ici comme un **espace de partage et de valorisation** de contenus pédagogiques. Exactement comme HAL ou Zenodo, mais avec en plus la dimension éditable."*
 
-[^1]: Graphical User Interface : donc une interface utilisateur visuelle avec fenêtres, bouton, menus...
+**Plan B** : lien LiaScript déjà généré en amont, prêt à coller si la chaîne casse.
 
-### Un partage facilité
+#### ⏱️ 18:00 — 20:00 | Bouclage + transition
+
+**Ce que tu dis** :
+> *"Et maintenant, quelqu'un d'autre peut forker mon cours remixé, le réviser à son tour, le re-remixer, le re-redistribuer. **Le cycle des 5R reprend**. C'est ça, une culture REL vivante : pas une ressource figée qu'on télécharge, mais une ressource qui circule et qui s'enrichit.*
+> 
+> *[Transition vers Souplesse] On vient de voir que vos contenus peuvent circuler librement. Mais encore faut-il que l'outil soit capable de porter ce que vous voulez vraiment enseigner. Passons au deuxième argument : la souplesse."*
+
+**Questions chat** : tu prends 1-2 questions rapides si le timing le permet, sinon tu renvoies à la fin.
+
+### Un outil SOUPLE
 
 ## Mise en route
 
@@ -362,66 +456,6 @@ Les mises en forme qui suivent n'existent pas en MarkDown de base :
 * `~~souligné~~` -> ~~souligné~~<!-- class="notranslate"--> (attention avec l'éditeur VS Code votre texte apparaîtra ~barré~, mais il sera bien ~~souligné~~ dans LiaScript
 * `~~~barré et souligné~~~` -> ~~~barré et souligné~~~<!-- class="notranslate"--> (remarque similaire ici, l'affichage du texte dans VS Code peut être confusionnalisant)
 * `^en exposant^` -> ^en exposant^<!-- class="notranslate"--> (comme ça vous allez pouvoir écrire XIX^**e**^ et pas XIX**e**.
-
-### Extensions
-
-     --{{0}}--
-But you can also include other features such as spoken text.
-
-      --{{1}}--
-Insert any kind of audio file:
-
-       {{1}}
-?[audio](https://bigsoundbank.com/UPLOAD/mp3/1068.mp3)
-
-
-     --{{2}}--
-Even videos or change the language completely.
-
-       {{2-3}}
-!?[video](https://www.youtube.com/watch?v=bICfKRyKTwE)
-
-
-      --{{3 Russian Female}}--
-Первоначально создан в 2004 году Джоном Грубером (англ. John Gruber) и Аароном
-Шварцем. Многие идеи языка были позаимствованы из существующих соглашений по
-разметке текста в электронных письмах...
-
-
-    {{3}}
-Type "voice" to see a list of all available languages.
-
-
-### Styling
-
-<!-- class = "animated rollIn" style = "animation-delay: 2s; color: purple" -->
-The whole text-block should appear in purple color and with a wobbling effect.
-Which is a **bad** example, please use it with caution ...
-~~ only this is red ;-) ~~ <!-- class = "animated infinite bounce" style = "color: red;" -->
-
-## Quizzes
-
-### A Textquiz
-
-What did the **fish** say when he hit a **concrete wall**?
-
-    [[dam]]
-
-### Multiple Choice
-
-Just add as many points as you wish:
-
-    [[X]] Only the **X** marks the correct point.
-    [[ ]] Empty ones are wrong.
-    [[X]] ...
-
-### Single Choice
-
-Just add as many points as you wish:
-
-    [( )] ...
-    [(X)] <-- Only the **X** is allowed.
-    [( )] ...
 
 ## More
 
