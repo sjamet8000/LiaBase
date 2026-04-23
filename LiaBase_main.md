@@ -76,16 +76,7 @@ LiaScript a pu être présenté par son créateur André Dietrich comme une alte
 
 [^1]: Learning System Management, donc en gros tout ce qui ressemble à Moodle.
 
-### Un partage facilité
-
-Transition Partage → Souplesse
-> *"On vient de voir que vos contenus peuvent circuler, être repris, modifiés, redistribués. Mais encore faut-il que l'outil soit capable de porter ce que vous voulez enseigner. Parce qu'un outil qui vous enferme dans un format pauvre, c'est une autre forme de dépendance. Regardons jusqu'où LiaScript peut aller."*
-
-Transition Souplesse → Résilience
-> *"Vous avez vu qu'on peut aller très loin avec LiaScript. Mais il reste une question : qu'est-ce qui se passe si LiaScript disparaît demain ? Si le projet s'arrête ? C'est là qu'intervient le 3ème argument : vos contenus vous survivent."*
-
-Clôture
-> *"Partage, souplesse, résilience. Trois manières différentes de dire la même chose : avec LiaScript, **vos contenus pédagogiques vous appartiennent vraiment**. Et ça, dans un paysage dominé par des plateformes qui captent et enferment, c'est politique."*
+### Un outil pensé pour l'accessibilité et le partage
 
 🎯 Objectif de la séquence
 Démontrer que LiaScript + GitHub permet nativement les 5R des REL, en faisant vivre le cycle complet sur un cours réel.
@@ -96,9 +87,31 @@ Démontrer que LiaScript + GitHub permet nativement les 5R des REL, en faisant v
 - Un bloc de contenu Git prêt à injecter (rédigé par toi)
 - Une vieille capture d'écran à remplacer dans le cours
 
-#### ⏱️ 0:00 — 2:00 | Cadrage "Les 5R"
+#### Les 5R
 
-**Ce que tu montres** : slide simple avec les 5R (Retain, Reuse, Revise, Remix, Redistribute) + définition courte de chacun.
+``````````````````````````````````````````````````
+           .--------------.       .-------------. 
+           |  Réutiliser  |       |   Réviser   |
+           |    . <-.     |       |    . <-.    |
+     +----->   (     )    +------->   (  +  )   +------+             
+     |     |    `-> '     |       |    `-> '    |      |
+     |     '--------------'       '-------------'      |
+.----+----.                                      .-----V-----.
+| Retenir |                                      |  Remixer  |
+|    |    |                                      |   \   /   |
+|  | v |  |                                      |    V V    |
+|  +---+  |                                      |    ^ ^    |
+'----^----'                                      |   /   \   |
+     |                                           '-----+-----'
+     |               .----------------.                | 
+     |               |  Redistribuer  |                |
+     |               |    ^  ^  ^     |                |   
+     +---------------+     \ | /      <----------------+
+                     |      .+.       |
+                     |     (   )      |
+                     |      `-'       |
+                     '----------------'
+``````````````````````````````````````````````````
 
 **Ce que tu dis** (verbatim de référence) :
 > *"Les REL — Ressources Éducatives Libres — reposent sur 5 libertés qu'on appelle les 5R. Retenir, réutiliser, réviser, remixer, redistribuer. Je vais vous montrer tout de suite en quoi LiaScript respecte super bien ces 5R. Et donc qu'en composant une formation sur LiaScript, vous élaborez une formation **nativement REL**. On y va."*
@@ -473,3 +486,12 @@ Les mises en forme qui suivent n'existent pas en MarkDown de base :
 Find out what you can even do more with quizzes:
 
 https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md
+
+Transition Partage → Souplesse
+> *"On vient de voir que vos contenus peuvent circuler, être repris, modifiés, redistribués. Mais encore faut-il que l'outil soit capable de porter ce que vous voulez enseigner. Parce qu'un outil qui vous enferme dans un format pauvre, c'est une autre forme de dépendance. Regardons jusqu'où LiaScript peut aller."*
+
+Transition Souplesse → Résilience
+> *"Vous avez vu qu'on peut aller très loin avec LiaScript. Mais il reste une question : qu'est-ce qui se passe si LiaScript disparaît demain ? Si le projet s'arrête ? C'est là qu'intervient le 3ème argument : vos contenus vous survivent."*
+
+Clôture
+> *"Partage, souplesse, résilience. Trois manières différentes de dire la même chose : avec LiaScript, **vos contenus pédagogiques vous appartiennent vraiment**. Et ça, dans un paysage dominé par des plateformes qui captent et enferment, c'est politique."*
