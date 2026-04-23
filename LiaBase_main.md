@@ -33,40 +33,50 @@ script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
     {{2}}
 Ça s'appelle un LiaScript par récursivité
 
-## Alors, pourquoi LiaScript et pas Moodle ?
+## LiaScript, Moodle, faut-il vraiment choisir ?
 
            --{{0}}--
-Je vous arrête tout de suite, on ne part pas en guerre, c'est une " licence pédagogique " qui me permet de placer abusivement LiaScript sur le même plan qu'un LMS[^1], ce qui n'est pas tout à fait le cas, malgré ce qu'en pense son créateur André Dietrich (cf. un [article de son blog datant de 2020](https://liascript.github.io/blog/from-hero-to-zero-with-lms/)).
+LiaScript a pu être présenté par son créateur André Dietrich comme une alternative aux LMS[^1] (cf. un [article de son blog datant de 2020](https://liascript.github.io/blog/from-hero-to-zero-with-lms/)), ce qu'il peut être en raison de sa grande plasticité. Mais on peut tout aussi bien concevoir LiaScript comme un outil *complémentaire* des LMS tels que Moodle.
 
 ![Who will prevail ?](assets\Pk_Liascript\Who_will_prevail.png)
 
-Moodle, LiaScript... Serait-ce LA bataille finale ?
+*Moodle, LiaScript, Scenari... et si on se faisait surtout plein de câlins ?*
 
-           {{1}}
-<!-- Bloc Résumé --> 
-<div style="background-color:#72003e; padding: 0.8em; border-radius: 6px; margin-top:2em;"> 
+           {{1-2}}
+<lia-keep>
+<div style="background-color:#f98012; padding: 0.8em; border-radius: 6px; margin-top:2em;"> 
     <div style="color:white; display:flex; align-items:center;"> 
-        <div style="font-size: 1.2em;"><strong>Moodle et consort (LMS)</strong></div> 
+        <div style="font-size: 1.2em;"><strong>Moodle et consort (LMS) : les bons côtés</strong></div> 
     </div> 
 </div> 
 <div style="background-color:#F5F6F9; font-size: 0.95em; padding: 1.1em 1.2em; margin-top:-8px; border-radius: 0 0 6px 6px; line-height: 1.6;"> 
-    <p> 
-        Paragraphe 1 
-    </p> 
-    <p> 
-        Paragraphe 2 
-    </p> 
-</div> 
+    <ul>
+        <li> <span style="font-size: 1.2em;"><strong>Centralisation institutionnelle</strong></span> : les cours sont conçus au sein de l'environnement numérique des établissements ; </li>
+        <li> <span style="font-size: 1.2em;"><strong>Suivi et évaluation</strong></span> : outils pour tracker le suivi et les progrès, notifier les échéances (par mail ou mobile), certifier les compétences et mesurer l’efficacité via des rapports ; </li>
+        <li> <span style="font-size: 1.2em;"><strong>Polyvalence fonctionnelle</strong></span> : grande diversité d'activités qui vont de la page de cours à l'intégration de SCORMS, du H5P natif, des wiki, etc. </li>
+    </ul>
+</div>
+</lia-keep>
 
-           --{{1}}--
-On peut plutôt considérer que ce sont deux outils pour deux usages bien différents :
+           {{2-3}}
+<lia-keep>
+<div style="background-color:#170E02; padding: 0.8em; border-radius: 6px; margin-top:2em;"> 
+    <div style="color:white; display:flex; align-items:center;"> 
+        <div style="font-size: 1.2em;"><strong>Moodle et consort (LMS) : les moins bons côtés</strong></div> 
+    </div> 
+</div> 
+<div style="background-color:#F5F6F9; font-size: 0.95em; padding: 1.1em 1.2em; margin-top:-8px; border-radius: 0 0 6px 6px; line-height: 1.6;"> 
+    <ul>
+        <li> <span style="font-size: 1.2em;"><strong>Encapsulage institutionnel</strong></span> : les contenus pédagogiques sont d'abord conçus pour une communauté spécifique avec des droits d'accès spécifiques (même s'il est possible d'ouvrir largement les contenus), le partage, la réutilisation et le remixage n'en est pas facilité ; </li>
+        <li> <span style="font-size: 1.2em;"><strong>Interface graphique utilisateur lourde</strong></span> : le nombre de clics nécessaires pour intervenir sur une activité peut être important, lourdeur augmentée par la lenteur des serveurs (web, base de données, utilisateurs en simultané) ; </li>
+        <li> <span style="font-size: 1.2em;"><strong>La tendance au tracking overkill</strong></span> : systématisation du tracking (allez voir les logs d'un cours sur Moodle) avec une granularité comportementale pas forcément nécessaire pour l'UX et l'amélioration continue. </li>
+    </ul>
+</div>
+</lia-keep>
 
 [^1]: Learning System Management, donc en gros tout ce qui ressemble à Moodle.
 
 ### Un partage facilité
-
-Intro générale (début d'atelier)
-> *"LiaScript, ce n'est pas juste un outil de plus. C'est un outil qui vous redonne **le contrôle** sur vos contenus pédagogiques. Je vais vous montrer ça à travers 3 arguments : d'abord que vos contenus **circulent librement**, ensuite qu'ils **s'adaptent à vos besoins réels**, et enfin qu'ils **vous survivent**. On commence par le partage."*
 
 Transition Partage → Souplesse
 > *"On vient de voir que vos contenus peuvent circuler, être repris, modifiés, redistribués. Mais encore faut-il que l'outil soit capable de porter ce que vous voulez enseigner. Parce qu'un outil qui vous enferme dans un format pauvre, c'est une autre forme de dépendance. Regardons jusqu'où LiaScript peut aller."*
@@ -184,6 +194,8 @@ Le versioning, une invitation au partage et à la collectivisation rigoureuse de
 **Questions chat** : tu prends 1-2 questions rapides si le timing le permet, sinon tu renvoies à la fin.
 
 ### Un outil SOUPLE
+
+### Un outil RESILIENT
 
 ## Mise en route
 
