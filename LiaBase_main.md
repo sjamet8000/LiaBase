@@ -68,7 +68,7 @@ LiaScript a pu être présenté par son créateur André Dietrich comme une alte
 <div style="background-color:#F5F6F9; font-size: 0.95em; padding: 1.1em 1.2em; margin-top:-8px; border-radius: 0 0 6px 6px; line-height: 1.6;"> 
     <ul>
         <li> <span style="font-size: 1.2em;"><strong>Encapsulage institutionnel</strong></span> : les contenus pédagogiques sont d'abord conçus pour une communauté spécifique avec des droits d'accès spécifiques (même s'il est possible d'ouvrir largement les contenus), le partage, la réutilisation et le remixage n'en est pas facilité ; </li>
-        <li> <span style="font-size: 1.2em;"><strong>Interface graphique utilisateur lourde</strong></span> : le nombre de clics nécessaires pour intervenir sur une activité peut être important, lourdeur augmentée par la lenteur des serveurs (web, base de données, utilisateurs en simultané) ; </li>
+        <li> <span style="font-size: 1.2em;"><strong>Interface graphique utilisateur lourde</strong></span> : le nombre de clics nécessaires pour intervenir sur une activité peut être important, lourdeur augmentée par la lenteur des serveurs institutionnels (web, base de données, utilisateurs en simultané) ; </li>
         <li> <span style="font-size: 1.2em;"><strong>La tendance au tracking overkill</strong></span> : systématisation du tracking (allez voir les logs d'un cours sur Moodle) avec une granularité comportementale pas forcément nécessaire pour l'UX et l'amélioration continue. </li>
     </ul>
 </div>
