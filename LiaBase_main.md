@@ -89,6 +89,9 @@ Démontrer que LiaScript + GitHub permet nativement les 5R des REL, en faisant v
 
 #### Les 5R
 
+        --{{0}}--
+J'utilise à titre personnel une définition assez simple de ce que sont les REL, celle de David Wiley (cf. [La Fabrique REL](https://fabriquerel.org/rel/) ainsi que le [blog de David Wiley](https://opencontent.org/definition/)), qui me rappelle les 5W des journalistes. Les 5R font office de critères pour définir si telle ou telle ressource est bien " libre ". Dans ce qui suit, je vais essayer de vous montrer en quoi une ressources produite avec LiaScript est nativement ouverte.
+
 ``````````````````````````````````````````````````
            .--------------.       .-------------. 
            |  Réutiliser  |       |   Réviser   |
@@ -113,12 +116,7 @@ Démontrer que LiaScript + GitHub permet nativement les 5R des REL, en faisant v
                      '----------------'
 ``````````````````````````````````````````````````
 
-**Ce que tu dis** (verbatim de référence) :
-> *"Les REL — Ressources Éducatives Libres — reposent sur 5 libertés qu'on appelle les 5R. Retenir, réutiliser, réviser, remixer, redistribuer. Je vais vous montrer tout de suite en quoi LiaScript respecte super bien ces 5R. Et donc qu'en composant une formation sur LiaScript, vous élaborez une formation **nativement REL**. On y va."*
-
-**Backstage** : ne pas détailler chaque R maintenant, tu y reviendras concrètement.
-
-#### ⏱️ 2:00 — 5:00 | RETAIN + REUSE + FORK
+#### Retenir (Retain), Réutiliser (Reuse)
 
 **Ce que tu fais** :
 1. Tu montres le cours original sur GitHub
@@ -132,7 +130,7 @@ Démontrer que LiaScript + GitHub permet nativement les 5R des REL, en faisant v
 
 **Plan B** : si le fork rame, tu as une capture en backup et tu expliques ce qui se passe.
 
-#### ⏱️ 5:00 — 8:00 | REVISE (remplacement de capture)
+#### Réviser (Revise)
 
 **Ce que tu fais** :
 1. Tu ouvres le fichier `.md` dans l'éditeur GitHub (crayon)
@@ -147,7 +145,7 @@ Démontrer que LiaScript + GitHub permet nativement les 5R des REL, en faisant v
 
 **Plan B** : si la modif en ligne plante, tu montres une capture du résultat attendu.
 
-#### ⏱️ 8:00 — 14:00 | REMIX (ajout d'une section Git)
+#### Remixer (Remixe)
 
 **Ce que tu fais** :
 1. Tu ouvres le fichier `.md`
@@ -180,7 +178,7 @@ Le suivi des versions implique aussi que votre travail, ou le travail de quelqu'
 Le versioning, une invitation au partage et à la collectivisation rigoureuse des moyens de productions pédagogiques.
 ![Le suivi des versions](assets/Pk_Liascript/Versioning.png)
 
-#### ⏱️ 14:00 — 18:00 | REDISTRIBUTE
+#### Redistribuer (Redistribute)
 
 **Ce que tu fais** :
 1. Sur GitHub, tu ouvres le `.md` modifié
