@@ -90,7 +90,7 @@ Démontrer que LiaScript + GitHub permet nativement les 5R des REL, en faisant v
 #### Les 5R
 
         --{{0}}--
-J'utilise à titre personnel une définition assez simple de ce que sont les REL, celle de David Wiley (cf. [La Fabrique REL](https://fabriquerel.org/rel/) ainsi que le [blog de David Wiley](https://opencontent.org/definition/)), qui me rappelle les 5W des journalistes. Les 5R font office de critères pour définir si telle ou telle ressource est bien " libre ". Dans ce qui suit, je vais essayer de vous montrer en quoi une ressources produite avec LiaScript est nativement ouverte.
+J'utilise à titre personnel une définition assez simple de ce que sont les REL, celle de David Wiley (cf. [La Fabrique REL](https://fabriquerel.org/rel/) ainsi que le [blog de David Wiley](https://opencontent.org/definition/)), qui me rappelle les 5W des journalistes. Les 5R font office de critères pour définir si telle ou telle ressource est bien " libre ". Je ne détaille pas plus, et je vais vous montrer concrètement comment une ressource éducative qui a été faite sur LiaScript permet nativement ces 5 actions.
 
 ``````````````````````````````````````````````````
            .--------------.       .-------------. 
@@ -116,19 +116,42 @@ J'utilise à titre personnel une définition assez simple de ce que sont les REL
                      '----------------'
 ``````````````````````````````````````````````````
 
-#### Retenir (Retain), Réutiliser (Reuse)
+#### Retiens le repo pour nous deux jusqu’à la fin du monde
 
-**Ce que tu fais** :
-1. Tu montres le cours original sur GitHub
-2. Tu cliques sur "Fork"
-3. Le cours apparaît sur ton compte
+L'action retain/retenir, c'est :
 
-**Ce que tu dis** :
-> *"Première étape : je prends ce cours qui m'intéresse. Un clic sur Fork, et j'en ai une copie sur mon compte GitHub. **Ce que je viens de faire, c'est le Retain** : cette copie est à moi, elle est chez moi. Même si le cours original disparaît demain, j'ai mon exemplaire.*
-> 
+> " make, own, and control a 
+> copy of the resource "
+>
+> -- David Wiley ([*Defining the "Open" in Open Content and Open Educational Ressources*, 2023](https://opencontent.org/definition/))
+
+        --{{0}}--
+Mettons que je traîne sur GitHub et que je tombe sur [**ce cours**](https://github.com/damienbelveze/Liascript) (coucou Damien).
+
+        {{0-1}}
+![Répertoire de Damien Belvèze](assets/github/github_repo_damien_belveze.png)<!--width="60%"-->
+
+        {{1-2}}
+![Fork du répertoire de Damien Belvèze](assets/github/github_repo_damien_belveze_fork.png)<!--width="60%"-->
+
+        {{2-3}}
+![Fork du répertoire de Damien Belvèze](assets/github/github_repo_damien_belveze_fork_2.png)<!--width="60%"-->
+
+        {{3-4}}
+![Répertoire de Damien forké chez moi, je peux le modifier](assets/github/github_repo_damien_belveze_forked.png)<!--width="60%"-->
+
+#### Réviser
+
+<script
+  style="display: block"
+  modify="false"
+>
+"HTML: <marquee>Je n'ai pas trouvé de paroles de chanson avec réviser dedans.</marquee>"
+</script>
+
+#### Réutilise le repo pour nos cœurs dans sa course vagabonde
+
 > *Et déjà, à ce stade, je peux l'utiliser tel quel avec mes apprenants — je récupère le lien LiaScript et je le partage. **Ça, c'est le Reuse**. Je n'ai rien modifié, mais j'ai fait mien ce contenu."*
-
-**Plan B** : si le fork rame, tu as une capture en backup et tu expliques ce qui se passe.
 
 #### Réviser (Revise)
 
@@ -283,7 +306,7 @@ Aller sur le [site officiel](https://git-scm.com/install/windows) et de téléch
 Sélectionnez l'installateur `Git for Windows/x64 Setup` qui devrait fonctionner dans la plupart des cas.
 ![Page de téléchargement de Git for Windows](assets/git/git_dl.png)
 
-L'installateur de Git sous Windows a beaucoup d'étapes avec plein de cases à cocher, **laisser toutes les options par défaut et de cliquer sur "Next" jusqu'au bout**. Ça ira très bien pour 99 % des usages.
+L'installateur de Git sous Windows a beaucoup d'étapes avec plein de cases à cocher, **laissez toutes les options par défaut et de cliquer sur "Next" jusqu'au bout**. Ça ira très bien pour 99 % des usages.
 
 #### Configurer Git
 
@@ -477,7 +500,7 @@ Les mises en forme qui suivent n'existent pas en MarkDown de base :
 
 * `~~souligné~~` -> ~~souligné~~<!-- class="notranslate"--> (attention avec l'éditeur VS Code votre texte apparaîtra ~barré~, mais il sera bien ~~souligné~~ dans LiaScript
 * `~~~barré et souligné~~~` -> ~~~barré et souligné~~~<!-- class="notranslate"--> (remarque similaire ici, l'affichage du texte dans VS Code peut être confusionnalisant)
-* `^en exposant^` -> ^en exposant^<!-- class="notranslate"--> (comme ça vous allez pouvoir écrire XIX^**e**^ et pas XIX**e**.
+* `^en exposant^` -> ^en exposant^<!-- class="notranslate"--> (comme ça vous allez pouvoir écrire XIX^**e**^ et pas XIX**e**).
 
 ## More
 
