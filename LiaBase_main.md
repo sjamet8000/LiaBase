@@ -143,6 +143,13 @@ Je retrouve le répertoire forké avec tout son contenu, je peux le modifier dan
 
 #### Réviser (Revise)
 
+L'action revise/réviser, c'est :
+
+> " edit, adapt, and modify 
+> your copy of the resource "
+>
+> -- David Wiley ([*Defining the "Open" in Open Content and Open Educational Ressources*, 2023](https://opencontent.org/definition/))
+
         --{{0}}--
 A partir de ce moment-là, je suis libre de faire ce que je veux sur le contenu du cours, ça n'a pas de conséquence sur le répertoire d'origine.
 
@@ -151,7 +158,6 @@ Je peux par exemple corriger une minuscule faute que j'ai repéré dans le titre
         --{{1}}--
 Dans GitHub je ne peux pas corriger directement dans l'affichage `Preview`, mais il me suffit de cliquer sur `Edit this file` pour afficher le *Code* qui, lui, est éditable.
 
-        {{1}}
 ![Exemple d'une modification minime](assets\Cours_Damien\Titre_cours_Damien_edit.png)<!--width="60%"-->
 
         --{{2}}--
@@ -162,29 +168,20 @@ Le *Code* est austère, mais c'est un type d'affichage auquel il faut s'habituer
 ![Modification dans le Code](assets\Cours_Damien\Titre_cours_Damien_edit_code.png)<!--width="60%"-->
 
         {{3}}
-Autre point de vocabulaire, ne cherchez pas le bouton *save* ici. Pour enregistrer vos modifications, même minimes, cliquez sur `Commit changes...`, décrivez la modification, puis sur `Commite Changes`
+Autre point de vocabulaire, ne cherchez pas le bouton *save* ici. Pour enregistrer vos modifications, même minimes, cliquez sur `Commit changes...`, décrivez la modification, puis sur `Commite Changes`, voilà vous avez " sauvegardé " !
 ![Wallace et Commit !](assets\github\Commit_github.svg)<!--width="50%"-->
 
-#### Réutiliser (Reuse)
-
-*Et déjà, à ce stade, je peux l'utiliser tel quel avec mes apprenants — je récupère le lien LiaScript et je le partage. **Ça, c'est le Reuse**. Je n'ai rien modifié, mais j'ai fait mien ce contenu."*
-
-#### Réviser (Revise)
-
-**Ce que tu fais** :
-1. Tu ouvres le fichier `.md` dans l'éditeur GitHub (crayon)
-2. Tu repères la vieille capture
-3. Tu la remplaces par la nouvelle (upload ou modif du lien)
-4. Tu commit
-
-**Ce que tu dis** :
-> *"Maintenant, j'aimerais adapter ce cours. Par exemple, cette capture d'écran date un peu — l'interface a changé. Je l'ouvre, je remplace, je valide. **Ça, c'est le Revise** : j'ai modifié le contenu sans en changer la structure. Un geste simple, mais qui fait toute la différence pour la maintenance de vos formations."*
-
-**Backstage** : insister sur le fait que c'est un geste **de bibliothécaire-formateur**, pas de développeur.
-
-**Plan B** : si la modif en ligne plante, tu montres une capture du résultat attendu.
+        --{{3}}--
+Il n'y a pas de traduction parfaite pour le terme " commit " qu'on peut entendre comme le fait de *valider* une modification.
 
 #### Remixer (Remixe)
+
+L'action reuse/réutiliser, c'est :
+
+> " combine your original or revised copy of the resource with 
+> other existing material to create something new "
+>
+> -- David Wiley ([*Defining the "Open" in Open Content and Open Educational Ressources*, 2023](https://opencontent.org/definition/))
 
 **Ce que tu fais** :
 1. Tu ouvres le fichier `.md`
@@ -217,7 +214,27 @@ Le suivi des versions implique aussi que votre travail, ou le travail de quelqu'
 Le versioning, une invitation au partage et à la collectivisation rigoureuse des moyens de productions pédagogiques.
 ![Le suivi des versions](assets/Pk_Liascript/Versioning.png)
 
+#### Réutiliser (Reuse)
+
+L'action reuse/réutiliser, c'est :
+
+> " use your original, revised, or remixed 
+> copy of the resource publicly "
+>
+> -- David Wiley ([*Defining the "Open" in Open Content and Open Educational Ressources*, 2023](https://opencontent.org/definition/))
+
+A ce stade, je peux d'ores et déjà réutiliser le cours à mon propre compte, si j'estime ne pas avoir besoin d'apporter plus de modifications ou de faire des adaptations supplémentaires.
+
 #### Redistribuer (Redistribute)
+
+L'action redistribute/redistribuer, c'est :
+
+> " share copies of your original, revised, or remixed
+> copy of the resource with others "
+>
+> -- David Wiley ([*Defining the "Open" in Open Content and Open Educational Ressources*, 2023](https://opencontent.org/definition/))
+
+
 
 **Ce que tu fais** :
 1. Sur GitHub, tu ouvres le `.md` modifié
