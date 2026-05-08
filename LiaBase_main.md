@@ -286,10 +286,17 @@ On peut insérer des images... ![Une belle image de Erik Ciottu](assets/autre/ec
 
 ```````````````````````
 
-        {{2-3}}
+        {{3}}
 On peut intégrer à peu près tout et n'importe quoi, présentation Genially, tableau Miro, mais surtout... du H5P :-) (si vous voulez rester dans de la REL pure et dure)
 
-<iframe src="https://sjamet8000.github.io/LiaBase/actvities/demo_h5p.html" width="92%" height="100%" style="border:none;" allowfullscreen > </iframe> 
+        {{3}}
+<iframe
+  src="https://sjamet8000.github.io/RechDoc/activites/GSDroit.html"
+  width="92%"
+  height="600"
+  style="border:none;"
+  allowfullscreen
+></iframe>
 
 ### Un outil RESILIENT
 
