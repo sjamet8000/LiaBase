@@ -229,6 +229,36 @@ Le versioning, une invitation au partage et à la collectivisation rigoureuse de
 
 ### Un outil SOUPLE
 
+        {{0-1}}
+```markdown
+On peut juste écrire du texte, tout simplement...
+```
+
+        {{1-2}}
+On peut insérer des images... ![Une belle image de Erik Ciottu](assets/autre/ecrikciotti.svg "Une superbe photo du maire de Nice")
+
+        {{2-3}}
+```````````````````````
+                         +-------------+
+                     +-->| Des schémas |
+                     |   +-------------+
+                     |
++---------------+    |   +--------------+
+| On peut faire +----+-->| en ASCII-art |
++---------------+    |   +--------------+
+                     |
+                     |   +--------------+
+                     +-->| dingue non ? |
+                         +--------------+
+
+```````````````````````
+
+        {{2-3}}
+On peut intégrer à peut prèe tout et n'importe quoi, présentation Genially, tableau Miro, mais surtout... du H5P :-) (si vous voulez rester dans de la REL pure et dure)
+
+
+
+
 ### Un outil RESILIENT
 
 ## Mise en route
