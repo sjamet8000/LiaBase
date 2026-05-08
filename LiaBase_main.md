@@ -19,7 +19,7 @@ script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
 
 ![Logo Liascript](assets/liascript/LiaScript_logo.png)
 
-## 🎶 Je lui dirai démo bleue...
+## 🎶 Je lui dirai démo bleueuuh...
 
 <script
   style="display: block"
@@ -78,16 +78,8 @@ LiaScript a pu être présenté par son créateur André Dietrich comme une alte
 
 ### Un outil pensé pour l'accessibilité et le partage
 
-🎯 Objectif de la séquence
-Démontrer que LiaScript + GitHub permet nativement les 5R des REL, en faisant vivre le cycle complet sur un cours réel.
-
-🧱 Prérequis posés
-- Slide "Les 5R" affichée en permanence ou rappelée à chaque étape
-- Un cours LiaScript sur GitHub prêt à forker (cours du collègue sur LiaScript)
-- Un bloc de contenu Git prêt à injecter (rédigé par toi)
-- Une vieille capture d'écran à remplacer dans le cours
-
-#### Les 5R
+Les 5R
+===
 
         --{{0}}--
 J'utilise à titre personnel une définition assez simple de ce que sont les REL, celle de David Wiley (cf. [La Fabrique REL](https://fabriquerel.org/rel/) ainsi que le [blog de David Wiley](https://opencontent.org/definition/)), qui me rappelle les 5W des journalistes. Les 5R font office de critères pour définir si telle ou telle ressource est bien " libre ". Je ne détaille pas plus, et je vais vous montrer concrètement comment une ressource éducative qui a été faite sur LiaScript permet nativement ces 5 actions.
@@ -116,7 +108,7 @@ J'utilise à titre personnel une définition assez simple de ce que sont les REL
                      '----------------'
 ``````````````````````````````````````````````````
 
-#### Retiens le repo pour nous deux jusqu’à la fin du monde
+#### Retenir (Retain)
 
 L'action retain/retenir, c'est :
 
@@ -126,49 +118,70 @@ L'action retain/retenir, c'est :
 > -- David Wiley ([*Defining the "Open" in Open Content and Open Educational Ressources*, 2023](https://opencontent.org/definition/))
 
         --{{0}}--
-Mettons que je traîne sur GitHub et que je tombe sur [**ce cours**](https://github.com/damienbelveze/Liascript) (coucou Damien).
+Mettons que je traîne sur GitHub et que je tombe sur [**ce cours**](https://github.com/damienbelveze/Liascript) (coucou Damien), il est pile dans mon sujet, et son auteur a pris la peine de mentionner de manière explicite la licence de réutilisation, on est sur un CC-BY classique (donc réutilisation permisee avec mention de l'auteur).
 
         {{0-1}}
 ![Répertoire de Damien Belvèze](assets/github/github_repo_damien_belveze.png)<!--width="60%"-->
 
+        --{{1}}--
+Le fonctionnement de GitHub est pensé pour ce genre de cas, je peux *forker* le répertoire, c'est-à-dire que j'en crée une copie qui va directement dans la liste de mes répertoires sur mon compte.
+
         {{1-2}}
 ![Fork du répertoire de Damien Belvèze](assets/github/github_repo_damien_belveze_fork.png)<!--width="60%"-->
+
+        --{{2}}--
+Je lui donne un nom, pourquoi pas une description et je crée le *Fork*.
 
         {{2-3}}
 ![Fork du répertoire de Damien Belvèze](assets/github/github_repo_damien_belveze_fork_2.png)<!--width="60%"-->
 
+        --{{3}}--
+Je retrouve le répertoire forké avec tout son contenu, je peux le modifier dans porter atteinte à l'intégrité du répertoire d'origine, tout en conservant son historique, donc une traçabilité des modifications.
+
         {{3-4}}
 ![Répertoire de Damien forké chez moi, je peux le modifier](assets/github/github_repo_damien_belveze_forked.png)<!--width="60%"-->
 
-#### Réviser
-
-<script
-  style="display: block"
-  modify="false"
->
-"HTML: <marquee>Je n'ai pas trouvé de paroles de chanson avec réviser dedans.</marquee>"
-</script>
-
-#### Réutilise le repo pour nos cœurs dans sa course vagabonde
-
-> *Et déjà, à ce stade, je peux l'utiliser tel quel avec mes apprenants — je récupère le lien LiaScript et je le partage. **Ça, c'est le Reuse**. Je n'ai rien modifié, mais j'ai fait mien ce contenu."*
-
 #### Réviser (Revise)
 
-**Ce que tu fais** :
-1. Tu ouvres le fichier `.md` dans l'éditeur GitHub (crayon)
-2. Tu repères la vieille capture
-3. Tu la remplaces par la nouvelle (upload ou modif du lien)
-4. Tu commit
+L'action revise/réviser, c'est :
 
-**Ce que tu dis** :
-> *"Maintenant, j'aimerais adapter ce cours. Par exemple, cette capture d'écran date un peu — l'interface a changé. Je l'ouvre, je remplace, je valide. **Ça, c'est le Revise** : j'ai modifié le contenu sans en changer la structure. Un geste simple, mais qui fait toute la différence pour la maintenance de vos formations."*
+> " edit, adapt, and modify 
+> your copy of the resource "
+>
+> -- David Wiley ([*Defining the "Open" in Open Content and Open Educational Ressources*, 2023](https://opencontent.org/definition/))
 
-**Backstage** : insister sur le fait que c'est un geste **de bibliothécaire-formateur**, pas de développeur.
+        --{{0}}--
+A partir de ce moment-là, je suis libre de faire ce que je veux sur le contenu du cours, ça n'a pas de conséquence sur le répertoire d'origine.
 
-**Plan B** : si la modif en ligne plante, tu montres une capture du résultat attendu.
+Je peux par exemple corriger une minuscule faute que j'ai repéré dans le titre.
+
+        --{{1}}--
+Dans GitHub je ne peux pas corriger directement dans l'affichage `Preview`, mais il me suffit de cliquer sur `Edit this file` pour afficher le *Code* qui, lui, est éditable.
+
+![Exemple d'une modification minime](assets\Cours_Damien\Titre_cours_Damien_edit.png)<!--width="60%"-->
+
+        --{{2}}--
+Je supprime le " s " en trop (je vous invite à aller voir son cours qui est évidemment d'excellente facture).
+
+        {{2}}
+Le *Code* est austère, mais c'est un type d'affichage auquel il faut s'habituer !
+![Modification dans le Code](assets\Cours_Damien\Titre_cours_Damien_edit_code.png)<!--width="60%"-->
+
+        {{3}}
+Autre point de vocabulaire, ne cherchez pas le bouton *save* ici. Pour enregistrer vos modifications, même minimes, cliquez sur `Commit changes...`, décrivez la modification, puis sur `Commite Changes`, voilà vous avez " sauvegardé " !
+![Wallace et Commit !](assets\github\Commit_github.svg)<!--width="50%"-->
+
+        --{{3}}--
+Il n'y a pas de traduction parfaite pour le terme " commit " qu'on peut entendre comme le fait de *valider* une modification.
 
 #### Remixer (Remixe)
+
+L'action reuse/réutiliser, c'est :
+
+> " combine your original or revised copy of the resource with 
+> other existing material to create something new "
+>
+> -- David Wiley ([*Defining the "Open" in Open Content and Open Educational Ressources*, 2023](https://opencontent.org/definition/))
 
 **Ce que tu fais** :
 1. Tu ouvres le fichier `.md`
@@ -201,7 +214,27 @@ Le suivi des versions implique aussi que votre travail, ou le travail de quelqu'
 Le versioning, une invitation au partage et à la collectivisation rigoureuse des moyens de productions pédagogiques.
 ![Le suivi des versions](assets/Pk_Liascript/Versioning.png)
 
+#### Réutiliser (Reuse)
+
+L'action reuse/réutiliser, c'est :
+
+> " use your original, revised, or remixed 
+> copy of the resource publicly "
+>
+> -- David Wiley ([*Defining the "Open" in Open Content and Open Educational Ressources*, 2023](https://opencontent.org/definition/))
+
+A ce stade, je peux d'ores et déjà réutiliser le cours à mon propre compte, si j'estime ne pas avoir besoin d'apporter plus de modifications ou de faire des adaptations supplémentaires.
+
 #### Redistribuer (Redistribute)
+
+L'action redistribute/redistribuer, c'est :
+
+> " share copies of your original, revised, or remixed
+> copy of the resource with others "
+>
+> -- David Wiley ([*Defining the "Open" in Open Content and Open Educational Ressources*, 2023](https://opencontent.org/definition/))
+
+
 
 **Ce que tu fais** :
 1. Sur GitHub, tu ouvres le `.md` modifié
