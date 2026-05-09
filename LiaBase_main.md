@@ -28,17 +28,18 @@ script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
 "HTML: <marquee>Attention, tout ce qui suit a été réalisé sur LiaScript et, oui, j'ai intégré une démo de LiaScript dans le LiaScript que vous êtes en train de regarder, mais qu'est-ce que vous allez faire ? Me traîner devant les tribunaux ? Ha ! J'aimerais bien voir ça, vous savez peut-être que je travaille dans une fac de droit non ? J'ai des relations qui ne manqueront pas de vous mettre plus bas que terre si vous tentez de vous attaquer à ma personne, et ne comptez surtout pas sur moi pour intercéder en votre faveur, je suis d'un naturel rancunier, pour ne pas dire fou furieux. Dans le milieu, vous savez comment on m'appelle ? Le DANGER. Eh oui, vous êtes en train de vous en prendre à la seule personne qu'il fallait absolument laisser tranquille, mais c'est trop tard une fois que mes crocs sont plantés dans le mollet de l'oppression capitalistique je ne lâche plus, vous ne pouvez vous en prendre qu'à vous-mêmes. Voilà bisous.</marquee>"
 </script>
 
+        {{0-1}}
 <iframe style="height: 80vh; min-width: 100%; border: 1px black solid" src="https://liascript.github.io/LiveEditor/?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"></iframe>
 
-    {{2}}
-Ça s'appelle un LiaScript par récursivité
+    {{1}}
+Ça s'appelle un LiaScript par récursivité, ça ne sert à rien, mais c'est POSSIBLE.
 
 ## LiaScript, Moodle, faut-il vraiment choisir ?
 
            --{{0}}--
 LiaScript a pu être présenté par son créateur André Dietrich comme une alternative aux LMS[^1] (cf. un [article de son blog datant de 2020](https://liascript.github.io/blog/from-hero-to-zero-with-lms/)), ce qu'il peut être en raison de sa grande plasticité. Mais on peut tout aussi bien concevoir LiaScript comme un outil *complémentaire* des LMS tels que Moodle.
 
-![Who will prevail ?](assets\Pk_Liascript\Who_will_prevail.png)
+![Who will prevail ?](assets/Pk_Liascript/Who_will_prevail.png)
 
 *Moodle, LiaScript, Scenari... et si on se faisait surtout plein de câlins ?*
 
@@ -69,7 +70,7 @@ LiaScript a pu être présenté par son créateur André Dietrich comme une alte
     <ul>
         <li> <span style="font-size: 1.2em;"><strong>Encapsulage institutionnel</strong></span> : les contenus pédagogiques sont d'abord conçus pour une communauté spécifique avec des droits d'accès spécifiques (même s'il est possible d'ouvrir largement les contenus), le partage, la réutilisation et le remixage n'en est pas facilité ; </li>
         <li> <span style="font-size: 1.2em;"><strong>Interface graphique utilisateur lourde</strong></span> : le nombre de clics nécessaires pour intervenir sur une activité peut être important, lourdeur augmentée par la lenteur des serveurs institutionnels (web, base de données, utilisateurs en simultané) ; </li>
-        <li> <span style="font-size: 1.2em;"><strong>La tendance au tracking overkill</strong></span> : systématisation du tracking (allez voir les logs d'un cours sur Moodle) avec une granularité comportementale pas forcément nécessaire pour l'UX et l'amélioration continue. </li>
+        <li> <span style="font-size: 1.2em;"><strong>La tendance au tracking overkill</strong></span> : systématisation du tracking (allez voir les logs d'un cours sur Moodle) avec une granularité des données comportementales pas forcément nécessaire pour l'UX et l'amélioration continue. </li>
     </ul>
 </div>
 </lia-keep>
@@ -117,28 +118,28 @@ L'action retain/retenir, c'est :
 >
 > -- David Wiley ([*Defining the "Open" in Open Content and Open Educational Ressources*, 2023](https://opencontent.org/definition/))
 
-        --{{0}}--
+        --{{1}}--
 Mettons que je traîne sur GitHub et que je tombe sur [**ce cours**](https://github.com/damienbelveze/Liascript) (coucou Damien), il est pile dans mon sujet, et son auteur a pris la peine de mentionner de manière explicite la licence de réutilisation, on est sur un CC-BY classique (donc réutilisation permisee avec mention de l'auteur).
 
-        {{0-1}}
+        {{1-2}}
 ![Répertoire de Damien Belvèze](assets/github/github_repo_damien_belveze.png)<!--width="60%"-->
 
-        --{{1}}--
+        --{{2}}--
 Le fonctionnement de GitHub est pensé pour ce genre de cas, je peux *forker* le répertoire, c'est-à-dire que j'en crée une copie qui va directement dans la liste de mes répertoires sur mon compte.
 
-        {{1-2}}
+        {{2-3}}
 ![Fork du répertoire de Damien Belvèze](assets/github/github_repo_damien_belveze_fork.png)<!--width="60%"-->
 
-        --{{2}}--
+        --{{3}}--
 Je lui donne un nom, pourquoi pas une description et je crée le *Fork*.
 
-        {{2-3}}
+        {{3-4}}
 ![Fork du répertoire de Damien Belvèze](assets/github/github_repo_damien_belveze_fork_2.png)<!--width="60%"-->
 
-        --{{3}}--
+        --{{4}}--
 Je retrouve le répertoire forké avec tout son contenu, je peux le modifier dans porter atteinte à l'intégrité du répertoire d'origine, tout en conservant son historique, donc une traçabilité des modifications.
 
-        {{3-4}}
+        {{4-5}}
 ![Répertoire de Damien forké chez moi, je peux le modifier](assets/github/github_repo_damien_belveze_forked.png)<!--width="60%"-->
 
 #### Réviser (Revise)
@@ -158,18 +159,19 @@ Je peux par exemple corriger une minuscule faute que j'ai repéré dans le titre
         --{{1}}--
 Dans GitHub je ne peux pas corriger directement dans l'affichage `Preview`, mais il me suffit de cliquer sur `Edit this file` pour afficher le *Code* qui, lui, est éditable.
 
-![Exemple d'une modification minime](assets\Cours_Damien\Titre_cours_Damien_edit.png)<!--width="60%"-->
+        {{1-2}}
+![Exemple d'une modification minime](assets/Cours_Damien/Titre_cours_Damien_edit.png)<!--width="60%"-->
 
         --{{2}}--
 Je supprime le " s " en trop (je vous invite à aller voir son cours qui est évidemment d'excellente facture).
 
-        {{2}}
+        {{2-3}}
 Le *Code* est austère, mais c'est un type d'affichage auquel il faut s'habituer !
-![Modification dans le Code](assets\Cours_Damien\Titre_cours_Damien_edit_code.png)<!--width="60%"-->
+![Modification dans le Code](assets/Cours_Damien/Titre_cours_Damien_edit_code.png)<!--width="60%"-->
 
-        {{3}}
+        {{3-4}}
 Autre point de vocabulaire, ne cherchez pas le bouton *save* ici. Pour enregistrer vos modifications, même minimes, cliquez sur `Commit changes...`, décrivez la modification, puis sur `Commite Changes`, voilà vous avez " sauvegardé " !
-![Wallace et Commit !](assets\github\Commit_github.svg)<!--width="50%"-->
+![Wallace et Commit !](assets/github/Commit_github.svg)<!--width="50%"-->
 
         --{{3}}--
 Il n'y a pas de traduction parfaite pour le terme " commit " qu'on peut entendre comme le fait de *valider* une modification.
@@ -234,8 +236,6 @@ L'action redistribute/redistribuer, c'est :
 >
 > -- David Wiley ([*Defining the "Open" in Open Content and Open Educational Ressources*, 2023](https://opencontent.org/definition/))
 
-
-
 **Ce que tu fais** :
 1. Sur GitHub, tu ouvres le `.md` modifié
 2. Tu cliques sur "Raw"
@@ -268,9 +268,21 @@ On peut juste écrire du texte, tout simplement...
 ```
 
         {{1-2}}
-On peut insérer des images... ![Une belle image de Erik Ciottu](assets/autre/ecrikciotti.svg "Une superbe photo du maire de Nice")
+On peut insérer des images... ![Une belle image de Erik Ciottu](assets/autre/ecrikciotti.svg "Une superbe photo du maire de Nice")<!--width="30%"-->
 
         {{2-3}}
+```
+                         +-------------+
+                     +-->| Des schémas |
+                     |   +-------------+
+                     |
++---------------+    |   +--------------+
+| On peut faire +----+-->| en ASCII-art |
++---------------+        +--------------+
+                     
+```
+
+        {{3-4}}
 ```````````````````````
                          +-------------+
                      +-->| Des schémas |
@@ -280,16 +292,16 @@ On peut insérer des images... ![Une belle image de Erik Ciottu](assets/autre/ec
 | On peut faire +----+-->| en ASCII-art |
 +---------------+    |   +--------------+
                      |
-                     |   +--------------+
-                     +-->| dingue non ? |
-                         +--------------+
+                     |   +----------------------------------+
+                     +-->| qui deviennent des images en svg |
+                         +----------------------------------+
 
 ```````````````````````
 
-        {{3}}
+        {{4-5}}
 On peut intégrer à peu près tout et n'importe quoi, présentation Genially, tableau Miro, mais surtout... du H5P :-) (si vous voulez rester dans de la REL pure et dure)
 
-        {{3}}
+        {{4-5}}
 <iframe
   src="https://sjamet8000.github.io/RechDoc/activites/GSDroit.html"
   width="92%"
@@ -298,7 +310,57 @@ On peut intégrer à peu près tout et n'importe quoi, présentation Genially, t
   allowfullscreen
 ></iframe>
 
-### Un outil RESILIENT
+        {{5}}
+Il est même possible d'exécuter du code
+
+        {{5-6}}
+```javascript
+const motCle = "bibliothécaires formateurs";
+const url = `https://api.archives-ouvertes.fr/search/?q=${encodeURIComponent(motCle)}&rows=3&sort=submittedDate_s desc`;
+
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
+    console.log("📊 Nombre total de résultats dans HAL : " + data.response.numFound.toLocaleString('fr-FR'));
+    console.log("---");
+    console.log("🔎 3 publications les plus récentes :");
+    console.log("");
+    
+    data.response.docs.forEach((doc, i) => {
+      // On nettoie les chevrons encodés pour l'affichage
+      const citation = doc.label_s.replace(/&#x27E8;/g, '⟨').replace(/&#x27E9;/g, '⟩');
+      console.log(`[${i+1}] ${citation}`);
+      console.log(`    🔗 ${doc.uri_s}`);
+      console.log("");
+    });
+  })
+  .catch(error => {
+    console.log("❌ Erreur : " + error);
+  });
+
+"Interrogation de HAL en cours...";
+```
+<script>@input</script>
+
+### Un outil REMPLAÇABLE
+
+Et si LiaScript venait à mourir ?
+===
+        --{{0}}--
+LiaScript à la qualité d'être un outil remplaçable, il ne vous prend pas en otage. S'il meurt, on ne perd que la forme, mais pas le fond, pas les éléments, pas les intentions pédagogiques fondamentales. L'outil en tant que tel n'est qu'un interpréteur de votre code, et ce code se trouve être en majeure partie du MarkDown, donc globalement du texte.
+
+        {{0-1}}
+![La mort tragique de LiaScript](assets/liascript/the_death_of_LiaScript.svg)<!--width="100%"-->
+
+        {{1-2}}
+```````````````````````````````````````
++-----------------------+         +------------------------+          +-----------+
+|                       |         |                        |          |           |
+| Votre document en .md +-------->| Interpréteur LiaScript +--------->| Votre REL |
+|                       |         |                        |          |           |
++-----------------------+         +------------------------+          +-----------+
+
+```````````````````````````````````````
 
 ## Mise en route
 
@@ -381,7 +443,7 @@ L'installateur de Git sous Windows a beaucoup d'étapes avec plein de cases à c
 
 Une fois installé, ouvrez le terminal de commande **Git Bash**.
 
-![Ouvrir Git Bash](assets\git\git_bash.png)
+![Ouvrir Git Bash](assets/git/git_bash.png)
 
 Vérifiez que Git est bien installé en entrant :
 
@@ -391,7 +453,7 @@ git --version
 
 Si le terminal vous renvoie `git version 2.5x.x.windows` c'est bon.
 
-![Git version sur Git Bash](assets\git\git_version.png)
+![Git version sur Git Bash](assets/git/git_version.png)
 
 C'est là qu'il faut définir l'identité, pour que Git sache qui fait les modifications. 
 Voici les commandes à entrer (le --global est important pour que ça s'applique à tous vos futurs projets) :
@@ -432,7 +494,7 @@ A titre personnel, je clone mes répertoires directement dans le dossier Documen
 
 Une fois dans le dossier, faites un `clic droit` à l'intérieur puis cliquez sur `Open Git Bash here` pour ouvrir le terminal.
 
-![Git bash here](assets\git\open_git_bash_here.png)
+![Git bash here](assets/git/open_git_bash_here.png)
 
 Tapez :
 
@@ -440,7 +502,7 @@ Tapez :
 git clone https://github.com/nomdevotrecompte/nomdurepertoire.git
 ```
 
-![Clonage de répertoire](assets\git\git_clone.png)
+![Clonage de répertoire](assets/git/git_clone.png)
 
 Vous trouverez l'URL du répertoire en vous rendant... dans votre répertoire bien joué, et en cliquant sur `<> code`.
 
@@ -448,7 +510,7 @@ Vous trouverez l'URL du répertoire en vous rendant... dans votre répertoire bi
 
 Et voilà ! Votre répertoire avec tout son contenu est cloné sur votre PC ! Si c'est votre premier répertoire, seul le `README.md`et la `LICENCE` ont été clonées, mais ce n'est qu'un début.
 
-![Répertoire en local](assets\git\repo_git_local.png)
+![Répertoire en local](assets/git/repo_git_local.png)
 
 ### Finalisation de la configuration... et premier commit
 
@@ -458,7 +520,7 @@ Votre arborescence s'affichera sur la partie gauche de la fenêtre de VS Code. S
 
 Sélectionnez le `README.md` pour afficher l'éditeur de texte et voyez ce que ça donne. C'est visuellement beaucoup plus sobre et plus du tout WYSIWYG, mais on s'y fait.
 
-![Arborescence répertoire VS Code](assets\VS_Code\VS_Code_arbo.png)
+![Arborescence répertoire VS Code](assets/VS_Code/VS_Code_arbo.png)
 
 #### Créer votre premier document
 
@@ -466,7 +528,7 @@ Evidemment, vous n'allez pas vous mettre à composer dans le `README.md` (conser
 
 Dans l'arborescence de votre répertoire, toujours dans VS Code, cliquez sur l'icône `New File`juste à côté du nom de votre répertoire.
 
-![Newfile](assets\VS_Code\VS_Code_premier_fichier.png) Attention, comme vous le voyez sur la capture, il est indispensable de spécifier le format du fichier nouvellement créé, et ce format, c'est du `.md` donc le format MarkDown. Vous pouvez nommer votre document comme vous le souhaitez, mais ajoutez `.md` à la fin si vous voulez que ça fonctionne.
+![Newfile](assets/VS_Code/VS_Code_premier_fichier.png) Attention, comme vous le voyez sur la capture, il est indispensable de spécifier le format du fichier nouvellement créé, et ce format, c'est du `.md` donc le format MarkDown. Vous pouvez nommer votre document comme vous le souhaitez, mais ajoutez `.md` à la fin si vous voulez que ça fonctionne.
 
 Cliquez sur le document pour afficher l'éditeur de texte. Par défaut, il vous propose de générer du code, mais vous ne mangez pas de ce pain-là. Positionnez-vous dans l'éditeur comme vous le feriez pour un éditeur de texte classique et tapez :
 
@@ -476,7 +538,7 @@ lia-init
 
 Vous vous souvenez du plug in [LiaScript Snippets](#7) ? C'est là qu'il entre en action. Appuyez sur `entrée` pour faire apparaître une première base du cours à partir de laquelle vous allez pouvoir avancer, ainsi qu'un certain nombre de métadonnées super utiles.
 
-![Lia-init](assets\VS_Code\VS_Code_lia_init.png)
+![Lia-init](assets/VS_Code/VS_Code_lia_init.png)
 
 #### Lier VS Code à GitHub
 
@@ -484,13 +546,13 @@ Il est temps de vous mettre au travail, vous avez cloné votre répertoire GitHu
 
 En bas à gauche de la fenêtre de VS Code, cliquez sur `Accounts`puis sur `Backups and Sync Settings`.
 
-![VS Code Accounts](assets\VS_Code\VS_Code_sync.png)
+![VS Code Accounts](assets/VS_Code/VS_Code_sync.png)
 
 Les `Settings Sync`s'ouvrent en haut de la fenêtre (oui on voyage), cliquez sur `Sign in` puis sur `Sign in with GitHub`
 
-![Sign in with GitHub](assets\VS_Code\VS_Code_sync2.png)
+![Sign in with GitHub](assets/VS_Code/VS_Code_sync2.png)
 
-![Sign in GitHub](assets\VS_Code\VS_Code_sync3.png) VS Code va automatiquement ouvrir une page de votre navigateur enregistré par défaut pour vous demander si vous souhaitez vous connecter à GitHub, cliquez sur `Sign in` puis continuez. Si, de retour sur VS Code, le nom de votre compte s'affiche quand vous cliquez sur `Accounts` c'est bon !
+![Sign in GitHub](assets/VS_Code/VS_Code_sync3.png) VS Code va automatiquement ouvrir une page de votre navigateur enregistré par défaut pour vous demander si vous souhaitez vous connecter à GitHub, cliquez sur `Sign in` puis continuez. Si, de retour sur VS Code, le nom de votre compte s'affiche quand vous cliquez sur `Accounts` c'est bon !
 
 #### Premier commit
 
