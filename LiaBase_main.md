@@ -313,12 +313,12 @@ On peut intégrer à peu près tout et n'importe quoi, présentation Genially, t
 Pour le H5P, je vous conseille d'utiliser les outils de [La Digitale](https://ladigitale.site/) et tout particulièrement [Logiquiz](https://ladigitale.site/logiquiz/) (pour la conception de contenus H5P en local) et [Digiquiz](https://ladigitale.site/digiquiz/) (pour la lecture de contenus H5P si vous ne pouvez pas utiliser Moodle)
 
         {{4-5}}
-<iframe
-  src="https://sjamet8000.github.io/RechDoc/activites/GSDroit.html"
-  width="92%"
-  height="600"
-  style="border:none;"
-  allowfullscreen
+<iframe 
+src="https://ladigitale.dev/digiquiz/q/6a01ae72251c2" 
+allow="fullscreen; autoplay;" 
+frameborder="0" 
+width="90%" 
+height="650"
 ></iframe>
 
         {{5}}
