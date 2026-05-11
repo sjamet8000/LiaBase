@@ -19,6 +19,15 @@ script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
 
 ![Logo Liascript](assets/liascript/LiaScript_logo.png)
 
+Au programme ce midi
+===
+
+1. [Une petite démo](#2)
+
+2. [Pourquoi choisir LiaScript](#3) plutôt qu'une lessive ordinaire ?
+
+3. S'il nous reste du temps, je prends vos questions, ou on approfondit quelque chose, comme vous le sentez.
+
 ## 🎶 Je lui dirai démo bleueuuh...
 
 <script
@@ -33,6 +42,7 @@ script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
 
     {{1}}
 Ça s'appelle un LiaScript par récursivité, ça ne sert à rien, mais c'est POSSIBLE.
+===
 
 ## LiaScript, Moodle, faut-il vraiment choisir ?
 
@@ -271,16 +281,15 @@ On peut juste écrire du texte, tout simplement...
 On peut insérer des images... ![Une belle image de Erik Ciottu](assets/autre/ecrikciotti.svg "Une superbe photo du maire de Nice")<!--width="30%"-->
 
         {{2-3}}
-```
+``````````````````````````````````````````
                          +-------------+
                      +-->| Des schémas |
                      |   +-------------+
                      |
 +---------------+    |   +--------------+
 | On peut faire +----+-->| en ASCII-art |
-+---------------+        +--------------+
-                     
-```
++---------------+        +--------------+          
+``````````````````````````````````````````
 
         {{3-4}}
 ```````````````````````
@@ -295,11 +304,13 @@ On peut insérer des images... ![Une belle image de Erik Ciottu](assets/autre/ec
                      |   +----------------------------------+
                      +-->| qui deviennent des images en svg |
                          +----------------------------------+
-
 ```````````````````````
 
         {{4-5}}
 On peut intégrer à peu près tout et n'importe quoi, présentation Genially, tableau Miro, mais surtout... du H5P :-) (si vous voulez rester dans de la REL pure et dure)
+
+        --{{4}}--
+Pour le H5P, je vous conseille d'utiliser les outils de [La Digitale](https://ladigitale.site/) et tout particulièrement [Logiquiz](https://ladigitale.site/logiquiz/) (pour la conception de contenus H5P en local) et [Digiquiz](https://ladigitale.site/digiquiz/) (pour la lecture de contenus H5P si vous ne pouvez pas utiliser Moodle)
 
         {{4-5}}
 <iframe
@@ -346,11 +357,12 @@ fetch(url)
 
 Et si LiaScript venait à mourir ?
 ===
-        --{{0}}--
-LiaScript à la qualité d'être un outil remplaçable, il ne vous prend pas en otage. S'il meurt, on ne perd que la forme, mais pas le fond, pas les éléments, pas les intentions pédagogiques fondamentales. L'outil en tant que tel n'est qu'un interpréteur de votre code, et ce code se trouve être en majeure partie du MarkDown, donc globalement du texte.
 
         {{0-1}}
 ![La mort tragique de LiaScript](assets/liascript/the_death_of_LiaScript.svg)<!--width="100%"-->
+
+        --{{0}}--
+LiaScript à la qualité d'être un outil remplaçable, il ne vous prend pas en otage, il n'est finalement qu'un intermédiaire. S'il meurt, on ne perd que la forme, mais pas le fond, pas les éléments, pas les intentions pédagogiques fondamentales. L'outil en tant que tel n'est qu'un interpréteur de votre code, et ce code se trouve être en majeure partie du MarkDown, donc globalement du texte.
 
         {{1-2}}
 ```````````````````````````````````````
@@ -395,12 +407,12 @@ LiaScript à la qualité d'être un outil remplaçable, il ne vous prend pas en 
            '-----| éléments annexes    +----->| Auditer   +------'
                  | (images, H5P, etc.) |      | Convertir |
                  +---------------------+      `-----------'                  
-
 ```````````````````````````````````````
 
         {{4-5}}
-Et pour tout ça, il y a Pandoc ! (le logo est pas de moi hélas)
+Et pour tout ça, il y a [Pandoc](https://pandoc.org/) ! (le logo n'est hélas pas de moi)
 ![Logo de Pandoc](assets/Pandoc/Pandoc_logo.svg)
+Pandoc est un convertisseur universel de document, totalement gratuit. D'un usage peu intuitif au départ, il reste incroyablement pratique et efficace, notamment pour convertir des document rédigés en MarkDown vers le PDF, docx ou le HTML en conservant la structure du document, le texte, les images, les figures, etc.
 
 ## Mise en route
 
@@ -600,7 +612,7 @@ Vous avez créé votre premier document et vous souhaitez qu'ils soit synchronis
 
 Cliquez sur `Source Control`(par défaut, parmi les quelques icônes sur le côté gauche de la fenêtre de VS Code)
 
-![Premier commit](assets\VS_Code\VS_Code_commit.png)
+![Premier commit](assets/VS_Code/VS_Code_commit.png)
 
         --{{1}}--
 Vous arrivez dans le panneau de contrôle des sources. Juste en dessous du bouton `Commit` un certain nombre de `Changes` sont listés (notamment la création de votre nouveau document.) Cliquez sur le petit `+` en face de `Changes` les éléments listés deviennent des `Staged Changes`prêts à être envoyé dans votre répertoire GitHub. N'oubliez pas de décrire votre modification/ajout avant de cliquer sur `Commit` puis de cliquer sur `Sync Changes` pour que votre répertoire GitHub soit synchronisé.
@@ -678,12 +690,3 @@ Les mises en forme qui suivent n'existent pas en MarkDown de base :
 Find out what you can even do more with quizzes:
 
 https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md
-
-Transition Partage → Souplesse
-> *"On vient de voir que vos contenus peuvent circuler, être repris, modifiés, redistribués. Mais encore faut-il que l'outil soit capable de porter ce que vous voulez enseigner. Parce qu'un outil qui vous enferme dans un format pauvre, c'est une autre forme de dépendance. Regardons jusqu'où LiaScript peut aller."*
-
-Transition Souplesse → Résilience
-> *"Vous avez vu qu'on peut aller très loin avec LiaScript. Mais il reste une question : qu'est-ce qui se passe si LiaScript disparaît demain ? Si le projet s'arrête ? C'est là qu'intervient le 3ème argument : vos contenus vous survivent."*
-
-Clôture
-> *"Partage, souplesse, résilience. Trois manières différentes de dire la même chose : avec LiaScript, **vos contenus pédagogiques vous appartiennent vraiment**. Et ça, dans un paysage dominé par des plateformes qui captent et enferment, c'est politique."*
