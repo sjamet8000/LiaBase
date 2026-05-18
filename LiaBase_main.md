@@ -81,6 +81,7 @@ LiaScript a pu être présenté par son créateur André Dietrich comme une alte
         <li> <span style="font-size: 1.2em;"><strong>Encapsulage institutionnel</strong></span> : les contenus pédagogiques sont d'abord conçus pour une communauté spécifique avec des droits d'accès spécifiques (même s'il est possible d'ouvrir largement les contenus), le partage, la réutilisation et le remixage n'en est pas facilité ; </li>
         <li> <span style="font-size: 1.2em;"><strong>Interface graphique utilisateur lourde</strong></span> : le nombre de clics nécessaires pour intervenir sur une activité peut être important, lourdeur augmentée par la lenteur des serveurs institutionnels (web, base de données, utilisateurs en simultané) ; </li>
         <li> <span style="font-size: 1.2em;"><strong>La tendance au tracking overkill</strong></span> : systématisation du tracking (allez voir les logs d'un cours sur Moodle) avec une granularité des données comportementales pas forcément nécessaire pour l'UX et l'amélioration continue. </li>
+        <li> <span style="font-size: 1.2em;"><strong>La déconnexion contenant / contenu</strong></span> : globalement les LMS tombent dans les mêmes écueils de les CMS (Content System Management) qui, pour des raison d'efficacité font une distinction entre contenant et contenu et rendent la modification du contenant très complexe.</li>
     </ul>
 </div>
 </lia-keep>
@@ -162,7 +163,7 @@ L'action revise/réviser, c'est :
 > -- David Wiley ([*Defining the "Open" in Open Content and Open Educational Ressources*, 2023](https://opencontent.org/definition/))
 
         --{{0}}--
-A partir de ce moment-là, je suis libre de faire ce que je veux sur le contenu du cours, ça n'a pas de conséquence sur le répertoire d'origine.
+A partir de ce moment-là, je suis libre de faire ce que je veux sur le contenu du cours, ça n'a pas de conséquence sur le répertoire d'origine. Le fait de réviser va concerner toutes les modifications "mineures" -- même si une traduction n'est pas vraiment un travail mineur -- qui ne changent pas l'esprit de la ressource (elle garde donc les mêmes objectifs pédagogiques), mais l'ouvre à d'autres formats et d'autres modalités de lecture.
 
 Je peux par exemple corriger une minuscule faute que j'ai repéré dans le titre.
 
@@ -210,7 +211,7 @@ L'action reuse/réutiliser, c'est :
 
 **Plan B** : capture avant/après du rendu LiaScript.
 
-##### Le suivi des versions
+##### Réviser et remixer en toute légalité : le suivi des versions
 
            --{{0}}--
 Sans doute un des aspects les plus importants quand on travaille sur du long terme ou à plusieurs, c'est de pouvoir s'y retrouver entre plusieurs états d'un même projet, d'éventuellement revenir à un état antérieur, voire de dupliquer un projet entier (à soi ou non) pour le modifier en tant que projet indépendant (faire un **fork**). 
@@ -259,22 +260,29 @@ L'action redistribute/redistribuer, c'est :
 > 
 > ***Ça, c'est le Redistribute.** Et remarquez quelque chose d'important : GitHub, qu'on présente souvent comme un outil de développeur, fonctionne ici comme un **espace de partage et de valorisation** de contenus pédagogiques. Exactement comme HAL ou Zenodo, mais avec en plus la dimension éditable."*
 
-**Plan B** : lien LiaScript déjà généré en amont, prêt à coller si la chaîne casse.
-
-#### ⏱️ 18:00 — 20:00 | Bouclage + transition
-
-**Ce que tu dis** :
-> *"Et maintenant, quelqu'un d'autre peut forker mon cours remixé, le réviser à son tour, le re-remixer, le re-redistribuer. **Le cycle des 5R reprend**. C'est ça, une culture REL vivante : pas une ressource figée qu'on télécharge, mais une ressource qui circule et qui s'enrichit.*
-> 
-> *[Transition vers Souplesse] On vient de voir que vos contenus peuvent circuler librement. Mais encore faut-il que l'outil soit capable de porter ce que vous voulez vraiment enseigner. Passons au deuxième argument : la souplesse."*
-
-**Questions chat** : tu prends 1-2 questions rapides si le timing le permet, sinon tu renvoies à la fin.
-
 ### Un outil SOUPLE
 
         {{0-1}}
 ```markdown
-On peut juste écrire du texte, tout simplement...
+On peut juste écrire du texte en toute simplicité et en toute décontraction...
+On a le droit de faire des listes :
+* comme
+* celle
+* ci
+
+ou
+
+1. comme
+2. celle
+3. là
+
+On peut aussi faire des tableaux
+
+|Colonne 1|Colonne 2|Colonne 3|
+|---------|---------|---------|
+|Bla      |Bla      |Bla      |
+
+Bref, on a toute la palette du markdown
 ```
 
         {{1-2}}
@@ -368,13 +376,13 @@ LiaScript à la qualité d'être un outil remplaçable, il ne vous prend pas en 
 ```````````````````````````````````````
 +-----------------------+         +------------------------+          +-----------+
 |                       |         |                        |          |           |
-| Votre document en .md +-------->| Interpréteur LiaScript +--------->| Votre REL |
-|                       |         |                        |          |           |
-+----------+------------+         +------------------------+          +-----------+
-           ^                 
-           |     +---------------------+
-           |     | Avec tous les       |
-           '-----| éléments annexes    |
+| Votre document en .md +----+--->| Interpréteur LiaScript +--------->| Votre REL |
+|                       |    |    |                        |          |           |
++----------+------------+    |    +------------------------+          +-----------+
+                             |
+                 +-----------+---------+
+                 | Avec tous les       |
+                 | éléments annexes    |
                  | (images, H5P, etc.) |
                  +---------------------+
 ```````````````````````````````````````
@@ -383,13 +391,13 @@ LiaScript à la qualité d'être un outil remplaçable, il ne vous prend pas en 
 ```````````````````````````````````````
 +-----------------------+         +------//------//------//+          +-----------+
 |                       |         |     //      //      // |          |           |
-| Votre document en .md +-------->| Int//préteu//LiaScr//t +--------->| Votre REL |
-|                       |         |   //      //      //   |          |           |
-+----------+------------+         +--//------//------//----+          +-----------+
-           ^                  
-           |     +---------------------+
-           |     | Avec tous les       |
-           '-----| éléments annexes    |
+| Votre document en .md +----+--->| Int//préteu//LiaScr//t +--------->| Votre REL |
+|                       |    |    |   //      //      //   |          |           |
++-----------------------+    |    +--//------//------//----+          +-----------+
+                             |
+                 +-----------+---------+
+                 | Avec tous les       |
+                 | éléments annexes    |
                  | (images, H5P, etc.) |
                  +---------------------+
 ```````````````````````````````````````
