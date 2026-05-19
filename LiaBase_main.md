@@ -673,7 +673,7 @@ La prévisualisation s'ouvre automatiquement sur le navigateur enregistré en fa
 
 Attention, ce n'est pas parce que vous sauvegardez un état de votre travail avec `Ctrl + S` qu'il est automatiquement synchronisé avec votre répertoire ! Prenez l'habitude, lorsque vous arrivez à la fin d'une session, de [commit et de synchroniser](#26) avant de quitter.
 
-## Les bases des bases : écrire du texte
+## Les bases des bases
 
         --{{1}}--
 Si vous n'êtes pas familier avec le MarkDown, cette section est là pour y remedier. Pas d'inquiétude, les bases du langage sont très simples et vous aurez vite fait le tour du principal de sa syntaxe.
@@ -829,11 +829,124 @@ Le bon côté de VS Code, c'est que vous pouvez avoir en regard toute l'arboresc
 
 ![Vu répertoire VS Code](assets/VS_Code/VS_Code_arbo_2.svg)
 
-Vous avez aussi la possibilité, avec un clic droit sur l'image que vous souhaitez insérer, de copier son **chemin relatif** avec un `clic-droit` sur le nom de l'image puis en sélectionnant `Copy Relative Path`.
+Avec un clic droit sur l'image que vous souhaitez insérer, il est possible de copier son **chemin relatif** avec un `clic-droit` sur le nom de l'image puis en sélectionnant `Copy Relative Path`, pour le coller ensuite là où vous en avez besoin.
 
 ![Copy relative path](assets/VS_Code/VS_Code_relpath.svg)
 
 [^1]: Notez que les noms de fichiers (dossiers, et éléments) ne doivent pas comporter d'espace. Il est conseillé d'éviter les lettres accentuées qui peuvent être mal interprétées quand vous spécifier un chemin.
+
+#### Insérer des vidéos depuis le célèbre hébergeur d'un capitaliste de surveillance (ou d'ailleurs)
+
+Concernant l'insertion de vidéos, si l'on ne souhaite pas se contenter d'un URL, la syntaxe diffère très légèrement de l'insertion d'une image.
+
+```
+        !?[texte alternatif](URL)
+```
+
+Donc ceci :
+```
+        !?[Une vidéo YT](https://youtu.be/_Gx5F31qFfA?si=nYUBSlOTrPVVT6aE)
+```
+
+Donnera cela :
+
+!?[Une vidéo YT](https://youtu.be/_Gx5F31qFfA?si=nYUBSlOTrPVVT6aE)
+
+Il est aussi possible d'insérer une vidéo depuis ses fichiers locaux selon la même syntaxe:
+
+```
+        !?[Texte alternatif](Chemin relatif de la vidéo)
+```
+#### Insérer du bon son
+
+Liascript prend aussi en charge le son, avec une syntaxe qui vous est désormais familière :
+
+```
+        ?[texte alternatif](URL ou chemin relatif)
+```
+
+Donc ceci
+
+```
+?[un bon son si jamais...](https://on.soundcloud.com/FEaSGZCuvdd7nCaBh9)
+```
+
+Donnera cela
+
+?[un bon son si jamais...](https://on.soundcloud.com/FEaSGZCuvdd7nCaBh9)
+
+### 5. Les quiz
+
+#### Les QCM
+
+Ceci...
+
+```
+- [[ ]] Vide = pas une bonne réponse
+- [[X]] `X` majuscule = bonne réponse
+- [[x]] ... `x` minuscule aussi
+- [[ ]] **idem que sur la première ligne**
+```
+
+Donnera Cela
+
+- [[ ]] Vide = pas une bonne réponse
+- [[X]] `X` majuscule = bonne réponse
+- [[x]] ... `x` minuscule aussi
+- [[ ]] **idem que sur la première ligne**
+
+Si vous souhaitez ajouter un feedback, procédez comme suit :
+```
+- [[ ]] Vide = pas une bonne réponse
+- [[X]] `X` majuscule = bonne réponse
+- [[x]] ... `x` minuscule aussi
+- [[ ]] **idem que sur la première ligne**
+************************
+Ceci est un feedback bien utile
+************************
+```
+Et magie (pour vérifier la magie faire le quiz)
+
+- [[ ]] Vide = pas une bonne réponse
+- [[X]] `X` majuscule = bonne réponse
+- [[x]] ... `x` minuscule aussi
+- [[ ]] **idem que sur la première ligne**
+************************
+Ceci est un feedback bien utile
+************************
+
+#### Les Questions à choix unique
+
+Ceci...
+
+```
+- [( )] pas une bonne réponse
+- [(X)] **c'est cette réponse qui doit être sélectionnée**
+- [( )] ~~à moins que ce ne soit cette réponse ?~~
+```
+
+Donnera cela :
+
+- [( )] pas une bonne réponse
+- [(X)] **c'est cette réponse qui doit être sélectionnée**
+- [( )] ~~à moins que ce ne soit cette réponse ?~~
+
+Vous pouvez ajouter des indices :
+
+```
+- [( )] pas une bonne réponse
+- [(X)] **c'est cette réponse qui doit être sélectionnée**
+- [( )] ~~à moins que ce ne soit cette réponse ?~~
+- [(?)] Celle qui est soulignée est une réponse qui ne doit pas nécessairement vous inciter à la confiance.
+```
+Comme ceci :
+
+- [( )] pas une bonne réponse
+- [(X)] **c'est cette réponse qui doit être sélectionnée**
+- [( )] ~~à moins que ce ne soit cette réponse ?~~
+- [[?]] Celle qui est soulignée est une réponse qui ne doit pas nécessairement vous inciter à la confiance.
+
+On peut appliquer la même syntaxe que pour les QCM si l'on souhaite ajouter un feedback
 
 ## More
 
