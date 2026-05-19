@@ -81,7 +81,7 @@ LiaScript a pu être présenté par son créateur André Dietrich comme une alte
         <li> <span style="font-size: 1.2em;"><strong>Encapsulage institutionnel</strong></span> : les contenus pédagogiques sont d'abord conçus pour une communauté spécifique avec des droits d'accès spécifiques (même s'il est possible d'ouvrir largement les contenus), le partage, la réutilisation et le remixage n'en est pas facilité ; </li>
         <li> <span style="font-size: 1.2em;"><strong>Interface graphique utilisateur lourde</strong></span> : le nombre de clics nécessaires pour intervenir sur une activité peut être important, lourdeur augmentée par la lenteur des serveurs institutionnels (web, base de données, utilisateurs en simultané) ; </li>
         <li> <span style="font-size: 1.2em;"><strong>La tendance au tracking overkill</strong></span> : systématisation du tracking (allez voir les logs d'un cours sur Moodle) avec une granularité des données comportementales pas forcément nécessaire pour l'UX et l'amélioration continue. </li>
-        <li> <span style="font-size: 1.2em;"><strong>La déconnexion contenant / contenu</strong></span> : globalement les LMS tombent dans les mêmes écueils de les CMS (Content System Management) qui, pour des raison d'efficacité font une distinction entre contenant et contenu et rendent la modification du contenant très complexe.</li>
+        <li> <span style="font-size: 1.2em;"><strong>La déconnexion contenant / contenu</strong></span> : globalement les LMS tombent dans les mêmes écueils de les CMS (Content System Management) qui, pour des raisons d'efficacité font une distinction entre contenant et contenu et rendent la modification du contenant très complexe.</li>
     </ul>
 </div>
 </lia-keep>
@@ -181,7 +181,7 @@ Le *Code* est austère, mais c'est un type d'affichage auquel il faut s'habituer
 ![Modification dans le Code](assets/Cours_Damien/Titre_cours_Damien_edit_code.png)<!--width="60%"-->
 
         {{3-4}}
-Autre point de vocabulaire, ne cherchez pas le bouton *save* ici. Pour enregistrer vos modifications, même minimes, cliquez sur `Commit changes...`, décrivez la modification, puis sur `Commite Changes`, voilà vous avez " sauvegardé " !
+Autre point de vocabulaire, ne cherchez pas le bouton *save* ici. Pour enregistrer vos modifications, même minimes, cliquez sur `Commit changes...`, décrivez la modification, puis sur `Commit Changes`, voilà vous avez " sauvegardé " !
 ![Wallace et Commit !](assets/github/Commit_github.svg)<!--width="50%"-->
 
         --{{3}}--
@@ -275,7 +275,9 @@ A partir de là, la redistribution est simplissime et surtout multimodale. On pe
 
         {{1}}
 ```````````````````````````````
-+-----------------------+        #-------------------#   +------------------------+   #-------------------#
+                                         ^ ^ ^                                                ^ ^ ^
+                                          \|/                                                  \|/
++-----------------------+        #---------+---------#   +------------------------+   #---------+---------#
 |                       |        |                   |   |                        |   |                   |
 | Votre document en .md +----+-->| Répertoire GITHUB +-->| Interpréteur LiaScript +-->| Version LIASCRIPT |
 |                       |    |   |                   |   |                        |   |                   |
@@ -314,10 +316,11 @@ Bref, on a toute la palette du markdown
 ```
 
         {{1-2}}
-On peut insérer des images... ![Une belle image de Erik Ciottu](assets/autre/ecrikciotti.svg "Une superbe photo du maire de Nice")<!--width="100%"-->
+On peut insérer des images...
+![Une belle image de Erik Ciottu](assets/autre/ecrikciotti.svg "Une superbe photo du maire de Nice")<!--width="100%"-->
 
         {{2-3}}
-``````````````````````````````````````````
+```mardown
                          +-------------+
                      +-->| Des schémas |
                      |   +-------------+
@@ -325,7 +328,7 @@ On peut insérer des images... ![Une belle image de Erik Ciottu](assets/autre/ec
 +---------------+    |   +--------------+
 | On peut faire +----+-->| en ASCII-art |
 +---------------+        +--------------+          
-``````````````````````````````````````````
+```
 
         {{3-4}}
 ```````````````````````
@@ -450,11 +453,6 @@ Et pour tout ça, il y a [Pandoc](https://pandoc.org/) ! (le logo n'est hélas p
 ![Logo de Pandoc](assets/Pandoc/Pandoc_logo.svg)
 Pandoc est un convertisseur universel de document, totalement gratuit. D'un usage peu intuitif au départ, il reste incroyablement pratique et efficace, notamment pour convertir des document rédigés en MarkDown vers le PDF, docx ou le HTML en conservant la structure du document, le texte, les images, les figures, etc.
 
-Alors, pas mal non ?
-
-        [(Oui)] Oui
-        [(Non)] Non
-
 ## Mise en route
 
 ### Se créer un compte GitHub
@@ -480,7 +478,7 @@ Super important : votre répertoire doit impérativement être **public** pour q
 
 ### Visual Studio Code
 
-**Visual Studio Code** est un éditeur de texte gratuit et open source maintenu par **Microsoft** (eh oui, snif). Très utilisé par les développeur.ses, on va plutôt l'utiliser comme simple éditeur de MarkDown, un peu amélioré par le créateur de Liascript, grâce à quelques plug in.
+**Visual Studio Code** est un éditeur de texte gratuit et open source maintenu par **Microsoft** (eh oui, snif). Très utilisé par les développeur.ses, on va plutôt l'utiliser comme simple éditeur de MarkDown, un peu amélioré par le créateur de Liascript, grâce à quelques plugins.
 ![Accueil VS Code](assets/VS_Code/VS_Code_acc.png)
 
 Rendez-vous sur la [page de téléchargement](https://code.visualstudio.com/Download) et procédez à l'installation du logiciel, on se retrouve de l'autre côté.
@@ -611,7 +609,7 @@ Et voilà ! Votre répertoire avec tout son contenu est cloné sur votre PC ! Si
 
 Votre arborescence s'affichera sur la partie gauche de la fenêtre de VS Code. Sauf événement cataclismique, elle sera parfaitement identique à celle que vous avez dans l'explorateur de fichiers Windows et votre répertoire dans GitHub.
 
-Sélectionnez le `README.md` pour afficher l'éditeur de texte et voyez ce que ça donne. C'est visuellement beaucoup plus sobre et plus du tout WYSIWYG, mais on s'y fait.
+Sélectionnez le `README.md` pour afficher l'éditeur de texte et voyez ce que ça donne. C'est visuellement beaucoup plus sobre et plus vraiment WYSIWYG, mais on s'y fait.
 
 ![Arborescence répertoire VS Code](assets/VS_Code/VS_Code_arbo.png)
 
@@ -653,10 +651,27 @@ Vous avez créé votre premier document et vous souhaitez qu'ils soit synchronis
 
 Cliquez sur `Source Control`(par défaut, parmi les quelques icônes sur le côté gauche de la fenêtre de VS Code)
 
-![Premier commit](assets/VS_Code/VS_Code_commit.png)
+![Premier commit](assets/VS_Code/VS_Code_commit.svg)
 
-        --{{1}}--
-Vous arrivez dans le panneau de contrôle des sources. Juste en dessous du bouton `Commit` un certain nombre de `Changes` sont listés (notamment la création de votre nouveau document.) Cliquez sur le petit `+` en face de `Changes` les éléments listés deviennent des `Staged Changes`prêts à être envoyé dans votre répertoire GitHub. N'oubliez pas de décrire votre modification/ajout avant de cliquer sur `Commit` puis de cliquer sur `Sync Changes` pour que votre répertoire GitHub soit synchronisé.
+Vous arrivez dans le panneau de contrôle des sources. Juste en dessous du bouton `Commit` un certain nombre de `Changes` sont listés (notamment la création de votre nouveau document.) 
+
+Cliquez sur le petit `+` en face de `Changes` les éléments listés deviennent des `Staged Changes`prêts à être envoyé dans votre répertoire GitHub. 
+
+N'oubliez pas de décrire votre modification/ajout avant de cliquer sur `Commit` puis de cliquer sur `Sync Changes` pour que votre répertoire GitHub soit synchronisé.
+
+### Activer la prévisualisation
+
+En plus de gérer vos éléments en local, l'intérêt d'utiliser un éditeur tel que VS Code tient à la possibilité d'activer une prévisualisation de votre cours en version LiaScript afin de ne pas trop vous perdre dans votre conception.
+
+Dans VS Code positionnez votre curseur sur le texte et entrez `Alt + L`.
+
+![Alt + L pour activer la prévisualisation](assets/VS_Code/VS_Code_previsu.svg)
+
+La prévisualisation s'ouvre automatiquement sur le navigateur enregistré en favori. La prévisualisation ne se met pas à jour automatiquement quand vous faites une modification dans le document en markdown, faites `Ctrl + S` pour que la prévisualisation prenne en compte vos modifications.
+
+![Prévisualisation de LiaScript](assets/liascript/LiaScript_previsu.svg)
+
+Attention, ce n'est pas parce que vous sauvegardez un état de votre travail avec `Ctrl + S` qu'il est automatiquement synchronisé avec votre répertoire ! Prenez l'habitude, lorsque vous arrivez à la fin d'une session, de [commit et de synchroniser](#26) avant de quitter.
 
 ## Les bases des bases : écrire du texte
 
@@ -670,10 +685,10 @@ What you see may not be very pleasant...
 ```
 ... mais au moins, ça ne se casse pas.
 
-### 1. Structurer votre contenu
+### 1. Structurer
 
         --{{0}}--
-Sur LiaScript, une habitude à prendre, c'est de structurer votre contenu (quel qu'il soit). Entrez `#`[^1] suivi d'un texte pour créer la page de titre de votre cours, puis structurez de la manière suivante :
+Sur LiaScript, une habitude à prendre, c'est de structurer votre contenu. Entrez `#`[^1] suivi d'un texte pour créer la page de titre de votre cours, puis structurez de la manière suivante :
 
 ```markdown
 # Titre principal de votre cours
@@ -706,7 +721,7 @@ Sous-sous-section dans la même page
 
 [^1]: `Alt GR + 3` mais vous saviez.
 
-### 2. Mettre en forme votre contenu
+### 2. Mettre en forme
 
         --{{0}}--
 En MarkDown, la mise en forme du texte se fait en entourant ce dernier avec certains caractères que voici :
@@ -725,6 +740,100 @@ Les mises en forme qui suivent n'existent pas en MarkDown de base :
 * `~~souligné~~` -> ~~souligné~~<!-- class="notranslate"--> (attention avec l'éditeur VS Code votre texte apparaîtra ~barré~, mais il sera bien ~~souligné~~ dans LiaScript
 * `~~~barré et souligné~~~` -> ~~~barré et souligné~~~<!-- class="notranslate"--> (remarque similaire ici, l'affichage du texte dans VS Code peut être confusionnalisant)
 * `^en exposant^` -> ^en exposant^<!-- class="notranslate"--> (comme ça vous allez pouvoir écrire XIX^**e**^ et pas XIX**e**).
+
+### 3. Les liens hypertextes
+
+Il est possible d'ajouter des liens vivants dans un document markdown :
+
+1. De manière brute : https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md (peuvent s'appliquer les mises en formes vue précédemment)
+
+2. Ou en nommant le lien : [Aide LiaScript](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md "ici il y a TOUT") (idem pour la mise en forme)
+
+```
+[Aide LiaScript](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md "ici il y a TOUT")
+```
+
+On peut aussi faire des liens à l'intérieur d'un document:
+
+- Cliquez [ici](#1) pour revenir au début du cours
+
+```
+Cliquez [ici](#1) où "#1" =  numéro de la slide
+```
+
+### 4. Les médias
+
+#### Insérer des images
+
+On insère des images avec la syntaxe suivante
+
+![{1}{`texte alternatif`}]({2}{URL ou chemin de l'image}{3}{"légende optionnelle"})
+
+Par exemple :
+
+```
+![logo de LiaScript](assets/liascript/LiaScript_logo.png "ceci est le logo de LiaScript")
+```
+
+![logo de LiaScript](assets/liascript/LiaScript_logo.png "ceci est le logo de LiaScript")
+
+        --{{0}}--
+L'insertion d'images est un coup à prendre, notamment quand on a l'habitude des éditeurs WYSIWYG (Word, Libre Office, Powerpoint, Impress, Genially...) où il suffit généralement de glisser-déposer l'image de son choix. Mais ce geste ne va pas de soi et les langages courants tels que le MarkDown, LaTeX ou encore le HTML sont beaucoup plus prosaïques.
+
+Insérer une image (ou une vidéo, un son, ou tout autre contenu externe) nécessite d'expliciter deux informations à la machine :
+
+1. **que l'on veut insérer une image** --> avec la syntaxe `![texte alternatif](URL ou chemin de l'image)`
+
+2. **où trouver cette image** --> et ce deuxième point est **fondamental** à intégrer pour comprendre beaucoup de choses du fonctionnement de LiaScript, surtout dans nos métiers où l'on fait beaucoup de captures d'écran.
+
+---
+
+Pour vous faciliter la vie, créez dans votre répertoire :
+
+- en local donc par exemple **~/Documents/"nom\_du\_repertoire"**
+
+- sur GitHub
+
+... un dossier nommé `assets` dans la racine de votre répertoire (~/Documents/"nom\_du\_repertoire"/**assets**)qui accueillera les éléments qui entrent dans la composition de votre cours (capture d'écran, schémas, activités H5P, etc.)
+
+        --{{1}}--
+![mon dossier assets](assets/VS_Code/VS_Code_dossier_assets.svg)
+
+        --{{1}}--
+Vous êtes libre de classer comme vous l'entendez, de mon côté je crée un sous-dossier pour chaque thématique/plateforme/logiciel dont je capture/produis des images.
+
+On peut avoir une arborescence de ce genre :
+
+- ~/Documents/"nom\_du\_repertoire"/**assets**/activites[^1] --> pour les activités H5P
+
+- ~/Documents/"nom\_du\_repertoire"/**assets**/VS\_code[^1] --> pour toutes les captures de VS Code
+
+- ~/Documents/"nom\_du\_repertoire"/**assets**/git --> pour les captures de Git et Git Bash
+
+        --{{2}}--
+![mon arborescence assets](assets/VS_Code/VS_Code_dossier_assets_arbo.svg)
+
+Nous sommes parés pour insérer des images !
+
+---
+
+Depuis VS Code ou tout autre éditeur de ce genre, on spécifie le chemin d'une ressource **relativement** au document principal. En d'autres termes on nous demande d'indiquer une route qui **part** du document et qui a pour **destination** l'image que l'on veut intégrer.
+
+Si vous conservez votre document principal dans la racine du répertoire, vous devez spécifier que vous voulez qu'il aille chercher dans le dossier assets, puis dans le sous-dossier xx, l'image xxx_xxx.png, ce qui donne :
+
+```
+        assets/"sous_dossier"/image.png
+```
+
+Le bon côté de VS Code, c'est que vous pouvez avoir en regard toute l'arborescence de votre travail en cliquant sur `Explorer` (ou `Ctrl + Shift + E`) et surtout agir dessus (créer des dossiers et sous-dossiers, supprimer, etc.)
+
+![Vu répertoire VS Code](assets/VS_Code/VS_Code_arbo_2.svg)
+
+Vous avez aussi la possibilité, avec un clic droit sur l'image que vous souhaitez insérer, de copier son **chemin relatif** avec un `clic-droit` sur le nom de l'image puis en sélectionnant `Copy Relative Path`.
+
+![Copy relative path](assets/VS_Code/VS_Code_relpath.svg)
+
+[^1]: Notez que les noms de fichiers (dossiers, et éléments) ne doivent pas comporter d'espace. Il est conseillé d'éviter les lettres accentuées qui peuvent être mal interprétées quand vous spécifier un chemin.
 
 ## More
 
