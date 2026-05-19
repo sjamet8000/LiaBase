@@ -189,27 +189,25 @@ Il n'y a pas de traduction parfaite pour le terme " commit " qu'on peut entendre
 
 #### Remixer (Remixe)
 
-L'action reuse/réutiliser, c'est :
+L'action remix/remixer, c'est :
 
 > " combine your original or revised copy of the resource with 
 > other existing material to create something new "
 >
 > -- David Wiley ([*Defining the "Open" in Open Content and Open Educational Ressources*, 2023](https://opencontent.org/definition/))
 
-**Ce que tu fais** :
-1. Tu ouvres le fichier `.md`
-2. Tu colles ta section Git (préparée en amont, markdown prêt)
-3. Tu commit
-4. Tu rafraîchis la vue LiaScript pour montrer le résultat
+Comme la définition l'indique, une REL doit permettre le remixe, donc, par exemple, la possibilité d'être fusionnée avec une autre REL.
 
-**Ce que tu dis** :
-> *"Aller plus loin : j'ai écrit de mon côté toute une partie sur l'utilisation de Git, qui complète bien ce cours. Je vais l'injecter ici. Je colle, je commit, et… voilà. Le cours a gagné un chapitre entier. **Ça, c'est le Remix** : je fusionne du contenu d'origines différentes pour créer une nouvelle ressource.*
-> 
-> *Et notez bien : c'est du markdown. C'est lisible, c'est éditable dans n'importe quel éditeur de texte. Pas de format propriétaire, pas de dépendance à une plateforme."*
+        {{1-2}}
+A partir du cours de Damien, j'ai envie d'ajouter un morceau de mon cours pour en créer une nouvelle forme.
+![Fusion du cours de Damien avec une partie de mien](assets/github/github_remixe.svg)
 
-**Backstage** : c'est le bloc le plus long, celui qui peut déborder. Si tu es en retard, tu peux écourter en ne recommitant pas et en montrant juste le markdown source.
+        {{2-3}}
+![Historique des commits dans le répertoire forké de Damien](assets/github/github_remixe3.svg)Je vais tout simplement copier la partie de mon cours dans le cours de Damien (que j'ai préalablement forké), ce qui me permet de conserver l'historique de ses modifications et leurs attributions.
 
-**Plan B** : capture avant/après du rendu LiaScript.
+        {{3}}
+Et voilà, le cours est remixé et révisé, il est prêt à l'emploi.
+![La partie de mon cours dans le cours de Damien](assets/github/github_remixe2.svg)
 
 ##### Réviser et remixer en toute légalité : le suivi des versions
 
@@ -236,7 +234,27 @@ L'action reuse/réutiliser, c'est :
 >
 > -- David Wiley ([*Defining the "Open" in Open Content and Open Educational Ressources*, 2023](https://opencontent.org/definition/))
 
-A ce stade, je peux d'ores et déjà réutiliser le cours à mon propre compte, si j'estime ne pas avoir besoin d'apporter plus de modifications ou de faire des adaptations supplémentaires.
+C'est principalement à ce stade que LiaScript entre en jeu. Pour le moment, nous avons surtout navigué dans des répertoires GitHub, désormais nous allons passer notre travail de conception à l'interpréteur qu'est fondamentalement LiaScript.
+
+        {{1-2}}
+A partir du répertoire, je vais afficher le fichier principal, donc le fichier en .md.
+![Rendez vous sur le cours en lui-même (en .md)](assets/github/github_reuse1.svg)
+
+        {{2-3}}
+En plus de l'affichage `Code` et `Preview`il existe un affichage `Raw` sur une page spécifique, c'est précisément ça qu'on va chercher.
+![cliquez sur Raw pour afficher le fichier en markdown brut](assets/github/github_reuse2.svg)
+
+        {{3-4}}
+La version `Raw` du cours est moche, mais c'est elle qu'on va donner à l'interpréteur LiaScript. On va donc copier l'URL de la page `Raw`...
+![Copiez l'URL](assets/github/github_reuse3.svg)
+
+        {{4-5}}
+... pour la coller dans le site officiel de LiaScript (https://liascript.github.io/) qui est une page web GitHub. On clique sur `Open Course`...
+![Sur le site de LiaScript, collez l'URL](assets/liascript/LiaScript_reuse1.svg)
+
+        {{5}}
+... le temps d'un chargement plus tard, le cours s'affiche et est prêt à l'emploi.
+![Le cours en .md interprété par LiaScript](assets/liascript/LiaScript_reuse2.svg)
 
 #### Redistribuer (Redistribute)
 
@@ -247,18 +265,28 @@ L'action redistribute/redistribuer, c'est :
 >
 > -- David Wiley ([*Defining the "Open" in Open Content and Open Educational Ressources*, 2023](https://opencontent.org/definition/))
 
-**Ce que tu fais** :
-1. Sur GitHub, tu ouvres le `.md` modifié
-2. Tu cliques sur "Raw"
-3. Tu copies l'URL raw
-4. Tu la colles dans le générateur de lien LiaScript (ou directement dans l'URL LiaScript)
-5. Tu montres le cours live, utilisable
-6. Tu évoques : "ce lien, je peux le poster n'importe où — mon ENT, un mail, Zenodo pour archivage pérenne avec DOI…"
+A partir de là, la redistribution est simplissime et surtout multimodale. On peut distinguer deux entités partageable : 
 
-**Ce que tu dis** :
-> *"Dernière étape : je veux partager ma version remixée. Je récupère le lien raw, je le bascule en URL LiaScript, et j'obtiens un cours vivant, accessible à n'importe qui avec juste un navigateur. Ce lien, je peux le poster où je veux : mon ENT, un mail à mes collègues, ou même Zenodo pour obtenir un DOI et un archivage pérenne.*
-> 
-> ***Ça, c'est le Redistribute.** Et remarquez quelque chose d'important : GitHub, qu'on présente souvent comme un outil de développeur, fonctionne ici comme un **espace de partage et de valorisation** de contenus pédagogiques. Exactement comme HAL ou Zenodo, mais avec en plus la dimension éditable."*
+        {{1}}
+* le **répertoire GitHub** qui s'apparenterait à une version " Brute " du cours avec le document principal rédigé en markdown et les éléments annexes (souvent nommés `assets`, donc les images, les activités H5P, les vidéos, etc.). Cette version est aussi [**revisable**](#6) et [**remixable**](#7), mais elle ne comporte pas les éléments interactifs propres à LiaScript.
+
+        {{2}}
+* la **version LiaScript**, version finale de production complètement opérationnelle et non modifiable, sous la forme d'une URL dont on peut faire ce qu'on veut (et notamment l'intégrer sur une page en HTML).
+
+        {{1}}
+```````````````````````````````
++-----------------------+        #-------------------#   +------------------------+   #-------------------#
+|                       |        |                   |   |                        |   |                   |
+| Votre document en .md +----+-->| Répertoire GITHUB +-->| Interpréteur LiaScript +-->| Version LIASCRIPT |
+|                       |    |   |                   |   |                        |   |                   |
++----------+------------+    |   #-------------------#   +------------------------+   #-------------------#
+                             |
+                 +-----------+---------+
+                 | Avec tous les       |
+                 | éléments annexes    |
+                 | (images, H5P, etc.) |
+                 +---------------------+
+```````````````````````````````
 
 ### Un outil SOUPLE
 
@@ -286,7 +314,7 @@ Bref, on a toute la palette du markdown
 ```
 
         {{1-2}}
-On peut insérer des images... ![Une belle image de Erik Ciottu](assets/autre/ecrikciotti.svg "Une superbe photo du maire de Nice")<!--width="30%"-->
+On peut insérer des images... ![Une belle image de Erik Ciottu](assets/autre/ecrikciotti.svg "Une superbe photo du maire de Nice")<!--width="100%"-->
 
         {{2-3}}
 ``````````````````````````````````````````
@@ -334,7 +362,7 @@ Il est même possible d'exécuter du code
 
         {{5-6}}
 ```javascript
-const motCle = "bibliothécaires formateurs";
+const motCle = "merle noir";
 const url = `https://api.archives-ouvertes.fr/search/?q=${encodeURIComponent(motCle)}&rows=3&sort=submittedDate_s desc`;
 
 fetch(url)
@@ -421,6 +449,11 @@ LiaScript à la qualité d'être un outil remplaçable, il ne vous prend pas en 
 Et pour tout ça, il y a [Pandoc](https://pandoc.org/) ! (le logo n'est hélas pas de moi)
 ![Logo de Pandoc](assets/Pandoc/Pandoc_logo.svg)
 Pandoc est un convertisseur universel de document, totalement gratuit. D'un usage peu intuitif au départ, il reste incroyablement pratique et efficace, notamment pour convertir des document rédigés en MarkDown vers le PDF, docx ou le HTML en conservant la structure du document, le texte, les images, les figures, etc.
+
+Alors, pas mal non ?
+
+        [(Oui)] Oui
+        [(Non)] Non
 
 ## Mise en route
 
