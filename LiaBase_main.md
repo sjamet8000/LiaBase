@@ -81,7 +81,7 @@ LiaScript a pu être présenté par son créateur André Dietrich comme une alte
         <li> <span style="font-size: 1.2em;"><strong>Encapsulage institutionnel</strong></span> : les contenus pédagogiques sont d'abord conçus pour une communauté spécifique avec des droits d'accès spécifiques (même s'il est possible d'ouvrir largement les contenus), le partage, la réutilisation et le remixage n'en est pas facilité ; </li>
         <li> <span style="font-size: 1.2em;"><strong>Interface graphique utilisateur lourde</strong></span> : le nombre de clics nécessaires pour intervenir sur une activité peut être important, lourdeur augmentée par la lenteur des serveurs institutionnels (web, base de données, utilisateurs en simultané) ; </li>
         <li> <span style="font-size: 1.2em;"><strong>La tendance au tracking overkill</strong></span> : systématisation du tracking (allez voir les logs d'un cours sur Moodle) avec une granularité des données comportementales pas forcément nécessaire pour l'UX et l'amélioration continue. </li>
-        <li> <span style="font-size: 1.2em;"><strong>La déconnexion contenant / contenu</strong></span> : globalement les LMS tombent dans les mêmes écueils de les CMS (Content System Management) qui, pour des raisons d'efficacité font une distinction entre contenant et contenu et rendent la modification du contenant très complexe.</li>
+        <li> <span style="font-size: 1.2em;"><strong>La déconnexion contenant / contenu</strong></span> : globalement les LMS tombent dans les mêmes écueils de les CMS (Content Management System) qui, pour des raisons d'efficacité font une distinction entre contenant et contenu et rendent la modification du contenant très complexe.</li>
     </ul>
 </div>
 </lia-keep>
@@ -915,7 +915,7 @@ Et magie (pour vérifier la magie faire le quiz)
 Ceci est un feedback bien utile
 ************************
 
-#### Les Questions à choix unique
+#### Les questions à choix unique
 
 Ceci...
 
