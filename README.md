@@ -1,1 +1,5 @@
 # Ce que vous trouverez ici...
+
+Formation/atelier/retour d'expérience/que-sais-je autour de l'interpréteur markdown LiaScript, dans le cadre d'un Formacroq organisé le 22 mai 2026 par l'association [FormaBib IDF](http://philtyprod.com/testUP/) (si vous êtes bibliothécaire-formateur en Île-de-France, n'hésitez pas à vous inscrire à la liste de diffusion, ou même à adhérer, ils sont vraiment très sympa là-dedans).
+
+Le document principal (*LiaBase_main.md*) est consultable dans sa version brute **ici**, et dans sa version parsée **ici**.
