@@ -1,0 +1,1349 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>LiaBase_main</title>
+  <style>
+    /* Default styles provided by pandoc.
+    ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+    */
+    html {
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 12px;
+      }
+      h1 {
+        font-size: 1.8em;
+      }
+    }
+    @media print {
+      html {
+        background-color: white;
+      }
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    svg {
+      height: auto;
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      white-space: pre-wrap;
+      font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;
+      font-size: 85%;
+      margin: 0;
+      hyphens: manual;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #1a1a1a;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC ul {
+      padding-left: 1.3em;
+    }
+    #TOC > ul {
+      padding-left: 0;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      {   }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+    code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+    code span.at { color: #7d9029; } /* Attribute */
+    code span.bn { color: #40a070; } /* BaseN */
+    code span.bu { color: #008000; } /* BuiltIn */
+    code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #4070a0; } /* Char */
+    code span.cn { color: #880000; } /* Constant */
+    code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+    code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+    code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+    code span.dt { color: #902000; } /* DataType */
+    code span.dv { color: #40a070; } /* DecVal */
+    code span.er { color: #ff0000; font-weight: bold; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #40a070; } /* Float */
+    code span.fu { color: #06287e; } /* Function */
+    code span.im { color: #008000; font-weight: bold; } /* Import */
+    code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+    code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+    code span.op { color: #666666; } /* Operator */
+    code span.ot { color: #007020; } /* Other */
+    code span.pp { color: #bc7a00; } /* Preprocessor */
+    code span.sc { color: #4070a0; } /* SpecialChar */
+    code span.ss { color: #bb6688; } /* SpecialString */
+    code span.st { color: #4070a0; } /* String */
+    code span.va { color: #19177c; } /* Variable */
+    code span.vs { color: #4070a0; } /* VerbatimString */
+    code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
+  </style>
+</head>
+<body>
+<!--
+author:   Samuel Jamet
+
+email:    samuel.jamet.bib@proton.me
+
+version:  0.0.1
+
+language: fr
+
+comment:  Try to write a short comment about
+          your course, multiline is also okay.
+
+link:     https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css
+
+script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
+-->
+<h1 id="liascript">LiaScript</h1>
+<figure>
+<img src="assets/liascript/LiaScript_logo.png" alt="Logo Liascript" />
+<figcaption aria-hidden="true">Logo Liascript</figcaption>
+</figure>
+<h1 id="au-programme-ce-midi">Au programme ce midi</h1>
+<ol type="1">
+<li><p><a href="#2">Une petite démo</a></p></li>
+<li><p><a href="#3">Pourquoi choisir LiaScript</a> plutôt qu’une lessive
+ordinaire ?</p></li>
+<li><p>S’il nous reste du temps, je prends vos questions, ou on
+approfondit quelque chose, comme vous le sentez.</p></li>
+</ol>
+<h2 id="je-lui-dirai-démo-bleueuuh">🎶 Je lui dirai démo bleueuuh…</h2>
+<script
+  style="display: block"
+  modify="false"
+>
+"HTML: <marquee>Attention, tout ce qui suit a été réalisé sur LiaScript et, oui, j'ai intégré une démo de LiaScript dans le LiaScript que vous êtes en train de regarder, mais qu'est-ce que vous allez faire ? Me traîner devant les tribunaux ? Ha ! J'aimerais bien voir ça, vous savez peut-être que je travaille dans une fac de droit non ? J'ai des relations qui ne manqueront pas de vous mettre plus bas que terre si vous tentez de vous attaquer à ma personne, et ne comptez surtout pas sur moi pour intercéder en votre faveur, je suis d'un naturel rancunier, pour ne pas dire fou furieux. Dans le milieu, vous savez comment on m'appelle ? Le DANGER. Eh oui, vous êtes en train de vous en prendre à la seule personne qu'il fallait absolument laisser tranquille, mais c'est trop tard une fois que mes crocs sont plantés dans le mollet de l'oppression capitalistique je ne lâche plus, vous ne pouvez vous en prendre qu'à vous-mêmes. Voilà bisous.</marquee>"
+</script>
+<pre><code>    {{0-1}}</code></pre>
+<iframe style="height: 80vh; min-width: 100%; border: 1px black solid" src="https://liascript.github.io/LiveEditor/?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">
+</iframe>
+<pre><code>{{1}}</code></pre>
+<h1
+id="ça-sappelle-un-liascript-par-récursivité-ça-ne-sert-à-rien-mais-cest-possible.">Ça
+s’appelle un LiaScript par récursivité, ça ne sert à rien, mais c’est
+POSSIBLE.</h1>
+<h2 id="liascript-moodle-faut-il-vraiment-choisir">LiaScript, Moodle,
+faut-il vraiment choisir ?</h2>
+<pre><code>       --{{0}}--</code></pre>
+<p>LiaScript a pu être présenté par son créateur André Dietrich comme
+une alternative aux LMS<a href="#fn1" class="footnote-ref" id="fnref1"
+role="doc-noteref"><sup>1</sup></a> (cf. un <a
+href="https://liascript.github.io/blog/from-hero-to-zero-with-lms/">article
+de son blog datant de 2020</a>), ce qu’il peut être en raison de sa
+grande plasticité. Mais on peut tout aussi bien concevoir LiaScript
+comme un outil <em>complémentaire</em> des LMS tels que Moodle.</p>
+<figure>
+<img src="assets/Pk_Liascript/Who_will_prevail.png"
+alt="Who will prevail ?" />
+<figcaption aria-hidden="true">Who will prevail ?</figcaption>
+</figure>
+<p><em>Moodle, LiaScript, Scenari… et si on se faisait surtout plein de
+câlins ?</em></p>
+<pre><code>       {{1-2}}</code></pre>
+<lia-keep>
+<div
+style="background-color:#f98012; padding: 0.8em; border-radius: 6px; margin-top:2em;">
+<pre><code>&lt;div style=&quot;color:white; display:flex; align-items:center;&quot;&gt; 
+    &lt;div style=&quot;font-size: 1.2em;&quot;&gt;&lt;strong&gt;Moodle et consort (LMS) : les bons côtés&lt;/strong&gt;&lt;/div&gt; 
+&lt;/div&gt; </code></pre>
+</div>
+<div
+style="background-color:#F5F6F9; font-size: 0.95em; padding: 1.1em 1.2em; margin-top:-8px; border-radius: 0 0 6px 6px; line-height: 1.6;">
+<pre><code>&lt;ul&gt;
+    &lt;li&gt; &lt;span style=&quot;font-size: 1.2em;&quot;&gt;&lt;strong&gt;Centralisation institutionnelle&lt;/strong&gt;&lt;/span&gt; : les cours sont conçus au sein de l&#39;environnement numérique des établissements ; &lt;/li&gt;
+    &lt;li&gt; &lt;span style=&quot;font-size: 1.2em;&quot;&gt;&lt;strong&gt;Suivi et évaluation&lt;/strong&gt;&lt;/span&gt; : outils pour tracker le suivi et les progrès, notifier les échéances (par mail ou mobile), certifier les compétences et mesurer l’efficacité via des rapports ; &lt;/li&gt;
+    &lt;li&gt; &lt;span style=&quot;font-size: 1.2em;&quot;&gt;&lt;strong&gt;Polyvalence fonctionnelle&lt;/strong&gt;&lt;/span&gt; : grande diversité d&#39;activités qui vont de la page de cours à l&#39;intégration de SCORMS, du H5P natif, des wiki, etc. &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+<p></lia-keep></p>
+<pre><code>       {{2-3}}</code></pre>
+<lia-keep>
+<div
+style="background-color:#170E02; padding: 0.8em; border-radius: 6px; margin-top:2em;">
+<pre><code>&lt;div style=&quot;color:white; display:flex; align-items:center;&quot;&gt; 
+    &lt;div style=&quot;font-size: 1.2em;&quot;&gt;&lt;strong&gt;Moodle et consort (LMS) : les moins bons côtés&lt;/strong&gt;&lt;/div&gt; 
+&lt;/div&gt; </code></pre>
+</div>
+<div
+style="background-color:#F5F6F9; font-size: 0.95em; padding: 1.1em 1.2em; margin-top:-8px; border-radius: 0 0 6px 6px; line-height: 1.6;">
+<pre><code>&lt;ul&gt;
+    &lt;li&gt; &lt;span style=&quot;font-size: 1.2em;&quot;&gt;&lt;strong&gt;Encapsulage institutionnel&lt;/strong&gt;&lt;/span&gt; : les contenus pédagogiques sont d&#39;abord conçus pour une communauté spécifique avec des droits d&#39;accès spécifiques (même s&#39;il est possible d&#39;ouvrir largement les contenus), le partage, la réutilisation et le remixage n&#39;en est pas facilité ; &lt;/li&gt;
+    &lt;li&gt; &lt;span style=&quot;font-size: 1.2em;&quot;&gt;&lt;strong&gt;Interface graphique utilisateur lourde&lt;/strong&gt;&lt;/span&gt; : le nombre de clics nécessaires pour intervenir sur une activité peut être important, lourdeur augmentée par la lenteur des serveurs institutionnels (web, base de données, utilisateurs en simultané) ; &lt;/li&gt;
+    &lt;li&gt; &lt;span style=&quot;font-size: 1.2em;&quot;&gt;&lt;strong&gt;La tendance au tracking overkill&lt;/strong&gt;&lt;/span&gt; : systématisation du tracking (allez voir les logs d&#39;un cours sur Moodle) avec une granularité des données comportementales pas forcément nécessaire pour l&#39;UX et l&#39;amélioration continue. &lt;/li&gt;
+    &lt;li&gt; &lt;span style=&quot;font-size: 1.2em;&quot;&gt;&lt;strong&gt;La déconnexion contenant / contenu&lt;/strong&gt;&lt;/span&gt; : globalement les LMS tombent dans les mêmes écueils de les CMS (Content Management System) qui, pour des raisons d&#39;efficacité font une distinction entre contenant et contenu et rendent la modification du contenant très complexe.&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+</div>
+<p></lia-keep></p>
+<h3 id="un-outil-pensé-pour-laccessibilité-et-le-partage">Un outil pensé
+pour l’accessibilité et le partage</h3>
+<h1 id="les-5r">Les 5R</h1>
+<pre><code>    --{{0}}--</code></pre>
+<p>J’utilise à titre personnel une définition assez simple de ce que
+sont les REL, celle de David Wiley (cf. <a
+href="https://fabriquerel.org/rel/">La Fabrique REL</a> ainsi que le <a
+href="https://opencontent.org/definition/">blog de David Wiley</a>), qui
+me rappelle les 5W des journalistes. Les 5R font office de critères pour
+définir si telle ou telle ressource est bien ” libre “. Je ne détaille
+pas plus, et je vais vous montrer concrètement comment une ressource
+éducative qui a été faite sur LiaScript permet nativement ces 5
+actions.</p>
+<pre><code>           .--------------.       .-------------. 
+           |  Réutiliser  |       |   Réviser   |
+           |    . &lt;-.     |       |    . &lt;-.    |
+     +-----&gt;   (     )    +-------&gt;   (  +  )   +------+             
+     |     |    `-&gt; &#39;     |       |    `-&gt; &#39;    |      |
+     |     &#39;--------------&#39;       &#39;-------------&#39;      |
+.----+----.                                      .-----V-----.
+| Retenir |                                      |  Remixer  |
+|    |    |                                      |   \   /   |
+|  | v |  |                                      |    V V    |
+|  +---+  |                                      |    ^ ^    |
+&#39;----^----&#39;                                      |   /   \   |
+     |                                           &#39;-----+-----&#39;
+     |               .----------------.                | 
+     |               |  Redistribuer  |                |
+     |               |    ^  ^  ^     |                |   
+     +---------------+     \ | /      &lt;----------------+
+                     |      .+.       |
+                     |     (   )      |
+                     |      `-&#39;       |
+                     &#39;----------------&#39;</code></pre>
+<h4 id="retenir-retain">Retenir (Retain)</h4>
+<p>L’action retain/retenir, c’est :</p>
+<blockquote>
+<p>” make, own, and control a copy of the resource ”</p>
+<p>– David Wiley (<a
+href="https://opencontent.org/definition/"><em>Defining the “Open” in
+Open Content and Open Educational Ressources</em>, 2023</a>)</p>
+</blockquote>
+<pre><code>    --{{1}}--</code></pre>
+<p>Mettons que je traîne sur GitHub et que je tombe sur <a
+href="https://github.com/damienbelveze/Liascript"><strong>ce
+cours</strong></a> (coucou Damien), il est pile dans mon sujet, et son
+auteur a pris la peine de mentionner de manière explicite la licence de
+réutilisation, on est sur un CC-BY classique (donc réutilisation
+permisee avec mention de l’auteur).</p>
+<pre><code>    {{1-2}}</code></pre>
+<p><img src="assets/github/github_repo_damien_belveze.png"
+alt="Répertoire de Damien Belvèze" /><!--width="60%"--></p>
+<pre><code>    --{{2}}--</code></pre>
+<p>Le fonctionnement de GitHub est pensé pour ce genre de cas, je peux
+<em>forker</em> le répertoire, c’est-à-dire que j’en crée une copie qui
+va directement dans la liste de mes répertoires sur mon compte.</p>
+<pre><code>    {{2-3}}</code></pre>
+<p><img src="assets/github/github_repo_damien_belveze_fork.png"
+alt="Fork du répertoire de Damien Belvèze" /><!--width="60%"--></p>
+<pre><code>    --{{3}}--</code></pre>
+<p>Je lui donne un nom, pourquoi pas une description et je crée le
+<em>Fork</em>.</p>
+<pre><code>    {{3-4}}</code></pre>
+<p><img src="assets/github/github_repo_damien_belveze_fork_2.png"
+alt="Fork du répertoire de Damien Belvèze" /><!--width="60%"--></p>
+<pre><code>    --{{4}}--</code></pre>
+<p>Je retrouve le répertoire forké avec tout son contenu, je peux le
+modifier dans porter atteinte à l’intégrité du répertoire d’origine,
+tout en conservant son historique, donc une traçabilité des
+modifications.</p>
+<pre><code>    {{4-5}}</code></pre>
+<p><img src="assets/github/github_repo_damien_belveze_forked.png"
+alt="Répertoire de Damien forké chez moi, je peux le modifier" /><!--width="60%"--></p>
+<h4 id="réviser-revise">Réviser (Revise)</h4>
+<p>L’action revise/réviser, c’est :</p>
+<blockquote>
+<p>” edit, adapt, and modify your copy of the resource ”</p>
+<p>– David Wiley (<a
+href="https://opencontent.org/definition/"><em>Defining the “Open” in
+Open Content and Open Educational Ressources</em>, 2023</a>)</p>
+</blockquote>
+<pre><code>    --{{0}}--</code></pre>
+<p>A partir de ce moment-là, je suis libre de faire ce que je veux sur
+le contenu du cours, ça n’a pas de conséquence sur le répertoire
+d’origine. Le fait de réviser va concerner toutes les modifications
+“mineures” – même si une traduction n’est pas vraiment un travail mineur
+– qui ne changent pas l’esprit de la ressource (elle garde donc les
+mêmes objectifs pédagogiques), mais l’ouvre à d’autres formats et
+d’autres modalités de lecture.</p>
+<p>Je peux par exemple corriger une minuscule faute que j’ai repéré dans
+le titre.</p>
+<pre><code>    --{{1}}--</code></pre>
+<p>Dans GitHub je ne peux pas corriger directement dans l’affichage
+<code>Preview</code>, mais il me suffit de cliquer sur
+<code>Edit this file</code> pour afficher le <em>Code</em> qui, lui, est
+éditable.</p>
+<pre><code>    {{1-2}}</code></pre>
+<p><img src="assets/Cours_Damien/Titre_cours_Damien_edit.png"
+alt="Exemple d’une modification minime" /><!--width="60%"--></p>
+<pre><code>    --{{2}}--</code></pre>
+<p>Je supprime le ” s ” en trop (je vous invite à aller voir son cours
+qui est évidemment d’excellente facture).</p>
+<pre><code>    {{2-3}}</code></pre>
+<p>Le <em>Code</em> est austère, mais c’est un type d’affichage auquel
+il faut s’habituer ! <img
+src="assets/Cours_Damien/Titre_cours_Damien_edit_code.png"
+alt="Modification dans le Code" /><!--width="60%"--></p>
+<pre><code>    {{3-4}}</code></pre>
+<p>Autre point de vocabulaire, ne cherchez pas le bouton <em>save</em>
+ici. Pour enregistrer vos modifications, même minimes, cliquez sur
+<code>Commit changes...</code>, décrivez la modification, puis sur
+<code>Commit Changes</code>, voilà vous avez ” sauvegardé ” ! <img
+src="assets/github/Commit_github.svg"
+alt="Wallace et Commit !" /><!--width="50%"--></p>
+<pre><code>    --{{3}}--</code></pre>
+<p>Il n’y a pas de traduction parfaite pour le terme ” commit ” qu’on
+peut entendre comme le fait de <em>valider</em> une modification.</p>
+<h4 id="remixer-remixe">Remixer (Remixe)</h4>
+<p>L’action remix/remixer, c’est :</p>
+<blockquote>
+<p>” combine your original or revised copy of the resource with other
+existing material to create something new ”</p>
+<p>– David Wiley (<a
+href="https://opencontent.org/definition/"><em>Defining the “Open” in
+Open Content and Open Educational Ressources</em>, 2023</a>)</p>
+</blockquote>
+<p>Comme la définition l’indique, une REL doit permettre le remixe,
+donc, par exemple, la possibilité d’être fusionnée avec une autre
+REL.</p>
+<pre><code>    {{1-2}}</code></pre>
+<p>A partir du cours de Damien, j’ai envie d’ajouter un morceau de mon
+cours pour en créer une nouvelle forme. <img
+src="assets/github/github_remixe.svg"
+alt="Fusion du cours de Damien avec une partie de mien" /></p>
+<pre><code>    {{2-3}}</code></pre>
+<p><img src="assets/github/github_remixe3.svg"
+alt="Historique des commits dans le répertoire forké de Damien" />Je
+vais tout simplement copier la partie de mon cours dans le cours de
+Damien (que j’ai préalablement forké), ce qui me permet de conserver
+l’historique de ses modifications et leurs attributions.</p>
+<pre><code>    {{3}}</code></pre>
+<p>Et voilà, le cours est remixé et révisé, il est prêt à l’emploi. <img
+src="assets/github/github_remixe2.svg"
+alt="La partie de mon cours dans le cours de Damien" /></p>
+<h5
+id="réviser-et-remixer-en-toute-légalité-le-suivi-des-versions">Réviser
+et remixer en toute légalité : le suivi des versions</h5>
+<pre><code>       --{{0}}--</code></pre>
+<p>Sans doute un des aspects les plus importants quand on travaille sur
+du long terme ou à plusieurs, c’est de pouvoir s’y retrouver entre
+plusieurs états d’un même projet, d’éventuellement revenir à un état
+antérieur, voire de dupliquer un projet entier (à soi ou non) pour le
+modifier en tant que projet indépendant (faire un
+<strong>fork</strong>).</p>
+<pre><code>      {{1-2}}</code></pre>
+<p>Ci-dessous l’interface de suivi des versions d’un même projet dans VS
+Code et dans GitHub <img
+src="assets/Pk_Liascript/Versioning_VS_Github.png"
+alt="Le suivi des versions sur GitHub et VS Code" /></p>
+<pre><code>      --{{1}}--</code></pre>
+<p>Le suivi des versions implique aussi que votre travail, ou le travail
+de quelqu’un d’autre qui vous ferait de l’œil est implicitement
+disponible à la modification et au remixage. sans risque de corruption
+(on peut toujours revenir à une version antérieure).</p>
+<pre><code>      {{2}}</code></pre>
+<p>Le versioning, une invitation au partage et à la collectivisation
+rigoureuse des moyens de productions pédagogiques. <img
+src="assets/Pk_Liascript/Versioning.png"
+alt="Le suivi des versions" /></p>
+<h4 id="réutiliser-reuse">Réutiliser (Reuse)</h4>
+<p>L’action reuse/réutiliser, c’est :</p>
+<blockquote>
+<p>” use your original, revised, or remixed copy of the resource
+publicly ”</p>
+<p>– David Wiley (<a
+href="https://opencontent.org/definition/"><em>Defining the “Open” in
+Open Content and Open Educational Ressources</em>, 2023</a>)</p>
+</blockquote>
+<p>C’est principalement à ce stade que LiaScript entre en jeu. Pour le
+moment, nous avons surtout navigué dans des répertoires GitHub,
+désormais nous allons passer notre travail de conception à
+l’interpréteur qu’est fondamentalement LiaScript.</p>
+<pre><code>    {{1-2}}</code></pre>
+<p>A partir du répertoire, je vais afficher le fichier principal, donc
+le fichier en .md. <img src="assets/github/github_reuse1.svg"
+alt="Rendez vous sur le cours en lui-même (en .md)" /></p>
+<pre><code>    {{2-3}}</code></pre>
+<p>En plus de l’affichage <code>Code</code> et <code>Preview</code>il
+existe un affichage <code>Raw</code> sur une page spécifique, c’est
+précisément ça qu’on va chercher. <img
+src="assets/github/github_reuse2.svg"
+alt="cliquez sur Raw pour afficher le fichier en markdown brut" /></p>
+<pre><code>    {{3-4}}</code></pre>
+<p>La version <code>Raw</code> du cours est moche, mais c’est elle qu’on
+va donner à l’interpréteur LiaScript. On va donc copier l’URL de la page
+<code>Raw</code>… <img src="assets/github/github_reuse3.svg"
+alt="Copiez l’URL" /></p>
+<pre><code>    {{4-5}}</code></pre>
+<p>… pour la coller dans le site officiel de LiaScript
+(https://liascript.github.io/) qui est une page web GitHub. On clique
+sur <code>Open Course</code>… <img
+src="assets/liascript/LiaScript_reuse1.svg"
+alt="Sur le site de LiaScript, collez l’URL" /></p>
+<pre><code>    {{5}}</code></pre>
+<p>… le temps d’un chargement plus tard, le cours s’affiche et est prêt
+à l’emploi. <img src="assets/liascript/LiaScript_reuse2.svg"
+alt="Le cours en .md interprété par LiaScript" /></p>
+<h4 id="redistribuer-redistribute">Redistribuer (Redistribute)</h4>
+<p>L’action redistribute/redistribuer, c’est :</p>
+<blockquote>
+<p>” share copies of your original, revised, or remixed copy of the
+resource with others ”</p>
+<p>– David Wiley (<a
+href="https://opencontent.org/definition/"><em>Defining the “Open” in
+Open Content and Open Educational Ressources</em>, 2023</a>)</p>
+</blockquote>
+<p>A partir de là, la redistribution est simplissime et surtout
+multimodale. On peut distinguer deux entités partageable :</p>
+<pre><code>    {{1}}</code></pre>
+<ul>
+<li><p>le <strong>répertoire GitHub</strong> qui s’apparenterait à une
+version ” Brute ” du cours avec le document principal rédigé en markdown
+et les éléments annexes (souvent nommés <code>assets</code>, donc les
+images, les activités H5P, les vidéos, etc.). Cette version est aussi <a
+href="#6"><strong>revisable</strong></a> et <a
+href="#7"><strong>remixable</strong></a>, mais elle ne comporte pas les
+éléments interactifs propres à LiaScript.</p>
+<pre><code>  {{2}}</code></pre></li>
+<li><p>la <strong>version LiaScript</strong>, version finale de
+production complètement opérationnelle et non modifiable, sous la forme
+d’une URL dont on peut faire ce qu’on veut (et notamment l’intégrer sur
+une page en HTML).</p>
+<pre><code>  {{1}}</code></pre>
+<pre><code>                                       ^ ^ ^                                                ^ ^ ^
+                                        \|/                                                  \|/
++-----------------------+        #---------+---------#   +------------------------+   #---------+---------#
+|                       |        |                   |   |                        |   |                   |
+| Votre document en .md +----+--&gt;| Répertoire GITHUB +--&gt;| Interpréteur LiaScript +--&gt;| Version LIASCRIPT |
+|                       |    |   |                   |   |                        |   |                   |
++----------+------------+    |   #-------------------#   +------------------------+   #-------------------#
+                           |
+               +-----------+---------+
+               | Avec tous les       |
+               | éléments annexes    |
+               | (images, H5P, etc.) |
+               +---------------------+</code></pre></li>
+</ul>
+<h3 id="un-outil-souple">Un outil SOUPLE</h3>
+<pre><code>    {{0-1}}</code></pre>
+<div class="sourceCode" id="cb44"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a>On peut juste écrire du texte en toute simplicité et en toute décontraction...</span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>On a le droit de faire des listes :</span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>comme</span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>celle</span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a><span class="ss">* </span>ci</span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a>ou</span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a><span class="ss">1. </span>comme</span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a><span class="ss">2. </span>celle</span>
+<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a><span class="ss">3. </span>là</span>
+<span id="cb44-12"><a href="#cb44-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-13"><a href="#cb44-13" aria-hidden="true" tabindex="-1"></a>On peut aussi faire des tableaux</span>
+<span id="cb44-14"><a href="#cb44-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-15"><a href="#cb44-15" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>Colonne 1<span class="pp">|</span>Colonne 2<span class="pp">|</span>Colonne 3<span class="pp">|</span></span>
+<span id="cb44-16"><a href="#cb44-16" aria-hidden="true" tabindex="-1"></a><span class="pp">|---------|---------|---------|</span></span>
+<span id="cb44-17"><a href="#cb44-17" aria-hidden="true" tabindex="-1"></a><span class="pp">|</span>Bla      <span class="pp">|</span>Bla      <span class="pp">|</span>Bla      <span class="pp">|</span></span>
+<span id="cb44-18"><a href="#cb44-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb44-19"><a href="#cb44-19" aria-hidden="true" tabindex="-1"></a>Bref, on a toute la palette du markdown</span></code></pre></div>
+<pre><code>    {{1-2}}</code></pre>
+<p>On peut insérer des images… <img src="assets/autre/ecrikciotti.svg"
+title="Une superbe photo du maire de Nice"
+alt="Une belle image de Erik Ciottu" /><!--width="100%"--></p>
+<pre><code>    {{2-3}}</code></pre>
+<pre class="mardown"><code>                         +-------------+
+                     +--&gt;| Des schémas |
+                     |   +-------------+
+                     |
++---------------+    |   +--------------+
+| On peut faire +----+--&gt;| en ASCII-art |
++---------------+        +--------------+          </code></pre>
+<pre><code>    {{3-4}}</code></pre>
+<pre><code>                         +-------------+
+                     +--&gt;| Des schémas |
+                     |   +-------------+
+                     |
++---------------+    |   +--------------+
+| On peut faire +----+--&gt;| en ASCII-art |
++---------------+    |   +--------------+
+                     |
+                     |   +----------------------------------+
+                     +--&gt;| qui deviennent des images en svg |
+                         +----------------------------------+</code></pre>
+<pre><code>    {{4-5}}</code></pre>
+<p>On peut intégrer à peu près tout et n’importe quoi, présentation
+Genially, tableau Miro, mais surtout… du H5P :-) (si vous voulez rester
+dans de la REL pure et dure)</p>
+<pre><code>    --{{4}}--</code></pre>
+<p>Pour le H5P, je vous conseille d’utiliser les outils de <a
+href="https://ladigitale.site/">La Digitale</a> et tout particulièrement
+<a href="https://ladigitale.site/logiquiz/">Logiquiz</a> (pour la
+conception de contenus H5P en local) et <a
+href="https://ladigitale.site/digiquiz/">Digiquiz</a> (pour la lecture
+de contenus H5P si vous ne pouvez pas utiliser Moodle)</p>
+<pre><code>    {{4-5}}</code></pre>
+<iframe src="https://ladigitale.dev/digiquiz/q/6a01ae72251c2" allow="fullscreen; autoplay;" frameborder="0" width="90%" height="650">
+</iframe>
+<pre><code>    {{5}}</code></pre>
+<p>Il est même possible d’exécuter du code</p>
+<pre><code>    {{5-6}}</code></pre>
+<div class="sourceCode" id="cb55"><pre
+class="sourceCode javascript"><code class="sourceCode javascript"><span id="cb55-1"><a href="#cb55-1" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> motCle <span class="op">=</span> <span class="st">&quot;merle noir&quot;</span><span class="op">;</span></span>
+<span id="cb55-2"><a href="#cb55-2" aria-hidden="true" tabindex="-1"></a><span class="kw">const</span> url <span class="op">=</span> <span class="vs">`https://api.archives-ouvertes.fr/search/?q=</span><span class="sc">${</span><span class="pp">encodeURIComponent</span>(motCle)<span class="sc">}</span><span class="vs">&amp;rows=3&amp;sort=submittedDate_s desc`</span><span class="op">;</span></span>
+<span id="cb55-3"><a href="#cb55-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-4"><a href="#cb55-4" aria-hidden="true" tabindex="-1"></a><span class="fu">fetch</span>(url)</span>
+<span id="cb55-5"><a href="#cb55-5" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>(response <span class="kw">=&gt;</span> response<span class="op">.</span><span class="fu">json</span>())</span>
+<span id="cb55-6"><a href="#cb55-6" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">then</span>(data <span class="kw">=&gt;</span> {</span>
+<span id="cb55-7"><a href="#cb55-7" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;📊 Nombre total de résultats dans HAL : &quot;</span> <span class="op">+</span> data<span class="op">.</span><span class="at">response</span><span class="op">.</span><span class="at">numFound</span><span class="op">.</span><span class="fu">toLocaleString</span>(<span class="st">&#39;fr-FR&#39;</span>))<span class="op">;</span></span>
+<span id="cb55-8"><a href="#cb55-8" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;---&quot;</span>)<span class="op">;</span></span>
+<span id="cb55-9"><a href="#cb55-9" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;🔎 3 publications les plus récentes :&quot;</span>)<span class="op">;</span></span>
+<span id="cb55-10"><a href="#cb55-10" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;&quot;</span>)<span class="op">;</span></span>
+<span id="cb55-11"><a href="#cb55-11" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb55-12"><a href="#cb55-12" aria-hidden="true" tabindex="-1"></a>    data<span class="op">.</span><span class="at">response</span><span class="op">.</span><span class="at">docs</span><span class="op">.</span><span class="fu">forEach</span>((doc<span class="op">,</span> i) <span class="kw">=&gt;</span> {</span>
+<span id="cb55-13"><a href="#cb55-13" aria-hidden="true" tabindex="-1"></a>      <span class="co">// On nettoie les chevrons encodés pour l&#39;affichage</span></span>
+<span id="cb55-14"><a href="#cb55-14" aria-hidden="true" tabindex="-1"></a>      <span class="kw">const</span> citation <span class="op">=</span> doc<span class="op">.</span><span class="at">label_s</span><span class="op">.</span><span class="fu">replace</span>(<span class="ss">/&amp;#x27E8;/g</span><span class="op">,</span> <span class="st">&#39;⟨&#39;</span>)<span class="op">.</span><span class="fu">replace</span>(<span class="ss">/&amp;#x27E9;/g</span><span class="op">,</span> <span class="st">&#39;⟩&#39;</span>)<span class="op">;</span></span>
+<span id="cb55-15"><a href="#cb55-15" aria-hidden="true" tabindex="-1"></a>      <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`[</span><span class="sc">${</span>i<span class="op">+</span><span class="dv">1</span><span class="sc">}</span><span class="vs">] </span><span class="sc">${</span>citation<span class="sc">}</span><span class="vs">`</span>)<span class="op">;</span></span>
+<span id="cb55-16"><a href="#cb55-16" aria-hidden="true" tabindex="-1"></a>      <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="vs">`    🔗 </span><span class="sc">${</span>doc<span class="op">.</span><span class="at">uri_s</span><span class="sc">}</span><span class="vs">`</span>)<span class="op">;</span></span>
+<span id="cb55-17"><a href="#cb55-17" aria-hidden="true" tabindex="-1"></a>      <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;&quot;</span>)<span class="op">;</span></span>
+<span id="cb55-18"><a href="#cb55-18" aria-hidden="true" tabindex="-1"></a>    })<span class="op">;</span></span>
+<span id="cb55-19"><a href="#cb55-19" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb55-20"><a href="#cb55-20" aria-hidden="true" tabindex="-1"></a>  <span class="op">.</span><span class="fu">catch</span>(error <span class="kw">=&gt;</span> {</span>
+<span id="cb55-21"><a href="#cb55-21" aria-hidden="true" tabindex="-1"></a>    <span class="bu">console</span><span class="op">.</span><span class="fu">log</span>(<span class="st">&quot;❌ Erreur : &quot;</span> <span class="op">+</span> error)<span class="op">;</span></span>
+<span id="cb55-22"><a href="#cb55-22" aria-hidden="true" tabindex="-1"></a>  })<span class="op">;</span></span>
+<span id="cb55-23"><a href="#cb55-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb55-24"><a href="#cb55-24" aria-hidden="true" tabindex="-1"></a><span class="st">&quot;Interrogation de HAL en cours...&quot;</span><span class="op">;</span></span></code></pre></div>
+<script>@input</script>
+<h3 id="un-outil-remplaçable">Un outil REMPLAÇABLE</h3>
+<h1 id="et-si-liascript-venait-à-mourir">Et si LiaScript venait à mourir
+?</h1>
+<pre><code>    {{0-1}}</code></pre>
+<p><img src="assets/liascript/the_death_of_LiaScript.svg"
+alt="La mort tragique de LiaScript" /><!--width="100%"--></p>
+<pre><code>    --{{0}}--</code></pre>
+<p>LiaScript à la qualité d’être un outil remplaçable, il ne vous prend
+pas en otage, il n’est finalement qu’un intermédiaire. S’il meurt, on ne
+perd que la forme, mais pas le fond, pas les éléments, pas les
+intentions pédagogiques fondamentales. L’outil en tant que tel n’est
+qu’un interpréteur de votre code, et ce code se trouve être en majeure
+partie du MarkDown, donc globalement du texte.</p>
+<pre><code>    {{1-2}}</code></pre>
+<pre><code>+-----------------------+         +------------------------+          +-----------+
+|                       |         |                        |          |           |
+| Votre document en .md +----+---&gt;| Interpréteur LiaScript +---------&gt;| Votre REL |
+|                       |    |    |                        |          |           |
++----------+------------+    |    +------------------------+          +-----------+
+                             |
+                 +-----------+---------+
+                 | Avec tous les       |
+                 | éléments annexes    |
+                 | (images, H5P, etc.) |
+                 +---------------------+</code></pre>
+<pre><code>    {{2-3}}</code></pre>
+<pre><code>+-----------------------+         +------//------//------//+          +-----------+
+|                       |         |     //      //      // |          |           |
+| Votre document en .md +----+---&gt;| Int//préteu//LiaScr//t +---------&gt;| Votre REL |
+|                       |    |    |   //      //      //   |          |           |
++-----------------------+    |    +--//------//------//----+          +-----------+
+                             |
+                 +-----------+---------+
+                 | Avec tous les       |
+                 | éléments annexes    |
+                 | (images, H5P, etc.) |
+                 +---------------------+</code></pre>
+<pre><code>    {{3-4}}</code></pre>
+<pre><code>+-----------------------+        ,-----------.                    
+|                       |        | Remixer   |                
+| Votre document en .md +-------&gt;| Auditer   +-------------------.      
+|                       |        | Convertir |                   |    +--------------+
++----------+------------+        `-----------&#39;                   |    | Votre REL 2  |
+           |                                                     +---&gt;| ou peut-être |
+           |     +---------------------+      ,-----------.      |    | vos RELs     |
+           |     | Avec tous les       |      | Remixer   |      |    +--------------+
+           &#39;-----| éléments annexes    +-----&gt;| Auditer   +------&#39;
+                 | (images, H5P, etc.) |      | Convertir |
+                 +---------------------+      `-----------&#39;                  </code></pre>
+<pre><code>    {{4-5}}</code></pre>
+<p>Et pour tout ça, il y a <a href="https://pandoc.org/">Pandoc</a> !
+(le logo n’est hélas pas de moi) <img
+src="assets/Pandoc/Pandoc_logo.svg" alt="Logo de Pandoc" /> Pandoc est
+un convertisseur universel de document, totalement gratuit. D’un usage
+peu intuitif au départ, il reste incroyablement pratique et efficace,
+notamment pour convertir des document rédigés en MarkDown vers le PDF,
+docx ou le HTML en conservant la structure du document, le texte, les
+images, les figures, etc.</p>
+<h2 id="mise-en-route">Mise en route</h2>
+<h3 id="se-créer-un-compte-github">Se créer un compte GitHub</h3>
+<p>Pour utiliser tranquillement Liascript, la création d’un compte sur
+GitHub est nécessaire.</p>
+<figure>
+<img src="assets/github/githubconnect.png"
+alt="Page de connexion de GitHub" />
+<figcaption aria-hidden="true">Page de connexion de GitHub</figcaption>
+</figure>
+<h3 id="créer-un-répertoire">Créer un répertoire</h3>
+<p>{{1-3}} Cliquez sur l’icône de votre compte en haut à droit de
+l’écran, puis sur <em>Repositories</em> <img
+src="assets/github/github_repo.png"
+alt="Création d’un répertoire Github" /></p>
+<p>{{2-3}} Cliquez sur <em>New</em> pour créer un nouveau répertoire.
+<img src="assets/github/github_repo_2.png"
+alt="Création d’un répertoire GitHub" /></p>
+<p>{{3}} Entrez les informations nécessaires. Evitez les espaces dans le
+nom du répertoire. la description n’est pas obligatoire, mais elle peut
+aider à ce que l’on retrouve votre répertoire. Super important : votre
+répertoire doit impérativement être <strong>public</strong> pour que
+Liascript puisse l’interpréter. <img
+src="assets/github/github_repo_3.png"
+alt="Finalisation d’un répertoire" /></p>
+<p>{{4}} Une fois votre répertoire créé, vous pouvez y accéder depuis
+<em>Repositories</em> en cliquant sur l’icone de votre profil. Notez
+qu’au moment de la création du répertoire, il ne contient rien que la
+<strong>LICENCE</strong> et le README.md. <img
+src="assets/github/github_repo_4.png"
+alt="Répertoire GitHub vide" /></p>
+<h3 id="visual-studio-code">Visual Studio Code</h3>
+<p><strong>Visual Studio Code</strong> est un éditeur de texte gratuit
+et open source maintenu par <strong>Microsoft</strong> (eh oui, snif).
+Très utilisé par les développeur.ses, on va plutôt l’utiliser comme
+simple éditeur de MarkDown, un peu amélioré par le créateur de
+Liascript, grâce à quelques plugins. <img
+src="assets/VS_Code/VS_Code_acc.png" alt="Accueil VS Code" /></p>
+<p>Rendez-vous sur la <a
+href="https://code.visualstudio.com/Download">page de téléchargement</a>
+et procédez à l’installation du logiciel, on se retrouve de l’autre
+côté.</p>
+<h4 id="installer-et-activer-les-plugins-liascript">Installer et activer
+les plugins Liascript</h4>
+<p>Pour utiliser confortablement Liascript, on va devoir installer deux
+extensions développées par André Dietrich. Rendez-vous dans le magasin
+d’extensions (cf. capture ci-dessous ou
+<code>Ctrl + Shift + X</code>).</p>
+<p>Entrez <code>liascript</code> dans la barre de recherche, normalement
+trois extensions doivent remonter. Cliquez sur
+<code>LiaScript-Preview</code> puis sur <code>Install</code>. <img
+src="assets/VS_Code/VS_Code_plug_in_LSPreview.png"
+alt="Liascript Preview" /></p>
+<p>Ce plug in va vous permettre de lancer une prévisualisation de ce que
+vous êtes en train de produire depuis Visual Code, sur votre navigateur
+favori, en local, sans connexion internet. Plutôt utile pour vérifier et
+tester votre cours au fil de l’eau !</p>
+<h5 id="installer-et-activer-le-plugin-liascript-snippets">Installer et
+activer le plugin Liascript Snippets</h5>
+<p>Le second plug in se nomme <strong>LiaScript-Snippets</strong>, il
+n’est pas absolument nécessaire à l’utilisation de LiaScript avec VS
+Code, mais c’est une aide non négligable quand on débute.</p>
+<figure>
+<img src="assets/VS_Code/VS_Code_plug_in_LSSnippets.png"
+alt="Liascript Snippets" />
+<figcaption aria-hidden="true">Liascript Snippets</figcaption>
+</figure>
+<p>Une fois l’installation faite, ce n’est pas terminé. Sur la page de
+<strong>LiaScript-Snippets</strong>, on vous demande de copier-coller un
+morceau de code. Sélectionnez le morceau de code mis en exergue, puis
+<code>Ctrl + C</code>.</p>
+<figure>
+<img src="assets/VS_Code/VS_Code_plug_in_LSSnippets_2.png"
+alt="Liascript Snippets suite" />
+<figcaption aria-hidden="true">Liascript Snippets suite</figcaption>
+</figure>
+<p>Faites <code>Ctrl + Shift + P</code> puis entrez
+<code>settings</code> et cliquez sur Open User Settings (JSON), et
+collez le morceau de code entre les deux accolades (je le remets
+ci-dessous), puis quittez.</p>
+<pre><code>   &quot;[markdown]&quot;: {
+      &quot;editor.tabCompletion&quot;: &quot;on&quot;,
+      &quot;editor.quickSuggestions&quot;: true,
+      &quot;editor.snippetSuggestions&quot;: &quot;top&quot;
+   },</code></pre>
+<figure>
+<img src="assets/VS_Code/VS_Code_plug_in_LSSnippets_3.png"
+alt="Liascript Snippets suite" />
+<figcaption aria-hidden="true">Liascript Snippets suite</figcaption>
+</figure>
+<p><strong>LiaScript-Snippets</strong> va vous permettre d’“appeler” des
+fonctionalités de LiaScript comme des modèles mise en formes spécifiques
+(tableaux, graph, etc.), ou des modèles de quizs, et une miriade de
+choses super chouettes avec le préfixe <code>lia</code>.</p>
+<h3 id="git">Git</h3>
+<p><img src="assets/git/git_logo.png" alt="Logo de Git" />Git est un
+logiciel de gestion de versions décentralisé développé par Linus
+Torvalds, le créateur du noyeau Linux. Pour en savoir plus sur Git et
+son fonctionnement, vous pouvez consulter <a
+href="https://fr.wikipedia.org/wiki/Git">la page Wikipédia</a> qui est
+bien détaillée.</p>
+<h4 id="installer-git">Installer Git</h4>
+<p>Aller sur le <a href="https://git-scm.com/install/windows">site
+officiel</a> et de télécharger Git for Windows.</p>
+<p>Sélectionnez l’installateur <code>Git for Windows/x64 Setup</code>
+qui devrait fonctionner dans la plupart des cas. <img
+src="assets/git/git_dl.png"
+alt="Page de téléchargement de Git for Windows" /></p>
+<p>L’installateur de Git sous Windows a beaucoup d’étapes avec plein de
+cases à cocher, <strong>laissez toutes les options par défaut et de
+cliquer sur “Next” jusqu’au bout</strong>. Ça ira très bien pour 99 %
+des usages.</p>
+<h4 id="configurer-git">Configurer Git</h4>
+<p>Une fois installé, ouvrez le terminal de commande <strong>Git
+Bash</strong>.</p>
+<figure>
+<img src="assets/git/git_bash.png" alt="Ouvrir Git Bash" />
+<figcaption aria-hidden="true">Ouvrir Git Bash</figcaption>
+</figure>
+<p>Vérifiez que Git est bien installé en entrant :</p>
+<pre><code>git --version</code></pre>
+<p>Si le terminal vous renvoie <code>git version 2.5x.x.windows</code>
+c’est bon.</p>
+<figure>
+<img src="assets/git/git_version.png" alt="Git version sur Git Bash" />
+<figcaption aria-hidden="true">Git version sur Git Bash</figcaption>
+</figure>
+<p>C’est là qu’il faut définir l’identité, pour que Git sache qui fait
+les modifications. Voici les commandes à entrer (le –global est
+important pour que ça s’applique à tous vos futurs projets) :</p>
+<p>Pour le nom (avec les guillemets) :</p>
+<pre><code>git config --global user.name &quot;Prénom Nom&quot;</code></pre>
+<p>Pour l’email (idéalement celui que vous utilisez pour GitHub) :</p>
+<pre><code>git config --global user.email &quot;votre.email@exemple.com&quot;</code></pre>
+<p>Aujourd’hui, le standard est d’appeler la branche principale main (au
+lieu de l’ancien master). Autant configurer ça tout de suite pour éviter
+des confusions plus tard :</p>
+<pre><code>git config --global init.defaultBranch main</code></pre>
+<p>Pour vérifier que tout a bien fonctionné, taper :</p>
+<pre><code>git config --list</code></pre>
+<p>Cela affichera votre nom, votre mail et vos réglages. Si vous voyez
+vos infos, c’est tout bon !</p>
+<figure>
+<img src="assets/Powershell/Powershell_gitconfig.png"
+alt="Nom, mail et réglages avec git config" />
+<figcaption aria-hidden="true">Nom, mail et réglages avec git
+config</figcaption>
+</figure>
+<h3 id="cloner-votre-répertoire-github-en-local">Cloner votre répertoire
+GitHub en local</h3>
+<p>Rendez-vous dans le dossier dans lequel vous souhaitez synchroniser
+votre répertoire.</p>
+<p>A titre personnel, je clone mes répertoires directement dans le
+dossier Documents, mais vous pouvez choisir un autre dossier.</p>
+<p>Une fois dans le dossier, faites un <code>clic droit</code> à
+l’intérieur puis cliquez sur <code>Open Git Bash here</code> pour ouvrir
+le terminal.</p>
+<figure>
+<img src="assets/git/open_git_bash_here.png" alt="Git bash here" />
+<figcaption aria-hidden="true">Git bash here</figcaption>
+</figure>
+<p>Tapez :</p>
+<pre><code>git clone https://github.com/nomdevotrecompte/nomdurepertoire.git</code></pre>
+<figure>
+<img src="assets/git/git_clone.png" alt="Clonage de répertoire" />
+<figcaption aria-hidden="true">Clonage de répertoire</figcaption>
+</figure>
+<p>Vous trouverez l’URL du répertoire en vous rendant… dans votre
+répertoire bien joué, et en cliquant sur <code>&lt;&gt; code</code>.</p>
+<figure>
+<img src="assets/github/github_url_clone.png" alt="URL GitHub" />
+<figcaption aria-hidden="true">URL GitHub</figcaption>
+</figure>
+<p>Et voilà ! Votre répertoire avec tout son contenu est cloné sur votre
+PC ! Si c’est votre premier répertoire, seul le <code>README.md</code>et
+la <code>LICENCE</code> ont été clonées, mais ce n’est qu’un début.</p>
+<figure>
+<img src="assets/git/repo_git_local.png" alt="Répertoire en local" />
+<figcaption aria-hidden="true">Répertoire en local</figcaption>
+</figure>
+<h3 id="finalisation-de-la-configuration-et-premier-commit">Finalisation
+de la configuration… et premier commit</h3>
+<p><img src="assets/VS_Code/VS_Code_open_folder.png"
+alt="Open Folder" />Rouvrez VS Code et ouvrez votre répertoire
+synchronisé :
+<code>File &gt; Open Folder... &gt; "Nom du répertoire &gt; Select folder"</code>
+(Sélectionnez simplement le répertoire cloné, ne double-cliquez pas
+dessus)</p>
+<p>Votre arborescence s’affichera sur la partie gauche de la fenêtre de
+VS Code. Sauf événement cataclismique, elle sera parfaitement identique
+à celle que vous avez dans l’explorateur de fichiers Windows et votre
+répertoire dans GitHub.</p>
+<p>Sélectionnez le <code>README.md</code> pour afficher l’éditeur de
+texte et voyez ce que ça donne. C’est visuellement beaucoup plus sobre
+et plus vraiment WYSIWYG, mais on s’y fait.</p>
+<figure>
+<img src="assets/VS_Code/VS_Code_arbo.png"
+alt="Arborescence répertoire VS Code" />
+<figcaption aria-hidden="true">Arborescence répertoire VS
+Code</figcaption>
+</figure>
+<h4 id="créer-votre-premier-document">Créer votre premier document</h4>
+<p>Evidemment, vous n’allez pas vous mettre à composer dans le
+<code>README.md</code> (conservez ce fichier pour expliquer comment
+utiliser votre ressource !)</p>
+<p>Dans l’arborescence de votre répertoire, toujours dans VS Code,
+cliquez sur l’icône <code>New File</code>juste à côté du nom de votre
+répertoire.</p>
+<p><img src="assets/VS_Code/VS_Code_premier_fichier.png"
+alt="Newfile" /> Attention, comme vous le voyez sur la capture, il est
+indispensable de spécifier le format du fichier nouvellement créé, et ce
+format, c’est du <code>.md</code> donc le format MarkDown. Vous pouvez
+nommer votre document comme vous le souhaitez, mais ajoutez
+<code>.md</code> à la fin si vous voulez que ça fonctionne.</p>
+<p>Cliquez sur le document pour afficher l’éditeur de texte. Par défaut,
+il vous propose de générer du code, mais vous ne mangez pas de ce
+pain-là. Positionnez-vous dans l’éditeur comme vous le feriez pour un
+éditeur de texte classique et tapez :</p>
+<pre><code>lia-init</code></pre>
+<p>Vous vous souvenez du plug in <a href="#7">LiaScript Snippets</a> ?
+C’est là qu’il entre en action. Appuyez sur <code>entrée</code> pour
+faire apparaître une première base du cours à partir de laquelle vous
+allez pouvoir avancer, ainsi qu’un certain nombre de métadonnées super
+utiles.</p>
+<figure>
+<img src="assets/VS_Code/VS_Code_lia_init.png" alt="Lia-init" />
+<figcaption aria-hidden="true">Lia-init</figcaption>
+</figure>
+<h4 id="lier-vs-code-à-github">Lier VS Code à GitHub</h4>
+<p>Il est temps de vous mettre au travail, vous avez cloné votre
+répertoire GitHub, vous allez maintenant l’alimenter et le mettre à
+jour. Pour cela, vous aller lier VS Code à votre compte GitHub (il
+existe d’autres voies pour synchroniser vos répertoires, ils seront
+détaillés dans des versions ultérieures de ce guide).</p>
+<p>En bas à gauche de la fenêtre de VS Code, cliquez sur
+<code>Accounts</code>puis sur
+<code>Backups and Sync Settings</code>.</p>
+<figure>
+<img src="assets/VS_Code/VS_Code_sync.png" alt="VS Code Accounts" />
+<figcaption aria-hidden="true">VS Code Accounts</figcaption>
+</figure>
+<p>Les <code>Settings Sync</code>s’ouvrent en haut de la fenêtre (oui on
+voyage), cliquez sur <code>Sign in</code> puis sur
+<code>Sign in with GitHub</code></p>
+<figure>
+<img src="assets/VS_Code/VS_Code_sync2.png" alt="Sign in with GitHub" />
+<figcaption aria-hidden="true">Sign in with GitHub</figcaption>
+</figure>
+<p><img src="assets/VS_Code/VS_Code_sync3.png" alt="Sign in GitHub" />
+VS Code va automatiquement ouvrir une page de votre navigateur
+enregistré par défaut pour vous demander si vous souhaitez vous
+connecter à GitHub, cliquez sur <code>Sign in</code> puis continuez. Si,
+de retour sur VS Code, le nom de votre compte s’affiche quand vous
+cliquez sur <code>Accounts</code> c’est bon !</p>
+<h4 id="premier-commit">Premier commit</h4>
+<p>Vous avez créé votre premier document et vous souhaitez qu’ils soit
+synchronisé sur votre répertoire GitHub, vous allez donc faire ce qu’on
+appelle un <em>commit</em>, c’est-à-dire une modification du répertoire
+qui sera décrite et signée de votre nom.</p>
+<p>Cliquez sur <code>Source Control</code>(par défaut, parmi les
+quelques icônes sur le côté gauche de la fenêtre de VS Code)</p>
+<figure>
+<img src="assets/VS_Code/VS_Code_commit.svg" alt="Premier commit" />
+<figcaption aria-hidden="true">Premier commit</figcaption>
+</figure>
+<p>Vous arrivez dans le panneau de contrôle des sources. Juste en
+dessous du bouton <code>Commit</code> un certain nombre de
+<code>Changes</code> sont listés (notamment la création de votre nouveau
+document.)</p>
+<p>Cliquez sur le petit <code>+</code> en face de <code>Changes</code>
+les éléments listés deviennent des <code>Staged Changes</code>prêts à
+être envoyé dans votre répertoire GitHub.</p>
+<p>N’oubliez pas de décrire votre modification/ajout avant de cliquer
+sur <code>Commit</code> puis de cliquer sur <code>Sync Changes</code>
+pour que votre répertoire GitHub soit synchronisé.</p>
+<h3 id="activer-la-prévisualisation">Activer la prévisualisation</h3>
+<p>En plus de gérer vos éléments en local, l’intérêt d’utiliser un
+éditeur tel que VS Code tient à la possibilité d’activer une
+prévisualisation de votre cours en version LiaScript afin de ne pas trop
+vous perdre dans votre conception.</p>
+<p>Dans VS Code positionnez votre curseur sur le texte et entrez
+<code>Alt + L</code>.</p>
+<figure>
+<img src="assets/VS_Code/VS_Code_previsu.svg"
+alt="Alt + L pour activer la prévisualisation" />
+<figcaption aria-hidden="true">Alt + L pour activer la
+prévisualisation</figcaption>
+</figure>
+<p>La prévisualisation s’ouvre automatiquement sur le navigateur
+enregistré en favori. La prévisualisation ne se met pas à jour
+automatiquement quand vous faites une modification dans le document en
+markdown, faites <code>Ctrl + S</code> pour que la prévisualisation
+prenne en compte vos modifications.</p>
+<figure>
+<img src="assets/liascript/LiaScript_previsu.svg"
+alt="Prévisualisation de LiaScript" />
+<figcaption aria-hidden="true">Prévisualisation de
+LiaScript</figcaption>
+</figure>
+<p>Attention, ce n’est pas parce que vous sauvegardez un état de votre
+travail avec <code>Ctrl + S</code> qu’il est automatiquement synchronisé
+avec votre répertoire ! Prenez l’habitude, lorsque vous arrivez à la fin
+d’une session, de <a href="#26">commit et de synchroniser</a> avant de
+quitter.</p>
+<h2 id="les-bases-des-bases">Les bases des bases</h2>
+<pre><code>    --{{1}}--</code></pre>
+<p>Si vous n’êtes pas familier avec le MarkDown, cette section est là
+pour y remedier. Pas d’inquiétude, les bases du langage sont très
+simples et vous aurez vite fait le tour du principal de sa syntaxe. Le
+plus difficile reste de se défaire de l’accoutumance des éditeurs de
+texte WYSIWYG (What You See Is What You Get) comme Word.</p>
+<p>Ici,</p>
+<div class="sourceCode" id="cb74"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>What you see may not be very pleasant...</span></code></pre></div>
+<p>… mais au moins, ça ne se casse pas.</p>
+<h3 id="structurer">1. Structurer</h3>
+<pre><code>    --{{0}}--</code></pre>
+<p>Sur LiaScript, une habitude à prendre, c’est de structurer votre
+contenu. Entrez <code>#</code><a href="#fn2" class="footnote-ref"
+id="fnref2" role="doc-noteref"><sup>2</sup></a> suivi d’un texte pour
+créer la page de titre de votre cours, puis structurez de la manière
+suivante :</p>
+<div class="sourceCode" id="cb76"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a><span class="fu"># Titre principal de votre cours</span></span>
+<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-3"><a href="#cb76-3" aria-hidden="true" tabindex="-1"></a> ...</span>
+<span id="cb76-4"><a href="#cb76-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-5"><a href="#cb76-5" aria-hidden="true" tabindex="-1"></a><span class="fu">## Titre de la première section</span></span>
+<span id="cb76-6"><a href="#cb76-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-7"><a href="#cb76-7" aria-hidden="true" tabindex="-1"></a> ...</span>
+<span id="cb76-8"><a href="#cb76-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-9"><a href="#cb76-9" aria-hidden="true" tabindex="-1"></a><span class="fu">### Titre d&#39;une sous-section</span></span>
+<span id="cb76-10"><a href="#cb76-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-11"><a href="#cb76-11" aria-hidden="true" tabindex="-1"></a> ...</span>
+<span id="cb76-12"><a href="#cb76-12" aria-hidden="true" tabindex="-1"></a><span class="fu">## Titre de la deuxième section</span></span></code></pre></div>
+<pre><code>    --{{1}}--</code></pre>
+<p>Vous verrez votre table des matières cliquable se structurer sans que
+vous ayez besoin de faire quoi que ce soit d’autre chaque section,
+sous-section devient une page du cours.</p>
+<p>Il est aussi possible de créer des sous-sections à l’intérieur d’une
+page de cours</p>
+<div class="sourceCode" id="cb78"><pre
+class="sourceCode markdown"><code class="sourceCode markdown"><span id="cb78-1"><a href="#cb78-1" aria-hidden="true" tabindex="-1"></a><span class="fu">## Titre d&#39;une section</span></span>
+<span id="cb78-2"><a href="#cb78-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-3"><a href="#cb78-3" aria-hidden="true" tabindex="-1"></a>Sous-section dans la page</span>
+<span id="cb78-4"><a href="#cb78-4" aria-hidden="true" tabindex="-1"></a><span class="fu">================</span></span>
+<span id="cb78-5"><a href="#cb78-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb78-6"><a href="#cb78-6" aria-hidden="true" tabindex="-1"></a>Sous-sous-section dans la même page</span>
+<span id="cb78-7"><a href="#cb78-7" aria-hidden="true" tabindex="-1"></a>--------------------</span></code></pre></div>
+<h3 id="mettre-en-forme">2. Mettre en forme</h3>
+<pre><code>    --{{0}}--</code></pre>
+<p>En MarkDown, la mise en forme du texte se fait en entourant ce
+dernier avec certains caractères que voici :</p>
+<ul>
+<li><p><code>*italique*</code> -&gt;
+<em>italique</em><!-- class="notranslate"--></p></li>
+<li><p><code>**gras**</code> -&gt;
+<strong>gras</strong><!-- class="notranslate"--></p></li>
+<li><p><code>***gras et italique ***</code> -&gt; <strong><em>gras et
+italique </em></strong><!-- class="notranslate"--></p></li>
+<li><p><code>_italique aussi_</code> -&gt; <em>italique
+aussi</em><!-- class="notranslate"--></p></li>
+<li><p><code>__gras aussi__</code> -&gt; <strong>gras
+aussi</strong><!-- class="notranslate"--></p></li>
+<li><p><code>___gras et italique aussi___</code> -&gt; <strong><em>gras
+et italique aussi</em></strong><!-- class="notranslate"--></p></li>
+<li><p><code>~barré~</code> -&gt;
+<sub>barré</sub><!-- class="notranslate"--></p>
+<pre><code>  --{{1}}--</code></pre>
+<p>Les mises en forme qui suivent n’existent pas en MarkDown de base
+:</p></li>
+<li><p><code>~~souligné~~</code> -&gt;
+<del>souligné</del><!-- class="notranslate"--> (attention avec l’éditeur
+VS Code votre texte apparaîtra <sub>barré</sub>, mais il sera bien
+<del>souligné</del> dans LiaScript</p></li>
+<li><p><code>~~~barré et souligné~~~</code> -&gt; <sub></sub>~barré et
+souligné<sub></sub>~<!-- class="notranslate"--> (remarque similaire ici,
+l’affichage du texte dans VS Code peut être confusionnalisant)</p></li>
+<li><p><code>^en exposant^</code> -&gt; ^en
+exposant^<!-- class="notranslate"--> (comme ça vous allez pouvoir écrire
+XIX<sup><strong>e</strong></sup> et pas XIX<strong>e</strong>).</p></li>
+</ul>
+<h3 id="les-liens-hypertextes">3. Les liens hypertextes</h3>
+<p>Il est possible d’ajouter des liens vivants dans un document markdown
+:</p>
+<ol type="1">
+<li><p>De manière brute :
+https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md
+(peuvent s’appliquer les mises en formes vue précédemment)</p></li>
+<li><p>Ou en nommant le lien : <a
+href="https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md"
+title="ici il y a TOUT">Aide LiaScript</a> (idem pour la mise en
+forme)</p></li>
+</ol>
+<pre><code>[Aide LiaScript](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md &quot;ici il y a TOUT&quot;)</code></pre>
+<p>On peut aussi faire des liens à l’intérieur d’un document:</p>
+<ul>
+<li>Cliquez <a href="#1">ici</a> pour revenir au début du cours</li>
+</ul>
+<pre><code>Cliquez [ici](#1) où &quot;#1&quot; =  numéro de la slide</code></pre>
+<h3 id="les-médias">4. Les médias</h3>
+<h4 id="insérer-des-images">Insérer des images</h4>
+<p>On insère des images avec la syntaxe suivante</p>
+<figure>
+<img
+src="%7B2%7D%7BURL%20ou%20chemin%20de%20l&#39;image%7D%7B3%7D%7B%22légende%20optionnelle%22%7D"
+alt="{1}{texte alternatif}" />
+<figcaption
+aria-hidden="true">{1}{<code>texte alternatif</code>}</figcaption>
+</figure>
+<p>Par exemple :</p>
+<pre><code>![logo de LiaScript](assets/liascript/LiaScript_logo.png &quot;ceci est le logo de LiaScript&quot;)</code></pre>
+<figure>
+<img src="assets/liascript/LiaScript_logo.png"
+title="ceci est le logo de LiaScript" alt="logo de LiaScript" />
+<figcaption aria-hidden="true">logo de LiaScript</figcaption>
+</figure>
+<pre><code>    --{{0}}--</code></pre>
+<p>L’insertion d’images est un coup à prendre, notamment quand on a
+l’habitude des éditeurs WYSIWYG (Word, Libre Office, Powerpoint,
+Impress, Genially…) où il suffit généralement de glisser-déposer l’image
+de son choix. Mais ce geste ne va pas de soi et les langages courants
+tels que le MarkDown, LaTeX ou encore le HTML sont beaucoup plus
+prosaïques.</p>
+<p>Insérer une image (ou une vidéo, un son, ou tout autre contenu
+externe) nécessite d’expliciter deux informations à la machine :</p>
+<ol type="1">
+<li><p><strong>que l’on veut insérer une image</strong> –&gt; avec la
+syntaxe
+<code>![texte alternatif](URL ou chemin de l'image)</code></p></li>
+<li><p><strong>où trouver cette image</strong> –&gt; et ce deuxième
+point est <strong>fondamental</strong> à intégrer pour comprendre
+beaucoup de choses du fonctionnement de LiaScript, surtout dans nos
+métiers où l’on fait beaucoup de captures d’écran.</p></li>
+</ol>
+<hr />
+<p>Pour vous faciliter la vie, créez dans votre répertoire :</p>
+<ul>
+<li><p>en local donc par exemple
+<strong>~/Documents/“nom_du_repertoire”</strong></p></li>
+<li><p>sur GitHub</p></li>
+</ul>
+<p>… un dossier nommé <code>assets</code> dans la racine de votre
+répertoire (~/Documents/“nom_du_repertoire”/<strong>assets</strong>)qui
+accueillera les éléments qui entrent dans la composition de votre cours
+(capture d’écran, schémas, activités H5P, etc.)</p>
+<pre><code>    --{{1}}--</code></pre>
+<figure>
+<img src="assets/VS_Code/VS_Code_dossier_assets.svg"
+alt="mon dossier assets" />
+<figcaption aria-hidden="true">mon dossier assets</figcaption>
+</figure>
+<pre><code>    --{{1}}--</code></pre>
+<p>Vous êtes libre de classer comme vous l’entendez, de mon côté je crée
+un sous-dossier pour chaque thématique/plateforme/logiciel dont je
+capture/produis des images.</p>
+<p>On peut avoir une arborescence de ce genre :</p>
+<ul>
+<li><p>~/Documents/“nom_du_repertoire”/<strong>assets</strong>/activites<a
+href="#fn3" class="footnote-ref" id="fnref3"
+role="doc-noteref"><sup>3</sup></a> –&gt; pour les activités
+H5P</p></li>
+<li><p>~/Documents/“nom_du_repertoire”/<strong>assets</strong>/VS_code<a
+href="#fn4" class="footnote-ref" id="fnref4"
+role="doc-noteref"><sup>4</sup></a> –&gt; pour toutes les captures de VS
+Code</p></li>
+<li><p>~/Documents/“nom_du_repertoire”/<strong>assets</strong>/git –&gt;
+pour les captures de Git et Git Bash</p>
+<pre><code>  --{{2}}--</code></pre>
+<figure>
+<img src="assets/VS_Code/VS_Code_dossier_assets_arbo.svg"
+alt="mon arborescence assets" />
+<figcaption aria-hidden="true">mon arborescence assets</figcaption>
+</figure></li>
+</ul>
+<p>Nous sommes parés pour insérer des images !</p>
+<hr />
+<p>Depuis VS Code ou tout autre éditeur de ce genre, on spécifie le
+chemin d’une ressource <strong>relativement</strong> au document
+principal. En d’autres termes on nous demande d’indiquer une route qui
+<strong>part</strong> du document et qui a pour
+<strong>destination</strong> l’image que l’on veut intégrer.</p>
+<p>Si vous conservez votre document principal dans la racine du
+répertoire, vous devez spécifier que vous voulez qu’il aille chercher
+dans le dossier assets, puis dans le sous-dossier xx, l’image
+xxx_xxx.png, ce qui donne :</p>
+<pre><code>        assets/&quot;sous_dossier&quot;/image.png</code></pre>
+<p>Le bon côté de VS Code, c’est que vous pouvez avoir en regard toute
+l’arborescence de votre travail en cliquant sur <code>Explorer</code>
+(ou <code>Ctrl + Shift + E</code>) et surtout agir dessus (créer des
+dossiers et sous-dossiers, supprimer, etc.)</p>
+<figure>
+<img src="assets/VS_Code/VS_Code_arbo_2.svg"
+alt="Vu répertoire VS Code" />
+<figcaption aria-hidden="true">Vu répertoire VS Code</figcaption>
+</figure>
+<p>Avec un clic droit sur l’image que vous souhaitez insérer, il est
+possible de copier son <strong>chemin relatif</strong> avec un
+<code>clic-droit</code> sur le nom de l’image puis en sélectionnant
+<code>Copy Relative Path</code>, pour le coller ensuite là où vous en
+avez besoin.</p>
+<figure>
+<img src="assets/VS_Code/VS_Code_relpath.svg"
+alt="Copy relative path" />
+<figcaption aria-hidden="true">Copy relative path</figcaption>
+</figure>
+<h4
+id="insérer-des-vidéos-depuis-le-célèbre-hébergeur-dun-capitaliste-de-surveillance-ou-dailleurs">Insérer
+des vidéos depuis le célèbre hébergeur d’un capitaliste de surveillance
+(ou d’ailleurs)</h4>
+<p>Concernant l’insertion de vidéos, si l’on ne souhaite pas se
+contenter d’un URL, la syntaxe diffère très légèrement de l’insertion
+d’une image.</p>
+<pre><code>        !?[texte alternatif](URL)</code></pre>
+<p>Donc ceci :</p>
+<pre><code>        !?[Une vidéo YT](https://youtu.be/_Gx5F31qFfA?si=nYUBSlOTrPVVT6aE)</code></pre>
+<p>Donnera cela :</p>
+<p>!?<a href="https://youtu.be/_Gx5F31qFfA?si=nYUBSlOTrPVVT6aE">Une
+vidéo YT</a></p>
+<p>Il est aussi possible d’insérer une vidéo depuis ses fichiers locaux
+selon la même syntaxe:</p>
+<pre><code>        !?[Texte alternatif](Chemin relatif de la vidéo)</code></pre>
+<h4 id="insérer-du-bon-son">Insérer du bon son</h4>
+<p>Liascript prend aussi en charge le son, avec une syntaxe qui vous est
+désormais familière :</p>
+<pre><code>        ?[texte alternatif](URL ou chemin relatif)</code></pre>
+<p>Donc ceci</p>
+<pre><code>?[un bon son si jamais...](https://on.soundcloud.com/FEaSGZCuvdd7nCaBh9)</code></pre>
+<p>Donnera cela</p>
+<p>?<a href="https://on.soundcloud.com/FEaSGZCuvdd7nCaBh9">un bon son si
+jamais…</a></p>
+<h3 id="les-quiz">5. Les quiz</h3>
+<h4 id="les-qcm">Les QCM</h4>
+<p>Ceci…</p>
+<pre><code>- [[ ]] Vide = pas une bonne réponse
+- [[X]] `X` majuscule = bonne réponse
+- [[x]] ... `x` minuscule aussi
+- [[ ]] **idem que sur la première ligne**</code></pre>
+<p>Donnera Cela</p>
+<ul>
+<li>[[ ]] Vide = pas une bonne réponse</li>
+<li>[[X]] <code>X</code> majuscule = bonne réponse</li>
+<li>[[x]] … <code>x</code> minuscule aussi</li>
+<li>[[ ]] <strong>idem que sur la première ligne</strong></li>
+</ul>
+<p>Si vous souhaitez ajouter un feedback, procédez comme suit :</p>
+<pre><code>- [[ ]] Vide = pas une bonne réponse
+- [[X]] `X` majuscule = bonne réponse
+- [[x]] ... `x` minuscule aussi
+- [[ ]] **idem que sur la première ligne**
+************************
+Ceci est un feedback bien utile
+************************</code></pre>
+<p>Et magie (pour vérifier la magie faire le quiz)</p>
+<ul>
+<li>[[ ]] Vide = pas une bonne réponse</li>
+<li>[[X]] <code>X</code> majuscule = bonne réponse</li>
+<li>[[x]] … <code>x</code> minuscule aussi</li>
+<li>[[ ]] <strong>idem que sur la première ligne</strong>
+************************ Ceci est un feedback bien utile
+************************</li>
+</ul>
+<h4 id="les-questions-à-choix-unique">Les questions à choix unique</h4>
+<p>Ceci…</p>
+<pre><code>- [( )] pas une bonne réponse
+- [(X)] **c&#39;est cette réponse qui doit être sélectionnée**
+- [( )] ~~à moins que ce ne soit cette réponse ?~~</code></pre>
+<p>Donnera cela :</p>
+<ul>
+<li>[( )] pas une bonne réponse</li>
+<li>[(X)] <strong>c’est cette réponse qui doit être
+sélectionnée</strong></li>
+<li>[( )] <del>à moins que ce ne soit cette réponse ?</del></li>
+</ul>
+<p>Vous pouvez ajouter des indices :</p>
+<pre><code>- [( )] pas une bonne réponse
+- [(X)] **c&#39;est cette réponse qui doit être sélectionnée**
+- [( )] ~~à moins que ce ne soit cette réponse ?~~
+- [(?)] Celle qui est soulignée est une réponse qui ne doit pas nécessairement vous inciter à la confiance.</code></pre>
+<p>Comme ceci :</p>
+<ul>
+<li>[( )] pas une bonne réponse</li>
+<li>[(X)] <strong>c’est cette réponse qui doit être
+sélectionnée</strong></li>
+<li>[( )] <del>à moins que ce ne soit cette réponse ?</del></li>
+<li>[[?]] Celle qui est soulignée est une réponse qui ne doit pas
+nécessairement vous inciter à la confiance.</li>
+</ul>
+<p>On peut appliquer la même syntaxe que pour les QCM si l’on souhaite
+ajouter un feedback</p>
+<h2 id="more">More</h2>
+<p>Find out what you can even do more with quizzes:</p>
+<p>https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md</p>
+<section id="footnotes" class="footnotes footnotes-end-of-document"
+role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1"><p>Notez que les noms de fichiers (dossiers, et éléments)
+ne doivent pas comporter d’espace. Il est conseillé d’éviter les lettres
+accentuées qui peuvent être mal interprétées quand vous spécifier un
+chemin.<a href="#fnref1" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn2"><p>Notez que les noms de fichiers (dossiers, et éléments)
+ne doivent pas comporter d’espace. Il est conseillé d’éviter les lettres
+accentuées qui peuvent être mal interprétées quand vous spécifier un
+chemin.<a href="#fnref2" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn3"><p>Notez que les noms de fichiers (dossiers, et éléments)
+ne doivent pas comporter d’espace. Il est conseillé d’éviter les lettres
+accentuées qui peuvent être mal interprétées quand vous spécifier un
+chemin.<a href="#fnref3" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+<li id="fn4"><p>Notez que les noms de fichiers (dossiers, et éléments)
+ne doivent pas comporter d’espace. Il est conseillé d’éviter les lettres
+accentuées qui peuvent être mal interprétées quand vous spécifier un
+chemin.<a href="#fnref4" class="footnote-back"
+role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>

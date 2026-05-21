@@ -317,6 +317,7 @@ Bref, on a toute la palette du markdown
 
         {{1-2}}
 On peut insérer des images...
+
 ![Une belle image de Erik Ciottu](assets/autre/ecrikciotti.svg "Une superbe photo du maire de Nice")<!--width="100%"-->
 
         {{2-3}}
@@ -948,8 +949,147 @@ Comme ceci :
 
 On peut appliquer la même syntaxe que pour les QCM si l'on souhaite ajouter un feedback
 
-## More
+### Bonus en plus : convertir des documents avec Pandoc
 
-Find out what you can even do more with quizzes:
+**Pandoc** est un convertisseur universel -- ou quasi -- de documents. Il s'agit d'un logiciel gratuit, vieux de maintenant 20 ans, et qui fait encore largement ses preuves. 
+
+Dans le cadre d'un usage de LiaScript, Pandoc peut se révéler très utile pour convertir des documents .docx/.odt/.html vers le markdown et inversement. Il est aussi possible de convertir du markown vers le PDF (mais pas du PDF vers le markdown)
+
+#### Installation et vérification
+
+Installez Pandoc depuis en téléchargeant l'installateur depuis [cette page](https://pandoc.org/installing.html) et suivez les étapes jusqu'à l'installation complète.
+
+Pandoc s'utilise via le terminal de commande (en règle générale, si vous êtes sous Windows, l'invite de commandes ou PowerShell), il existe des adaptations de Pandoc avec des interfaces plus friendly, mais à mon sens, le terminal de commande est largement suffisant.
+
+Ouvrez le terminal de commande et tapez :
+
+```
+pandoc --version
+```
+
+La console devrait vous répondre quelque chose comme `pandoc 3.9.0.2` ect. Si c'est bien cela qui s'affiche, c'est bon, l'installation est complète.
+
+#### Naviguer dans vos dossiers avec un terminal de commande
+
+Pour faire votre conversion, vous devez vous positionner dans le dossier (Directory) dans lequel se trouve votre document à convertir. Vous avez deux possibilités :
+
+1. clic droit dans la fenêtre de votre dossier puis `Ouvrir dans le terminal` --> une console s'ouvre avec, normalement quelque chose du genre :
+
+```
+C:\Users\"identifiant"\Documents\Sous-dossier\Sous-sous-dossier>
+```
+
+Cela signifie que vous êtes positionné dans le sous-sous-dossier du sous-dossier de votre dossier Documents dans votre session utilisateur. A noter que Windows utilise des antislash ` \ ` pour spécifier les chemins, ce qui peut-être un peu galère si vous utilisez d'autres OS sur d'autres PC. Si vous êtes full Windows, tout ira bien pour vous[^1].
+
+---
+
+2. vous pouvez naviguer dans le terminal de commande  : si vous faites 
+
+```
+echo %cd%
+```
+la console va vous dire dans quel dossier vous vous trouvez.
+
+Tapez :
+
+```
+ls
+```
+
+pour lister les documents et sous-dossiers du dossier où vous êtes positionné.
+
+Tapez :
+
+```
+cd "nom du sous-dossier"
+```
+
+pour vous positionner dans le sous-dossier.
+
+Tapez :
+
+```
+cd ..
+```
+
+pour remonter du sous-dossier dans lequel vous êtes positionné vers le dossier de niveau supérieur.
+
+Tapez :
+
+```
+.\nom_du_document
+```
+
+Pour ouvrir un document du dossier dans lequel vous êtes positionné.
+
+Voilà, vous savez ce qu'il faut pour naviguer dans vos dossiers et documents, vous êtes un véritable netcoder !
+
+[^1]: Sauf pour vos données personnelles bien sûr, fuyez Microsoft pauvres fous !!!
+
+#### Convertir des documents
+
+Suivez-moi, on va faire un test. 
+
+docx <--> markdown
+===
+
+1. Trouvez-vous un document Word, assez classique, qui contient en plus du texte, une structure, des listes, ect., nommez-le `test.docx`.
+
+2. Collez-le dans votre dossier **Documents** à la racine. 
+
+3. Ouvrez l'invite de commande et positionnez-vous dans le dossier Documents. En règle générale il vous suffira d'entrer :
+
+```
+cd Documents
+```
+
+4. Listez les documents et sous-dossiers de Documents avec la commande [[liste|list|(ls)]], la console va vous renvoyer une liste qui normalement vous sera familière et qui contient notamment le document `test.docx`
+
+Nous allons tenter une conversion depuis le format **.docx** vers le format **.md**, voici la syntaxe complète qui s'appliquera pour toute conversion :
+
+**pandoc**<!-- style="color: red" --> {1}{nom\_du\_document_source} **-f**<!-- style="color: red" --> {2}{format source} **-t**<!-- style="color: red" --> {3}{format cible} **-s**<!-- style="color: red" --> **-o**<!-- style="color: red" --> {4}{nom\_du\_document_cible}
+
+Dans notre cas, cela donnera :
+
+```
+pandoc test.docx -f docx -t markdown -s -o test.md
+```
+
+5. Faites le test, c'est quasi immédiat. Quand la machine vous rend les commandes, c'est bon. Faites `ls` et vous verrez normalement apparaître un nouveau venu : `test.md`
+
+6. Ouvrez le avec :
+
+```
+.\test.md
+```
+
+Le document s'ouvrira automatiquement sur VS Code si vous l'avez bien installé.
+
+markdown <--> html
+===
+
+Nous allons maintenant convertir le `test.md` en `test.html`.
+
+1. Vous êtes normalement toujours positionné dans le dossier Documents, mais pour vous en assurer, vous pouvez taper [[ou suis-je|(echo %cd%)|cd %echo%]] dans le terminal de commande.
+
+Pour une conversion aussi simple, nous pouvons utiliser une syntaxe abrégée en supprimant de la commande la mention du format d'origine et du format cible. Voici la syntaxe abrégée :
+
+**pandoc**<!-- style="color: red" --> {1}{nom\_du\_document\_source} **-s**<!-- style="color: red" --> **-o**<!-- style="color: red" --> {2}{nom\_du\_document\_cible}[^1]
+
+Dans notre cas, la commande ressemblera à ceci :
+
+```
+pandoc test.md -s -o test.html
+```
+
+2. lancez-la. La machine vous rend les commandes presque'immédiatement
+
+3. Ouvrez le document HTML avec [[(.\test.html)|/.test.html|./test.html]]
+
+[^1]: La version complète de la commande est plus explicite, utilisez-là si la commande abrégée ne fonctionne pas.
+
+## La doc
+
+Toutes la doc à jour rédigée par les créateurs de LiaScript se trouve ici :
 
 https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md
