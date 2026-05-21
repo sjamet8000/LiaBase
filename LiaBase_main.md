@@ -1,9 +1,21 @@
 <!--
 author:   Samuel Jamet
 
+date: 22/05/2026
+
+icon: ./logo_formabib.svg
+
+logo: ./Who_will_prevail.svg
+
 email:    samuel.jamet.bib@proton.me
 
-version:  1
+repository: https://github.com/sjamet8000/LiaBase.git
+
+version:  1.0.0
+
+mode: Presentation
+
+translateWithGoogle: false
 
 language: fr
 
@@ -11,6 +23,8 @@ comment:  Toutes les bonnes raisons du monde de tester et d'adopter LiaScript.
           Prise en main et configuration depuis le berceau jusqu'aux étoiles.
 
 link:     https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css
+
+link:   https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css
 
 script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
 -->
@@ -53,6 +67,10 @@ LiaScript a pu être présenté par son créateur André Dietrich comme une alte
 
 *Moodle, LiaScript, Scenari... et si on se faisait surtout plein de câlins ?*
 
+<!--
+class="animate__animated animate__backInUp"
+style="background:#FFF; padding:1rem; min-height: 30vh; border-radius: 1rem"
+-->
            {{1-2}}
 <lia-keep>
 <div style="background-color:#f98012; padding: 0.8em; border-radius: 6px; margin-top:2em;"> 
@@ -69,6 +87,10 @@ LiaScript a pu être présenté par son créateur André Dietrich comme une alte
 </div>
 </lia-keep>
 
+<!--
+class="animate__animated animate__backInUp"
+style="background:#FFF; padding:1rem; min-height: 30vh; border-radius: 1rem"
+-->
            {{2-3}}
 <lia-keep>
 <div style="background-color:#170E02; padding: 0.8em; border-radius: 6px; margin-top:2em;"> 
@@ -177,16 +199,18 @@ Dans GitHub je ne peux pas corriger directement dans l'affichage `Preview`, mais
 Je supprime le " s " en trop (je vous invite à aller voir son cours qui est évidemment d'excellente facture).
 
         {{2-3}}
+*****************
 Le *Code* est austère, mais c'est un type d'affichage auquel il faut s'habituer !
 
-        {{2-3}}
 ![Modification dans le Code](assets/Cours_Damien/Titre_cours_Damien_edit_code.png)<!--width="60%"-->
+*****************
 
         {{3-4}}
+*****************
 Autre point de vocabulaire, ne cherchez pas le bouton *save* ici. Pour enregistrer vos modifications, même minimes, cliquez sur `Commit changes...`, décrivez la modification, puis sur `Commit Changes`, voilà vous avez " sauvegardé " !
 
-        {{3-4}}
 ![Wallace et Commit !](assets/github/Commit_github.svg)<!--width="50%"-->
+*****************
 
         --{{3}}--
 Il n'y a pas de traduction parfaite pour le terme " commit " qu'on peut entendre comme le fait de *valider* une modification.
@@ -208,16 +232,18 @@ A partir du cours de Damien, j'ai envie d'ajouter un morceau de mon cours pour e
 ![Fusion du cours de Damien avec une partie de mien](assets/github/github_remixe.svg)
 
         {{2-3}}
+********************
 Je vais tout simplement copier la partie de mon cours dans le cours de Damien (que j'ai préalablement forké), ce qui me permet de conserver l'historique de ses modifications et leurs attributions.
 
-        {{2-3}}
 ![Historique des commits dans le répertoire forké de Damien](assets/github/github_remixe3.svg)
+********************
 
         {{3}}
+********************
 Et voilà, le cours est remixé et révisé, il est prêt à l'emploi.
 
-        {{3}}
 ![La partie de mon cours dans le cours de Damien](assets/github/github_remixe2.svg)
+********************
 
 ##### Réviser et remixer en toute légalité : le suivi des versions
 
@@ -225,17 +251,18 @@ Et voilà, le cours est remixé et révisé, il est prêt à l'emploi.
 Sans doute un des aspects les plus importants quand on travaille sur du long terme ou à plusieurs, c'est de pouvoir s'y retrouver entre plusieurs états d'un même projet, d'éventuellement revenir à un état antérieur, voire de dupliquer un projet entier (à soi ou non) pour le modifier en tant que projet indépendant (faire un **fork**). 
 
           {{1-2}}
+********************
 Ci-dessous l'interface de suivi des versions d'un même projet dans VS Code et dans GitHub
 
-        {{1-2}}
 ![Le suivi des versions sur GitHub et VS Code](assets/Pk_Liascript/Versioning_VS_Github.png)
+********************
 
           --{{1}}--
 Le suivi des versions implique aussi que votre travail, ou le travail de quelqu'un d'autre qui vous ferait de l'œil est implicitement disponible à la modification et au remixage. sans risque de corruption (on peut toujours revenir à une version antérieure). 
 
           {{2}}
-Le versioning, une invitation au partage et à la collectivisation rigoureuse des moyens de productions pédagogiques.
-![Le suivi des versions](assets/Pk_Liascript/Versioning.png)
+![Le suivi des versions](assets/Pk_Liascript/Versioning.png "Le versioning, une invitation au partage et à la collectivisation rigoureuse des moyens de productions pédagogiques.")
+
 
 #### Réutiliser (Reuse)
 
@@ -249,34 +276,39 @@ L'action reuse/réutiliser, c'est :
 C'est principalement à ce stade que LiaScript entre en jeu. Pour le moment, nous avons surtout navigué dans des répertoires GitHub, désormais nous allons passer notre travail de conception à l'interpréteur qu'est fondamentalement LiaScript.
 
         {{1-2}}
+*****************
 A partir du répertoire, je vais afficher le fichier principal, donc le fichier en .md.
 
-        {{1-2}}
 ![Rendez vous sur le cours en lui-même (en .md)](assets/github/github_reuse1.svg)
+*****************
 
         {{2-3}}
+*****************
 En plus de l'affichage `Code` et `Preview`il existe un affichage `Raw` sur une page spécifique, c'est précisément ça qu'on va chercher.
 
-        {{2-3}}
 ![cliquez sur Raw pour afficher le fichier en markdown brut](assets/github/github_reuse2.svg)
+*****************
 
         {{3-4}}
+*****************
 La version `Raw` du cours est moche, mais c'est elle qu'on va donner à l'interpréteur LiaScript. On va donc copier l'URL de la page `Raw`...
 
-        {{3-4}}
 ![Copiez l'URL](assets/github/github_reuse3.svg)
+*****************
 
         {{4-5}}
+*****************
 ... pour la coller dans le site officiel de LiaScript (https://liascript.github.io/) qui est une page web GitHub. On clique sur `Open Course`...
 
-        {{4-5}}
 ![Sur le site de LiaScript, collez l'URL](assets/liascript/LiaScript_reuse1.svg)
+*****************
 
         {{5}}
+*****************
 ... le temps d'un chargement plus tard, le cours s'affiche et est prêt à l'emploi.
 
-        {{5}}
 ![Le cours en .md interprété par LiaScript](assets/liascript/LiaScript_reuse2.svg)
+*****************
 
 #### Redistribuer (Redistribute)
 
@@ -338,10 +370,11 @@ Bref, on a toute la palette du markdown
 ```
 
         {{1-2}}
+****************
 On peut insérer des images...
 
-        {{1-2}}
 ![Une belle image de Erik Ciottu](assets/autre/ecrikciotti.svg "Une superbe photo du maire de Nice")<!--width="100%"-->
+****************
 
         {{2-3}}
 ```mardown
@@ -370,12 +403,12 @@ On peut insérer des images...
 ```````````````````````
 
         {{4-5}}
+*********************
 On peut intégrer à peu près tout et n'importe quoi, présentation Genially, tableau Miro, mais surtout... du H5P :-) (si vous voulez rester dans de la REL pure et dure)
 
         --{{4}}--
 Pour le H5P, je vous conseille d'utiliser les outils de [La Digitale](https://ladigitale.site/) et tout particulièrement [Logiquiz](https://ladigitale.site/logiquiz/) (pour la conception de contenus H5P en local) et [Digiquiz](https://ladigitale.site/digiquiz/) (pour la lecture de contenus H5P si vous ne pouvez pas utiliser Moodle)
 
-        {{4-5}}
 <iframe 
 src="https://ladigitale.dev/digiquiz/q/6a01ae72251c2" 
 allow="fullscreen; autoplay;" 
@@ -383,11 +416,12 @@ frameborder="0"
 width="90%" 
 height="650"
 ></iframe>
+********************
 
         {{5}}
+********************
 Il est même possible d'exécuter du code
 
-        {{5-6}}
 ```javascript
 const motCle = "merle noir";
 const url = `https://api.archives-ouvertes.fr/search/?q=${encodeURIComponent(motCle)}&rows=3&sort=submittedDate_s desc`;
@@ -415,6 +449,7 @@ fetch(url)
 "Interrogation de HAL en cours...";
 ```
 <script>@input</script>
+************************
 
 ### Un outil REMPLAÇABLE
 
@@ -472,10 +507,14 @@ LiaScript à la qualité d'être un outil remplaçable, il ne vous prend pas en 
                  +---------------------+      `-----------'                  
 ```````````````````````````````````````
 
-        {{4-5}}
+        {{4}}
+***********************
 Et pour tout ça, il y a [Pandoc](https://pandoc.org/) ! (le logo n'est hélas pas de moi)
+
 ![Logo de Pandoc](assets/Pandoc/Pandoc_logo.svg)
+
 Pandoc est un convertisseur universel de document, totalement gratuit. D'un usage peu intuitif au départ, il reste incroyablement pratique et efficace, notamment pour convertir des document rédigés en MarkDown vers le PDF, docx ou le HTML en conservant la structure du document, le texte, les images, les figures, etc.
+***********************
 
 ## Mise en route
 
@@ -487,22 +526,40 @@ Pour utiliser tranquillement Liascript, la création d'un compte sur GitHub est 
 
 ### Créer un répertoire
 
-{{1-3}} Cliquez sur l'icône de votre compte en haut à droit de l'écran, puis sur *Repositories*
+        {{1-2}} 
+*********************
+Cliquez sur l'icône de votre compte en haut à droit de l'écran, puis sur *Repositories*
+
 ![Création d'un répertoire Github](assets/github/github_repo.png)
+*********************
 
-{{2-3}} Cliquez sur *New* pour créer un nouveau répertoire.
+        {{2-3}} 
+*********************
+Cliquez sur *New* pour créer un nouveau répertoire.
+
 ![Création d'un répertoire GitHub](assets/github/github_repo_2.png)
+*********************
 
-{{3}} Entrez les informations nécessaires. Evitez les espaces dans le nom du répertoire. la description n'est pas obligatoire, mais elle peut aider à ce que l'on retrouve votre répertoire.
-Super important : votre répertoire doit impérativement être **public** pour que Liascript puisse l'interpréter.
+        {{3-4}} 
+*********************
+Entrez les informations nécessaires. Evitez les espaces dans le nom du répertoire. la description n'est pas obligatoire, mais elle peut aider à ce que l'on retrouve votre répertoire.
+
+**Super important**<!-- style="color:red" --> : votre répertoire doit impérativement être **public** pour que Liascript puisse l'interpréter.
+
 ![Finalisation d'un répertoire](assets/github/github_repo_3.png)
+*********************
 
-{{4}} Une fois votre répertoire créé, vous pouvez y accéder depuis *Repositories* en cliquant sur l'icone de votre profil. Notez qu'au moment de la création du répertoire, il ne contient rien que la **LICENCE** et le README.md.
+        {{4}} 
+*********************
+Une fois votre répertoire créé, vous pouvez y accéder depuis *Repositories* en cliquant sur l'icone de votre profil. Notez qu'au moment de la création du répertoire, il ne contient rien que la **LICENCE** et le README.md.
+
 ![Répertoire GitHub vide](assets/github/github_repo_4.png)
+*********************
 
 ### Visual Studio Code
 
 **Visual Studio Code** est un éditeur de texte gratuit et open source maintenu par **Microsoft** (eh oui, snif). Très utilisé par les développeur.ses, on va plutôt l'utiliser comme simple éditeur de MarkDown, un peu amélioré par le créateur de Liascript, grâce à quelques plugins.
+
 ![Accueil VS Code](assets/VS_Code/VS_Code_acc.png)
 
 Rendez-vous sur la [page de téléchargement](https://code.visualstudio.com/Download) et procédez à l'installation du logiciel, on se retrouve de l'autre côté.
@@ -513,6 +570,7 @@ Pour utiliser confortablement Liascript, on va devoir installer deux extensions 
 Rendez-vous dans le magasin d'extensions (cf. capture ci-dessous ou `Ctrl + Shift + X`).
 
 Entrez `liascript` dans la barre de recherche, normalement trois extensions doivent remonter. Cliquez sur `LiaScript-Preview` puis sur `Install`.
+
 ![Liascript Preview](assets/VS_Code/VS_Code_plug_in_LSPreview.png)
 
 Ce plug in va vous permettre de lancer une prévisualisation de ce que vous êtes en train de produire depuis Visual Code, sur votre navigateur favori, en local, sans connexion internet. Plutôt utile pour vérifier et tester votre cours au fil de l'eau !
@@ -550,6 +608,7 @@ Faites `Ctrl + Shift + P` puis entrez `settings` et cliquez sur Open User Settin
 Aller sur le [site officiel](https://git-scm.com/install/windows) et de télécharger Git for Windows.
 
 Sélectionnez l'installateur `Git for Windows/x64 Setup` qui devrait fonctionner dans la plupart des cas.
+
 ![Page de téléchargement de Git for Windows](assets/git/git_dl.png)
 
 L'installateur de Git sous Windows a beaucoup d'étapes avec plein de cases à cocher, **laissez toutes les options par défaut et de cliquer sur "Next" jusqu'au bout**. Ça ira très bien pour 99 % des usages.
