@@ -178,10 +178,14 @@ Je supprime le " s " en trop (je vous invite à aller voir son cours qui est év
 
         {{2-3}}
 Le *Code* est austère, mais c'est un type d'affichage auquel il faut s'habituer !
+
+        {{2-3}}
 ![Modification dans le Code](assets/Cours_Damien/Titre_cours_Damien_edit_code.png)<!--width="60%"-->
 
         {{3-4}}
 Autre point de vocabulaire, ne cherchez pas le bouton *save* ici. Pour enregistrer vos modifications, même minimes, cliquez sur `Commit changes...`, décrivez la modification, puis sur `Commit Changes`, voilà vous avez " sauvegardé " !
+
+        {{3-4}}
 ![Wallace et Commit !](assets/github/Commit_github.svg)<!--width="50%"-->
 
         --{{3}}--
@@ -198,16 +202,21 @@ L'action remix/remixer, c'est :
 
 Comme la définition l'indique, une REL doit permettre le remixe, donc, par exemple, la possibilité d'être fusionnée avec une autre REL.
 
-        {{1-2}}
 A partir du cours de Damien, j'ai envie d'ajouter un morceau de mon cours pour en créer une nouvelle forme.
+
+        {{1-2}}
 ![Fusion du cours de Damien avec une partie de mien](assets/github/github_remixe.svg)
 
         {{2-3}}
-![Historique des commits dans le répertoire forké de Damien](assets/github/github_remixe3.svg)
 Je vais tout simplement copier la partie de mon cours dans le cours de Damien (que j'ai préalablement forké), ce qui me permet de conserver l'historique de ses modifications et leurs attributions.
+
+        {{2-3}}
+![Historique des commits dans le répertoire forké de Damien](assets/github/github_remixe3.svg)
 
         {{3}}
 Et voilà, le cours est remixé et révisé, il est prêt à l'emploi.
+
+        {{3}}
 ![La partie de mon cours dans le cours de Damien](assets/github/github_remixe2.svg)
 
 ##### Réviser et remixer en toute légalité : le suivi des versions
@@ -217,6 +226,8 @@ Sans doute un des aspects les plus importants quand on travaille sur du long ter
 
           {{1-2}}
 Ci-dessous l'interface de suivi des versions d'un même projet dans VS Code et dans GitHub
+
+        {{1-2}}
 ![Le suivi des versions sur GitHub et VS Code](assets/Pk_Liascript/Versioning_VS_Github.png)
 
           --{{1}}--
@@ -239,22 +250,32 @@ C'est principalement à ce stade que LiaScript entre en jeu. Pour le moment, nou
 
         {{1-2}}
 A partir du répertoire, je vais afficher le fichier principal, donc le fichier en .md.
+
+        {{1-2}}
 ![Rendez vous sur le cours en lui-même (en .md)](assets/github/github_reuse1.svg)
 
         {{2-3}}
 En plus de l'affichage `Code` et `Preview`il existe un affichage `Raw` sur une page spécifique, c'est précisément ça qu'on va chercher.
+
+        {{2-3}}
 ![cliquez sur Raw pour afficher le fichier en markdown brut](assets/github/github_reuse2.svg)
 
         {{3-4}}
 La version `Raw` du cours est moche, mais c'est elle qu'on va donner à l'interpréteur LiaScript. On va donc copier l'URL de la page `Raw`...
+
+        {{3-4}}
 ![Copiez l'URL](assets/github/github_reuse3.svg)
 
         {{4-5}}
 ... pour la coller dans le site officiel de LiaScript (https://liascript.github.io/) qui est une page web GitHub. On clique sur `Open Course`...
+
+        {{4-5}}
 ![Sur le site de LiaScript, collez l'URL](assets/liascript/LiaScript_reuse1.svg)
 
         {{5}}
 ... le temps d'un chargement plus tard, le cours s'affiche et est prêt à l'emploi.
+
+        {{5}}
 ![Le cours en .md interprété par LiaScript](assets/liascript/LiaScript_reuse2.svg)
 
 #### Redistribuer (Redistribute)
@@ -319,6 +340,7 @@ Bref, on a toute la palette du markdown
         {{1-2}}
 On peut insérer des images...
 
+        {{1-2}}
 ![Une belle image de Erik Ciottu](assets/autre/ecrikciotti.svg "Une superbe photo du maire de Nice")<!--width="100%"-->
 
         {{2-3}}
@@ -607,7 +629,9 @@ Et voilà ! Votre répertoire avec tout son contenu est cloné sur votre PC ! Si
 
 ### Finalisation de la configuration... et premier commit
 
-![Open Folder](assets/VS_Code/VS_Code_open_folder.png)Rouvrez VS Code et ouvrez votre répertoire synchronisé : `File > Open Folder... > "Nom du répertoire > Select folder"` (Sélectionnez simplement le répertoire cloné, ne double-cliquez pas dessus)
+Rouvrez VS Code et ouvrez votre répertoire synchronisé : `File > Open Folder... > "Nom du répertoire > Select folder"` (Sélectionnez simplement le répertoire cloné, ne double-cliquez pas dessus)
+
+![Open Folder](assets/VS_Code/VS_Code_open_folder.png)
 
 Votre arborescence s'affichera sur la partie gauche de la fenêtre de VS Code. Sauf événement cataclismique, elle sera parfaitement identique à celle que vous avez dans l'explorateur de fichiers Windows et votre répertoire dans GitHub.
 
@@ -621,7 +645,9 @@ Evidemment, vous n'allez pas vous mettre à composer dans le `README.md` (conser
 
 Dans l'arborescence de votre répertoire, toujours dans VS Code, cliquez sur l'icône `New File`juste à côté du nom de votre répertoire.
 
-![Newfile](assets/VS_Code/VS_Code_premier_fichier.png) Attention, comme vous le voyez sur la capture, il est indispensable de spécifier le format du fichier nouvellement créé, et ce format, c'est du `.md` donc le format MarkDown. Vous pouvez nommer votre document comme vous le souhaitez, mais ajoutez `.md` à la fin si vous voulez que ça fonctionne.
+Attention, comme vous le voyez sur la capture, il est indispensable de spécifier le format du fichier nouvellement créé, et ce format, c'est du `.md` donc le format MarkDown. Vous pouvez nommer votre document comme vous le souhaitez, mais ajoutez `.md` à la fin si vous voulez que ça fonctionne.
+
+![Newfile](assets/VS_Code/VS_Code_premier_fichier.png)
 
 Cliquez sur le document pour afficher l'éditeur de texte. Par défaut, il vous propose de générer du code, mais vous ne mangez pas de ce pain-là. Positionnez-vous dans l'éditeur comme vous le feriez pour un éditeur de texte classique et tapez :
 
@@ -645,7 +671,9 @@ Les `Settings Sync`s'ouvrent en haut de la fenêtre (oui on voyage), cliquez sur
 
 ![Sign in with GitHub](assets/VS_Code/VS_Code_sync2.png)
 
-![Sign in GitHub](assets/VS_Code/VS_Code_sync3.png) VS Code va automatiquement ouvrir une page de votre navigateur enregistré par défaut pour vous demander si vous souhaitez vous connecter à GitHub, cliquez sur `Sign in` puis continuez. Si, de retour sur VS Code, le nom de votre compte s'affiche quand vous cliquez sur `Accounts` c'est bon !
+VS Code va automatiquement ouvrir une page de votre navigateur enregistré par défaut pour vous demander si vous souhaitez vous connecter à GitHub, cliquez sur `Sign in` puis continuez. Si, de retour sur VS Code, le nom de votre compte s'affiche quand vous cliquez sur `Accounts` c'est bon !
+
+![Sign in GitHub](assets/VS_Code/VS_Code_sync3.png)
 
 #### Premier commit
 
@@ -949,6 +977,43 @@ Comme ceci :
 - [[?]] Celle qui est soulignée est une réponse qui ne doit pas nécessairement vous inciter à la confiance.
 
 On peut appliquer la même syntaxe que pour les QCM si l'on souhaite ajouter un feedback
+
+#### Les questions à réponse courte
+
+On peut difficilement faire plus simple pour les questions à réponse courte, il suffit de mettre
+
+```
+[[la bonne réponse]]
+```
+
+[[la bonne réponse]]
+- [[?]] Les indices fonctionnent
+***
+Les feedbacks fonctionnent
+***
+
+entre deux crochets.
+
+On peut tout à fait intégrer une question à réponse [[courte]] dans une phrase pour fabriquer des textes à [[trous]].
+
+#### Les questions à sélection
+
+Une alternative à la question à choix unique, la question à sélection fonctionne comme la question à réponse courte, mais en ajoutant plusieurs possibilités de réponse et en entourant la bonne par des parenthèses :
+
+```
+[[pas la bonne réponse|(la bonne réponse)|pas la bonne réponse non plus]]
+```
+
+[[pas la bonne réponse|(la bonne réponse)|pas la bonne réponse non plus]]
+- [[?]] la bonne réponse n'est pas nécessairement celle qu'on croit.
+***
+ah bah si.
+***
+
+Ce type de question s'intègre facilement dans le corps d'un [[(texte)|iguane mais c'est dégueu]] tout en restant assez fluide. On peut tout à fait combiner dans un texte à [[trous]] ces deux types de [[baguette|(question)]].
+***
+Si vous avez sélectionné l'iguane, vous me faites peur.
+***
 
 ### Bonus en plus : convertir des documents avec Pandoc
 
