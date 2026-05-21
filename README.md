@@ -7,4 +7,4 @@ Le document principal (*LiaBase_main.md*) est consultable dans sa version brute 
 ## Réutilisation
 
 Ce travail est sous licence CC0.
-Il fera l'objet ultérieurement d'un dépôt sur Zenodo (communauté ADBU Compétences informationnelle)
+Il fera l'objet ultérieurement d'un dépôt sur Zenodo (communauté ADBU Compétences informationnelles)
