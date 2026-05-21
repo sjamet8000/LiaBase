@@ -1086,7 +1086,7 @@ pandoc test.md -s -o test.html
 
 3. Ouvrez le document HTML avec [[(.\test.html)|/.test.html|./test.html]]
 
-[^1]: La version complète de la commande est plus explicite, utilisez-là si la commande abrégée ne fonctionne pas.
+[^1]: La version complète de la commande est plus explicite, utilisez-la si la commande abrégée ne fonctionne pas.
 
 ## La doc
 
