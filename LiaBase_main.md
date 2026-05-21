@@ -3,12 +3,12 @@ author:   Samuel Jamet
 
 email:    samuel.jamet.bib@proton.me
 
-version:  0.0.1
+version:  1
 
 language: fr
 
-comment:  Try to write a short comment about
-          your course, multiline is also okay.
+comment:  Toutes les bonnes raisons du monde de tester et d'adopter LiaScript.
+          Prise en main et configuration depuis le berceau jusqu'aux étoiles.
 
 link:     https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.css
 
@@ -203,7 +203,8 @@ A partir du cours de Damien, j'ai envie d'ajouter un morceau de mon cours pour e
 ![Fusion du cours de Damien avec une partie de mien](assets/github/github_remixe.svg)
 
         {{2-3}}
-![Historique des commits dans le répertoire forké de Damien](assets/github/github_remixe3.svg)Je vais tout simplement copier la partie de mon cours dans le cours de Damien (que j'ai préalablement forké), ce qui me permet de conserver l'historique de ses modifications et leurs attributions.
+![Historique des commits dans le répertoire forké de Damien](assets/github/github_remixe3.svg)
+Je vais tout simplement copier la partie de mon cours dans le cours de Damien (que j'ai préalablement forké), ce qui me permet de conserver l'historique de ses modifications et leurs attributions.
 
         {{3}}
 Et voilà, le cours est remixé et révisé, il est prêt à l'emploi.
