@@ -1,6 +1,6 @@
 # Ce que vous trouverez ici...
 
-[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://raw.githubusercontent.com/sjamet8000/LiaBase/refs/heads/main/LiaBase_main.md)
+[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/sjamet8000/LiaBase/refs/heads/main/LiaBase_main.md#1)
 
 Formation/atelier/retour d'expérience/que-sais-je autour de l'interpréteur markdown LiaScript, dans le cadre d'un Formacroq organisé le 22 mai 2026 par l'association [FormaBib IDF](http://philtyprod.com/testUP/) (si vous êtes bibliothécaire-formateur en Île-de-France, n'hésitez pas à vous inscrire à la liste de diffusion, ou même à adhérer, ils sont vraiment très sympa là-dedans).
 
