@@ -11,3 +11,5 @@ Le document principal (*LiaBase_main.md*) est consultable dans sa version brute 
 ## Réutilisation
 
 Ce travail est sous licence CC-BY.
+
+[https://doi.org/10.5281/zenodo.20327364](https://doi.org/10.5281/zenodo.20327364)
