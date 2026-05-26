@@ -2,7 +2,7 @@
 
 [![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/sjamet8000/LiaBase/refs/heads/main/LiaBase_main.md#1)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20327364.svg)](https://doi.org/10.5281/zenodo.20327364)
+<a href="https://doi.org/10.5281/zenodo.20327364"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.20327364.svg" alt="DOI"></a>
 
 Formation/atelier/retour d'expérience/que-sais-je autour de l'interpréteur markdown LiaScript, dans le cadre d'un Formacroq organisé le 22 mai 2026 par l'association [FormaBib IDF](http://philtyprod.com/testUP/) (si vous êtes bibliothécaire-formateur en Île-de-France, n'hésitez pas à vous inscrire à la liste de diffusion, ou même à adhérer, ils sont vraiment très sympa là-dedans).
 
