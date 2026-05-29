@@ -765,7 +765,7 @@ Attention, ce n'est pas parce que vous sauvegardez un état de votre travail ave
 ## Les bases des bases
 
         --{{1}}--
-Si vous n'êtes pas familier avec le MarkDown, cette section est là pour y remedier. Pas d'inquiétude, les bases du langage sont très simples et vous aurez vite fait le tour du principal de sa syntaxe.
+Si vous n'êtes pas familier avec le Markdown, cette section est là pour y remedier. Pas d'inquiétude, les bases du langage sont très simples et vous aurez vite fait le tour du principal de sa syntaxe.
 Le plus difficile reste de se défaire de l'accoutumance des éditeurs de texte WYSIWYG (What You See Is What You Get) comme Word.
 
 Ici, 
@@ -777,7 +777,7 @@ What you see may not be very pleasant...
 ### 1. Structurer
 
         --{{0}}--
-Sur LiaScript, une habitude à prendre, c'est de structurer votre contenu. Entrez `#`[^1] suivi d'un texte pour créer la page de titre de votre cours, puis structurez de la manière suivante :
+Sur LiaScript, une habitude à prendre, c'est de structurer votre contenu. Entrez `#`[^1] suivi d'un texte pour créer la page de titre de votre cours. Structurez de la manière suivante :
 
 ```markdown
 # Titre principal de votre cours
@@ -794,7 +794,7 @@ Sur LiaScript, une habitude à prendre, c'est de structurer votre contenu. Entre
 ## Titre de la deuxième section
 ```
         --{{1}}--
-Vous verrez votre table des matières cliquable se structurer sans que vous ayez besoin de faire quoi que ce soit d'autre chaque section, sous-section devient une page du cours.
+Vous verrez votre table des matières cliquable se structurer sans que vous ayez besoin de faire quoi que ce soit d'autre. Chaque section, sous-section devient une page du cours.
 
 Il est aussi possible de créer des sous-sections à l'intérieur d'une page de cours
 
@@ -813,7 +813,7 @@ Sous-sous-section dans la même page
 ### 2. Mettre en forme
 
         --{{0}}--
-En MarkDown, la mise en forme du texte se fait en entourant ce dernier avec certains caractères que voici :
+En Markdown, la mise en forme du texte se fait en entourant ce dernier avec certains caractères que voici :
 
 * `*italique*` -> *italique*<!-- class="notranslate"-->
 * `**gras**` -> **gras**<!-- class="notranslate"-->
@@ -824,7 +824,7 @@ En MarkDown, la mise en forme du texte se fait en entourant ce dernier avec cert
 * `~barré~` -> ~barré~<!-- class="notranslate"-->
 
         --{{1}}--
-Les mises en forme qui suivent n'existent pas en MarkDown de base :
+Les mises en forme qui suivent n'existent qu'en Markdown saveur LiaScript :
 
 * `~~souligné~~` -> ~~souligné~~<!-- class="notranslate"--> (attention avec l'éditeur VS Code votre texte apparaîtra ~barré~, mais il sera bien ~~souligné~~ dans LiaScript
 * `~~~barré et souligné~~~` -> ~~~barré et souligné~~~<!-- class="notranslate"--> (remarque similaire ici, l'affichage du texte dans VS Code peut être confusionnalisant)
@@ -832,7 +832,7 @@ Les mises en forme qui suivent n'existent pas en MarkDown de base :
 
 ### 3. Les liens hypertextes
 
-Il est possible d'ajouter des liens vivants dans un document markdown :
+Il est possible d'ajouter des liens vivants dans un document Markdown :
 
 1. De manière brute : https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md (peuvent s'appliquer les mises en formes vue précédemment)
 
@@ -867,7 +867,7 @@ Par exemple :
 ![logo de LiaScript](assets/liascript/LiaScript_logo.png "ceci est le logo de LiaScript")
 
         --{{0}}--
-L'insertion d'images est un coup à prendre, notamment quand on a l'habitude des éditeurs WYSIWYG (Word, Libre Office, Powerpoint, Impress, Genially...) où il suffit généralement de glisser-déposer l'image de son choix. Mais ce geste ne va pas de soi et les langages courants tels que le MarkDown, LaTeX ou encore le HTML sont beaucoup plus prosaïques.
+L'insertion d'images est un coup à prendre, notamment quand on a l'habitude des éditeurs WYSIWYG (Word, Libre Office, Powerpoint, Impress, Genially...) où il suffit généralement de glisser-déposer l'image de son choix. Mais ce geste ne va pas de soi et les langages courants tels que le Markdown, LaTeX ou encore le HTML sont beaucoup plus prosaïques.
 
 Insérer une image (ou une vidéo, un son, ou tout autre contenu externe) nécessite d'expliciter deux informations à la machine :
 
@@ -908,7 +908,7 @@ Nous sommes parés pour insérer des images !
 
 Depuis VS Code ou tout autre éditeur de ce genre, on spécifie le chemin d'une ressource **relativement** au document principal. En d'autres termes on nous demande d'indiquer une route qui **part** du document et qui a pour **destination** l'image que l'on veut intégrer.
 
-Si vous conservez votre document principal dans la racine du répertoire, vous devez spécifier que vous voulez qu'il aille chercher dans le dossier assets, puis dans le sous-dossier xx, l'image xxx_xxx.png, ce qui donne :
+Si vous conservez votre document principal dans la racine du répertoire, vous devez spécifier que vous voulez qu'il aille chercher dans le dossier assets, puis dans le sous-dossier xx, l'image image.png, ce qui donne :
 
 ```
         assets/"sous_dossier"/image.png
@@ -922,7 +922,7 @@ Avec un clic droit sur l'image que vous souhaitez insérer, il est possible de c
 
 ![Copy relative path](assets/VS_Code/VS_Code_relpath.svg)
 
-[^1]: Notez que les noms de fichiers (dossiers, et éléments) ne doivent pas comporter d'espace. Il est conseillé d'éviter les lettres accentuées qui peuvent être mal interprétées quand vous spécifier un chemin.
+[^1]: Notez que les noms de fichiers (dossiers, et éléments) ne doivent pas comporter d'espace. Il est conseillé d'éviter les lettres accentuées qui peuvent être mal interprétées quand vous spécifiez un chemin.
 
 #### Insérer des vidéos depuis le célèbre hébergeur d'un capitaliste de surveillance (ou d'ailleurs)
 
@@ -1069,7 +1069,7 @@ Une alternative à la question à choix unique, la question à sélection foncti
 ah bah si.
 ***
 
-Ce type de question s'intègre facilement dans le corps d'un [[(texte)|iguane mais c'est dégueu]] tout en restant assez fluide. On peut tout à fait combiner dans un texte à [[trous]] ces deux types de [[baguette|(question)]].
+Ce type de questions s'intègre facilement dans le corps d'un [[(texte)|iguane mais c'est dégueu]] tout en restant assez fluide. On peut tout à fait combiner dans un texte à [[trous]] ces deux types de [[baguettes|(questions)]].
 ***
 Si vous avez sélectionné l'iguane, vous me faites peur.
 ***
@@ -1078,13 +1078,13 @@ Si vous avez sélectionné l'iguane, vous me faites peur.
 
 **Pandoc** est un convertisseur universel -- ou quasi -- de documents. Il s'agit d'un logiciel gratuit, vieux de maintenant 20 ans, et qui fait encore largement ses preuves. 
 
-Dans le cadre d'un usage de LiaScript, Pandoc peut se révéler très utile pour convertir des documents .docx/.odt/.html vers le markdown et inversement. Il est aussi possible de convertir du markown vers le PDF (mais pas du PDF vers le markdown)
+Dans le cadre d'un usage de LiaScript, Pandoc peut se révéler très utile pour convertir des documents .docx/.odt/.html vers le Markdown et inversement. Il est aussi possible de convertir du Markown vers le PDF (mais pas du PDF vers le Markdown parce que le PDF est un format complexe).
 
 #### Installation et vérification
 
 Installez Pandoc depuis en téléchargeant l'installateur depuis [cette page](https://pandoc.org/installing.html) et suivez les étapes jusqu'à l'installation complète.
 
-Pandoc s'utilise via le terminal de commande (en règle générale, si vous êtes sous Windows, l'invite de commandes ou PowerShell), il existe des adaptations de Pandoc avec des interfaces plus friendly, mais à mon sens, le terminal de commande est largement suffisant.
+Pandoc s'utilise via le terminal de commande (en règle générale, si vous êtes sous Windows, l'invite de commandes ou PowerShell), il existe des adaptations de Pandoc avec des interfaces plus friendly, mais il n'est pas inutile de connaître les bases de la navigation par commandes.
 
 Ouvrez le terminal de commande et tapez :
 
@@ -1098,7 +1098,7 @@ La console devrait vous répondre quelque chose comme `pandoc 3.9.0.2` ect. Si c
 
 Pour faire votre conversion, vous devez vous positionner dans le dossier (Directory) dans lequel se trouve votre document à convertir. Vous avez deux possibilités :
 
-1. clic droit dans la fenêtre de votre dossier puis `Ouvrir dans le terminal` --> une console s'ouvre avec, normalement quelque chose du genre :
+1. `clic droit` dans la fenêtre de votre dossier puis `Ouvrir dans le terminal` --> une console s'ouvre avec, normalement quelque chose du genre :
 
 ```
 C:\Users\"identifiant"\Documents\Sous-dossier\Sous-sous-dossier>
@@ -1126,10 +1126,10 @@ pour lister les documents et sous-dossiers du dossier où vous êtes positionné
 Tapez :
 
 ```
-cd "nom du sous-dossier"
+cd nom_du_sous-dossier
 ```
 
-pour vous positionner dans le sous-dossier.
+pour vous positionner dans le sous-dossier. Si votre dossier comporte plusieurs mots séparés par des espaces entourez son nom ainsi : `'nom du dossier'`
 
 Tapez :
 
@@ -1149,7 +1149,7 @@ Pour ouvrir un document du dossier dans lequel vous êtes positionné.
 
 Voilà, vous savez ce qu'il faut pour naviguer dans vos dossiers et documents, vous êtes un véritable netcoder !
 
-[^1]: Sauf pour vos données personnelles bien sûr, fuyez Microsoft pauvres fous !!!
+[^1]: Sauf pour vos données personnelles bien sûr, mais c'est un autre sujet...
 
 #### Convertir des documents
 
@@ -1158,17 +1158,17 @@ Suivez-moi, on va faire un test.
 docx <--> markdown
 ===
 
-1. Trouvez-vous un document Word, assez classique, qui contient en plus du texte, une structure, des listes, ect., nommez-le `test.docx`.
+1. trouvez-vous un document Word, assez classique, qui contient en plus du texte, une structure, des listes, ect., nommez-le `test.docx`.
 
-2. Collez-le dans votre dossier **Documents** à la racine. 
+2. collez-le dans votre dossier **Documents** à la racine. 
 
-3. Ouvrez l'invite de commande et positionnez-vous dans le dossier Documents. En règle générale il vous suffira d'entrer :
+3. ouvrez l'invite de commande et positionnez-vous dans le dossier Documents. En règle générale il vous suffira d'entrer :
 
 ```
 cd Documents
 ```
 
-4. Listez les documents et sous-dossiers de Documents avec la commande [[liste|list|(ls)]], la console va vous renvoyer une liste qui normalement vous sera familière et qui contient notamment le document `test.docx`
+4. listez les documents et sous-dossiers de Documents avec la commande [[liste|list|(ls)]], la console va vous renvoyer une liste qui normalement vous sera familière et qui contient notamment le document `test.docx`
 
 Nous allons tenter une conversion depuis le format **.docx** vers le format **.md**, voici la syntaxe complète qui s'appliquera pour toute conversion :
 
@@ -1180,9 +1180,9 @@ Dans notre cas, cela donnera :
 pandoc test.docx -f docx -t markdown -s -o test.md
 ```
 
-5. Faites le test, c'est quasi immédiat. Quand la machine vous rend les commandes, c'est bon. Faites `ls` et vous verrez normalement apparaître un nouveau venu : `test.md`
+5. faites le test, c'est quasi immédiat. Quand la machine vous rend les commandes, c'est bon. Faites `ls` et vous verrez normalement apparaître un nouveau venu : `test.md`
 
-6. Ouvrez le avec :
+6. ouvrez le avec :
 
 ```
 .\test.md
@@ -1195,7 +1195,7 @@ markdown <--> html
 
 Nous allons maintenant convertir le `test.md` en `test.html`.
 
-1. Vous êtes normalement toujours positionné dans le dossier Documents, mais pour vous en assurer, vous pouvez taper [[ou suis-je|(echo %cd%)|cd %echo%]] dans le terminal de commande.
+1. vous êtes normalement toujours positionné dans le dossier Documents, mais pour vous en assurer, vous pouvez taper [[ou suis-je|(echo %cd%)|cd %echo%]] dans le terminal de commande.
 
 Pour une conversion aussi simple, nous pouvons utiliser une syntaxe abrégée en supprimant de la commande la mention du format d'origine et du format cible. Voici la syntaxe abrégée :
 
@@ -1207,9 +1207,9 @@ Dans notre cas, la commande ressemblera à ceci :
 pandoc test.md -s -o test.html
 ```
 
-2. lancez-la. La machine vous rend les commandes presque'immédiatement
+2. lancez-la. La machine vous rend les commandes presqu'immédiatement
 
-3. Ouvrez le document HTML avec [[(.\test.html)|/.test.html|./test.html]]
+3. ouvrez le document HTML avec [[(.\test.html)|/.test.html|./test.html]]
 
 [^1]: La version complète de la commande est plus explicite, utilisez-la si la commande abrégée ne fonctionne pas.
 
