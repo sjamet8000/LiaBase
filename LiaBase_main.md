@@ -33,14 +33,16 @@ script:   https://cdn.jsdelivr.net/chartist.js/latest/chartist.min.js
 
 ![Logo Liascript](assets/liascript/LiaScript_logo.png)
 
-Au programme ce midi
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20327364.svg)](https://doi.org/10.5281/zenodo.20327364)
+
+Ce que vous trouverez dans cette ressource :
 ===
 
-1. [Une petite démo](#2)
+1. [Une petite démo](#2), c'est fait pour tester, faites des bêtises dedans.
 
 2. [Pourquoi choisir LiaScript](#3) plutôt qu'une lessive ordinaire ?
 
-3. S'il nous reste du temps, je prends vos questions, ou on approfondit quelque chose, comme vous le sentez.
+3. [Mise en route, du berceau jusqu'aux étoiles](#13)
 
 ## 🎶 Je lui dirai démo bleueuuh...
 
