@@ -116,7 +116,7 @@ Les 5R
 ===
 
         --{{0}}--
-J'utilise à titre personnel une définition assez simple de ce que sont les REL, celle de David Wiley (cf. [La Fabrique REL](https://fabriquerel.org/rel/) ainsi que le [blog de David Wiley](https://opencontent.org/definition/)), qui me rappelle les 5W des journalistes. Les 5R font office de critères pour définir si telle ou telle ressource est bien " libre ". Je ne détaille pas plus, et je vais vous montrer concrètement comment une ressource éducative qui a été faite sur LiaScript permet nativement ces 5 actions.
+J'utilise une définition assez simple de ce que sont les REL, celle de David Wiley (cf. [La Fabrique REL](https://fabriquerel.org/rel/) ainsi que le [blog de David Wiley](https://opencontent.org/definition/)), qui me rappelle les 5W des journalistes. Les 5R font office de critères pour définir si telle ou telle ressource est bien " libre ". Je ne détaille pas plus, et je vais vous montrer concrètement comment une ressource éducative qui a été faite sur LiaScript permet nativement ces 5 actions.
 
 ``````````````````````````````````````````````````
            .--------------.       .-------------. 
@@ -319,7 +319,7 @@ L'action redistribute/redistribuer, c'est :
 >
 > -- David Wiley ([*Defining the "Open" in Open Content and Open Educational Ressources*, 2023](https://opencontent.org/definition/))
 
-A partir de là, la redistribution est simplissime et surtout multimodale. On peut distinguer deux entités partageable : 
+A partir de là, la redistribution est simplissime et surtout multimodale. On peut distinguer deux entités partageables : 
 
         {{1}}
 * le **répertoire GitHub** qui s'apparenterait à une version " Brute " du cours avec le document principal rédigé en markdown et les éléments annexes (souvent nommés `assets`, donc les images, les activités H5P, les vidéos, etc.). Cette version est aussi [**revisable**](#6) et [**remixable**](#7), mais elle ne comporte pas les éléments interactifs propres à LiaScript.
