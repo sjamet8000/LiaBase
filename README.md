@@ -14,4 +14,4 @@ Le document principal (*LiaBase_main.md*) est consultable dans sa version brute 
 
 ## Réutilisation
 
-Ce travail est sous licence CC-BY.
+Ce travail est sous licence CC-0.
